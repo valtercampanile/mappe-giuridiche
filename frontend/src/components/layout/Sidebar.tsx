@@ -33,14 +33,14 @@ export function Sidebar({ onSelectEntity, selectedId }: SidebarProps) {
   const { data } = useQuery({
     queryKey: [
       'entities',
-      { materiaId: 'penale', type: typeFilter, q: search || undefined, limit: 200 },
+      { materiaId: 'penale', type: typeFilter, q: search || undefined, limit: 100 },
     ],
     queryFn: () =>
       getEntities({
         materiaId: 'penale',
         type: typeFilter ?? undefined,
         q: search || undefined,
-        limit: 200,
+        limit: 100,
       }),
   });
 
@@ -53,7 +53,7 @@ export function Sidebar({ onSelectEntity, selectedId }: SidebarProps) {
   return (
     <aside className="w-[230px] min-w-[230px] bg-sidebar-bg text-white flex flex-col h-full">
       <div className="flex items-center justify-between px-3 py-3 border-b border-white/10">
-        <span className="text-sm font-bold text-sidebar-accent">Mappe Giuridiche</span>
+        <span className="text-sm font-semibold text-white">Mappe Giuridiche</span>
         <button
           onClick={toggleSidebar}
           className="text-white/60 hover:text-white text-xs px-1"
