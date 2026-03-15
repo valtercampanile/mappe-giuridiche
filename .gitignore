@@ -28,3 +28,6 @@ logs/
 # Coverage
 coverage/
 
+# TypeScript build info
+*.tsbuildinfo
+

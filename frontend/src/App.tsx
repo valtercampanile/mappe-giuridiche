@@ -1,5 +1,12 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ProtectedRoute } from './components/layout/ProtectedRoute';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Studio from './pages/Studio';
+import Ripasso from './pages/Ripasso';
+import Esercitazione from './pages/Esercitazione';
+import Questioni from './pages/Questioni';
 
 const queryClient = new QueryClient();
 
@@ -7,9 +14,52 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <div className="min-h-screen bg-surface text-text-primary font-sans">
-          <h1 className="text-2xl font-bold p-8 text-primary">Mappe Giuridiche</h1>
-        </div>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/studio"
+            element={
+              <ProtectedRoute>
+                <Studio />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/ripasso"
+            element={
+              <ProtectedRoute>
+                <Ripasso />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/esercitazione"
+            element={
+              <ProtectedRoute>
+                <Esercitazione />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/questioni"
+            element={
+              <ProtectedRoute>
+                <Questioni />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/*"
+            element={
+              <ProtectedRoute requireAdmin>
+                <div className="p-8 text-text-primary">Admin — in costruzione</div>
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/" element={<Navigate to="/studio" replace />} />
+          <Route path="*" element={<Navigate to="/studio" replace />} />
+        </Routes>
       </BrowserRouter>
     </QueryClientProvider>
   );
