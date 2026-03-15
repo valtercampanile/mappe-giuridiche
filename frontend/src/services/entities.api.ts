@@ -1,5 +1,5 @@
 import api from './api';
-import type { Entity, Relation, EntityFilters } from '../types/entity.types';
+import type { Entity, Relation, EntityFilters, QuestioniFilters } from '../types/entity.types';
 import type { ApiResponse, PaginatedResponse } from '../types/api.types';
 
 export async function getEntities(filters?: EntityFilters): Promise<PaginatedResponse<Entity>> {
@@ -29,6 +29,15 @@ export async function getEntityGraph(
     `/entities/${id}/graph?depth=${String(depth)}`,
   );
   return res.data.data;
+}
+
+export async function getQuestioni(filters?: QuestioniFilters): Promise<PaginatedResponse<Entity>> {
+  return getEntities({
+    type: 'QUESTIONE',
+    limit: 100,
+    zonaGrigia: filters?.zonaGrigia,
+    q: filters?.q,
+  });
 }
 
 export async function getTensioni(materiaId?: string): Promise<Relation[]> {

@@ -71,3 +71,19 @@ export interface AuthTokens {
   refreshToken: string;
   user: User;
 }
+
+export type StatoQuestione = 'aperta' | 'prevalente' | 'risolta' | 'controversa';
+
+export interface Tesi {
+  label: string;
+  contenuto: string;
+  autori?: string[];
+  giurisprudenza?: string[];
+  logiche_usate?: string[];
+}
+
+export interface QuestioniFilters {
+  stato?: StatoQuestione;
+  zonaGrigia?: boolean;
+  q?: string;
+}
