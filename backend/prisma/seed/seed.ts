@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 
 interface JsonEntity {
   id: string;
-  tipo: string;
+  type: string;
   label: string;
   short?: string;
   fonte?: string;
@@ -17,21 +17,26 @@ interface JsonEntity {
 }
 
 interface JsonRelation {
+  id?: string;
   from: string;
   to: string;
-  tipo: string;
+  type: string;
   label: string;
   poli?: string[];
   tecnica_risoluzione?: string[];
   criteri_orientamento?: string[];
   manifestazioni?: unknown[];
   zona_grigia?: boolean;
+  lezioni?: string[];
+  note?: string;
   [key: string]: unknown;
 }
 
 interface JsonDatabase {
-  entita: JsonEntity[];
-  relazioni: JsonRelation[];
+  entities: JsonEntity[];
+  relations: JsonRelation[];
+  meta?: unknown;
+  percorsi_tematici?: unknown;
 }
 
 const TYPE_MAP: Record<string, string> = {
@@ -60,7 +65,7 @@ const RELATION_TYPE_MAP: Record<string, string> = {
 };
 
 const COMMON_FIELDS = new Set([
-  'id', 'tipo', 'label', 'short', 'fonte', 'zona_grigia', 'tags', 'lezioni',
+  'id', 'type', 'label', 'short', 'fonte', 'zona_grigia', 'tags', 'lezioni',
 ]);
 
 function extractData(entity: JsonEntity): Record<string, unknown> {
@@ -193,8 +198,8 @@ async function seedFromJson(db: JsonDatabase) {
 
   // Entità
   let entitiesCount = 0;
-  for (const e of db.entita) {
-    const type = TYPE_MAP[e.tipo.toLowerCase()] ?? e.tipo.toUpperCase();
+  for (const e of db.entities) {
+    const type = TYPE_MAP[e.type.toLowerCase()] ?? e.type.toUpperCase();
     const data = extractData(e);
 
     await prisma.entity.upsert({
@@ -232,13 +237,18 @@ async function seedFromJson(db: JsonDatabase) {
     entitiesCount++;
   }
 
-  // Relazioni
+  // Relazioni — skip se from/to non esistono nel DB
+  const entityIds = new Set((await prisma.entity.findMany({ select: { id: true } })).map((e) => e.id));
   await prisma.relation.deleteMany();
   let relationsCount = 0;
-  for (const r of db.relazioni) {
-    const type = RELATION_TYPE_MAP[r.tipo.toLowerCase()] ?? r.tipo.toUpperCase();
-    const { from, to, tipo, label, ...rest } = r;
-    void tipo;
+  let skipped = 0;
+  for (const r of db.relations) {
+    if (!entityIds.has(r.from) || !entityIds.has(r.to)) {
+      skipped++;
+      continue;
+    }
+    const type = RELATION_TYPE_MAP[r.type.toLowerCase()] ?? r.type.toUpperCase();
+    const { from, to, type: _type, id: _id, label, lezioni: _lezioni, ...rest } = r;
 
     await prisma.relation.create({
       data: {
@@ -252,7 +262,8 @@ async function seedFromJson(db: JsonDatabase) {
     relationsCount++;
   }
 
-  console.log(`Seed completato: ${String(entitiesCount)} entità, ${String(relationsCount)} relazioni`); // eslint-disable-line no-console
+  const skippedMsg = skipped > 0 ? ` (${String(skipped)} relazioni saltate per entità mancanti)` : '';
+  console.log(`Seed completato: ${String(entitiesCount)} entità, ${String(relationsCount)} relazioni${skippedMsg}`); // eslint-disable-line no-console
 }
 
 function getBuiltinEntities() {
