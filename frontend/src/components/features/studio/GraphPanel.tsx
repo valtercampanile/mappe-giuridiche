@@ -1,8 +1,20 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import cytoscape from 'cytoscape';
 import { useEntityGraph } from '../../../hooks/useEntity';
-import { ENTITY_BADGE, ENTITY_COLORS } from '../../../constants/theme';
-import type { Entity, Relation } from '../../../types/entity.types';
+import { ENTITY_BADGE } from '../../../constants/theme';
+import type { Entity, Relation, EntityType } from '../../../types/entity.types';
+
+const NODE_COLORS: Record<EntityType, { bg: string; border: string }> = {
+  VALORE: { bg: '#FDF3DC', border: '#7C5C00' },
+  PRINCIPIO: { bg: '#EBF3FB', border: '#004B8C' },
+  NORMA: { bg: '#E3F4EC', border: '#005C2E' },
+  ISTITUTO: { bg: '#FDEEE8', border: '#7A2D00' },
+  QUESTIONE: { bg: '#F4ECF7', border: '#5B1A70' },
+  FUNZIONE: { bg: '#FDF6DC', border: '#5C4A00' },
+  LOGICA_INTERPRETATIVA: { bg: '#E8F5F8', border: '#005B6B' },
+  GIURISPRUDENZA: { bg: '#F0F0F0', border: '#3D3D3D' },
+  TENSIONE: { bg: '#FCEAEA', border: '#8B1A1A' },
+};
 
 interface Props {
   entityId: string | undefined;
@@ -17,7 +29,7 @@ function buildElements(
   const elements: cytoscape.ElementDefinition[] = [];
 
   for (const node of nodes) {
-    const colors = ENTITY_COLORS[node.type];
+    const colors = NODE_COLORS[node.type];
     elements.push({
       data: {
         id: node.id,
@@ -26,11 +38,10 @@ function buildElements(
         short: node.short ?? '',
         bgColor: colors.bg,
         borderColor: node.id === centerId ? '#0066CC' : colors.border,
-        textColor: colors.color,
-        borderWidth: node.id === centerId ? 3 : 1,
+        textColor: colors.border,
+        borderWidth: node.id === centerId ? 3 : 2,
         nodeSize: node.id === centerId ? 44 : 32,
         zonaGrigia: node.zonaGrigia,
-        type: node.type,
       },
     });
   }
@@ -42,8 +53,7 @@ function buildElements(
         id: `e-${edge.id}`,
         source: edge.fromId,
         target: edge.toId,
-        label: edge.type.toLowerCase().replace('_', ' '),
-        lineColor: isTensione ? '#8B1A1A' : '#D9E4ED',
+        lineColor: isTensione ? '#8B1A1A' : '#B0BEC5',
         lineStyle: isTensione ? 'dashed' : 'solid',
       },
     });
@@ -56,6 +66,13 @@ export function GraphPanel({ entityId, onNavigate }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const cyRef = useRef<cytoscape.Core | null>(null);
   const { data: graph } = useEntityGraph(entityId);
+
+  const stableNavigate = useCallback(
+    (id: string) => {
+      onNavigate(id);
+    },
+    [onNavigate],
+  );
 
   useEffect(() => {
     if (!containerRef.current || !graph || !entityId) return;
@@ -108,28 +125,40 @@ export function GraphPanel({ entityId, onNavigate }: Props) {
           },
         },
       ],
-      layout: {
-        name: 'concentric',
-        concentric: (node) => (node.id() === entityId ? 2 : 1),
-        levelWidth: () => 1,
-        minNodeSpacing: 60,
-        animate: false,
-        fit: true,
-        padding: 40,
-      },
+      layout: { name: 'preset' },
       userZoomingEnabled: true,
       userPanningEnabled: true,
       boxSelectionEnabled: false,
     });
 
-    cy.on('tap', 'node', (evt) => {
-      const nodeId = evt.target.id() as string;
-      if (nodeId !== entityId) {
-        onNavigate(nodeId);
-      }
+    // Manual concentric layout with center node fixed at viewport center
+    const w = containerRef.current.clientWidth;
+    const h = containerRef.current.clientHeight - 33;
+    const cx = w / 2;
+    const cy2 = h / 2;
+    const radius = Math.min(w, h) * 0.35;
+
+    const centerNode = cy.getElementById(entityId);
+    centerNode.position({ x: cx, y: cy2 });
+
+    const neighbors = cy.nodes().filter((n) => n.id() !== entityId);
+    const count = neighbors.length;
+    neighbors.forEach((n, i) => {
+      const angle = (2 * Math.PI * i) / Math.max(count, 1) - Math.PI / 2;
+      n.position({
+        x: cx + radius * Math.cos(angle),
+        y: cy2 + radius * Math.sin(angle),
+      });
     });
 
-    // Tooltip on hover
+    cy.fit(undefined, 40);
+    cy.center();
+
+    cy.on('tap', 'node', (evt) => {
+      const nodeId = evt.target.id() as string;
+      if (nodeId !== entityId) stableNavigate(nodeId);
+    });
+
     cy.on('mouseover', 'node', (evt) => {
       const node = evt.target;
       containerRef.current?.setAttribute(
@@ -143,11 +172,21 @@ export function GraphPanel({ entityId, onNavigate }: Props) {
 
     cyRef.current = cy;
 
+    // ResizeObserver: re-center on container resize
+    const observer = new ResizeObserver(() => {
+      if (cyRef.current) {
+        cyRef.current.resize();
+        cyRef.current.fit(undefined, 40);
+      }
+    });
+    observer.observe(containerRef.current);
+
     return () => {
+      observer.disconnect();
       cy.destroy();
       cyRef.current = null;
     };
-  }, [graph, entityId, onNavigate]);
+  }, [graph, entityId, stableNavigate]);
 
   return (
     <div className="h-full w-full bg-surface border-l border-border">

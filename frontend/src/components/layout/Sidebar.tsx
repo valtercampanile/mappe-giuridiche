@@ -12,10 +12,30 @@ const ALL_TYPES: EntityType[] = [
   'NORMA',
   'ISTITUTO',
   'QUESTIONE',
-  'FUNZIONE',
   'LOGICA_INTERPRETATIVA',
   'GIURISPRUDENZA',
+  'FUNZIONE',
 ];
+
+const TYPE_ORDER: Record<EntityType, number> = {
+  VALORE: 0,
+  PRINCIPIO: 1,
+  NORMA: 2,
+  ISTITUTO: 3,
+  QUESTIONE: 4,
+  LOGICA_INTERPRETATIVA: 5,
+  GIURISPRUDENZA: 6,
+  FUNZIONE: 7,
+  TENSIONE: 8,
+};
+
+function sortEntities(entities: Entity[]): Entity[] {
+  return [...entities].sort((a, b) => {
+    const typeD = TYPE_ORDER[a.type] - TYPE_ORDER[b.type];
+    if (typeD !== 0) return typeD;
+    return a.label.localeCompare(b.label, 'it');
+  });
+}
 
 interface SidebarProps {
   onSelectEntity: (id: string) => void;
@@ -44,7 +64,7 @@ export function Sidebar({ onSelectEntity, selectedId }: SidebarProps) {
       }),
   });
 
-  const entities = data?.data ?? [];
+  const entities = sortEntities(data?.data ?? []);
 
   if (!sidebarOpen) {
     return <CompactSidebar onToggle={toggleSidebar} onSelectEntity={onSelectEntity} />;
