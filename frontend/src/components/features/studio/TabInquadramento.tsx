@@ -7,7 +7,7 @@ interface Props {
 
 export function TabInquadramento({ entity }: Props) {
   const d = entity.data;
-  const definizione = (d.definizione ?? d.def ?? '') as string;
+  const definizione = (d.definizione ?? d.def ?? entity.short ?? '') as string;
   const fondamento = d.fondamento_normativo as string[] | undefined;
   const autoApplicativo = d.auto_applicativo as boolean | undefined;
   const testGiudice = d.test_giudice as string | undefined;
