@@ -17,16 +17,16 @@ services:
       dockerfile: ../docker/Dockerfile.backend
     restart: unless-stopped
     ports:
-      - "3001:3001"
+      - "3911:3911"
     environment:
       DATABASE_URL: postgresql://user:password@db:5432/mappe_giuridiche
       JWT_SECRET: dev_jwt_secret_cambiami_in_produzione_con_stringa_lunga_64_chars
       JWT_REFRESH_SECRET: dev_jwt_refresh_secret_cambiami_in_produzione_diversa_64_chars
       JWT_EXPIRES_IN: 15m
       JWT_REFRESH_EXPIRES_IN: 7d
-      PORT: 3001
+      PORT: 3911
       NODE_ENV: development
-      FRONTEND_URL: http://localhost:5173
+      FRONTEND_URL: http://localhost:3910
     depends_on:
       - db
     volumes:
@@ -39,9 +39,9 @@ services:
       dockerfile: ../docker/Dockerfile.frontend
     restart: unless-stopped
     ports:
-      - "5173:5173"
+      - "3910:3910"
     environment:
-      VITE_API_URL: http://localhost:3001/api/v1
+      VITE_API_URL: http://localhost:3911/api/v1
     volumes:
       - ./frontend/src:/app/src
       - ./frontend/index.html:/app/index.html

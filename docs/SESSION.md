@@ -161,13 +161,13 @@ JWT_SECRET=<stringa casuale lunga almeno 64 caratteri>
 JWT_REFRESH_SECRET=<stringa casuale diversa>
 JWT_EXPIRES_IN=15m
 JWT_REFRESH_EXPIRES_IN=7d
-PORT=3001
+PORT=3911
 NODE_ENV=development
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=http://localhost:3910
 ANTHROPIC_API_KEY=<chiave per funzione upload/analisi — fase futura>
 
 # Frontend
-VITE_API_URL=http://localhost:3001/api/v1
+VITE_API_URL=http://localhost:3911/api/v1
 ```
 
 ---
@@ -204,7 +204,7 @@ Eseguire nell'ordine prima di ogni commit finale:
 4. Nessun console.log nel codice:
    grep -r "console.log" backend/src frontend/src
 5. Nessun valore hardcoded (URL, porte, credenziali):
-   grep -rn "localhost\|3001\|5432\|password\|secret" backend/src frontend/src --include="*.ts"
+   grep -rn "localhost\|3910\|3911\|5432\|password\|secret" backend/src frontend/src --include="*.ts"
 6. TypeScript compila senza errori:
    cd backend && npm run build
 7. git status — revisiona i file prima del commit

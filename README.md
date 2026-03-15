@@ -37,7 +37,7 @@ docker-compose up
 cd backend && npx ts-node prisma/seed/seed.ts
 ```
 
-L'app sarà disponibile su `http://localhost:5173`.
+L'app sarà disponibile su `http://localhost:3910`.
 
 ## Struttura del repository
 
