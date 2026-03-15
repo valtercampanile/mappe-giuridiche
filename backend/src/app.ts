@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import { serverConfig } from './config/server';
 import authRoutes from './routes/auth.routes';
+import entitiesRoutes from './routes/entities.routes';
+import relationsRoutes from './routes/relations.routes';
 import { errorHandler } from './middleware/error.middleware';
 import logger from './utils/logger';
 
@@ -15,6 +17,8 @@ app.get('/api/v1/health', (_req, res) => {
 });
 
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/entities', entitiesRoutes);
+app.use('/api/v1/relations', relationsRoutes);
 
 app.use(errorHandler);
 
