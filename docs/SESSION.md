@@ -190,3 +190,22 @@ cd frontend && npm run lint        # ESLint
 # Entrambi
 docker-compose up                  # avvia tutto in locale con Docker
 ```
+
+---
+
+## 8. CHECKLIST DI CHIUSURA SESSIONE
+
+Eseguire nell'ordine prima di ogni commit finale:
+
+1. cd backend && npm run verify
+2. cd frontend && npm run lint
+3. Nessun file sorgente supera 300 righe:
+   find backend/src frontend/src -name "*.ts" -o -name "*.tsx" | xargs wc -l | sort -rn | head -20
+4. Nessun console.log nel codice:
+   grep -r "console.log" backend/src frontend/src
+5. Nessun valore hardcoded (URL, porte, credenziali):
+   grep -rn "localhost\|3001\|5432\|password\|secret" backend/src frontend/src --include="*.ts"
+6. TypeScript compila senza errori:
+   cd backend && npm run build
+7. git status — revisiona i file prima del commit
+8. Conventional commit con descrizione chiara

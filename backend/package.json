@@ -14,10 +14,17 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
-    "prisma:seed": "tsx prisma/seed/seed.ts"
+    "prisma:seed": "tsx prisma/seed/seed.ts",
+    "verify": "npm run lint && npm run build && echo '\\n--- File più lunghi ---' && find src -name \"*.ts\" | xargs wc -l | sort -rn | head -20 && echo '\\n--- console.log trovati ---' && (grep -r \"console.log\" src || echo 'Nessun console.log trovato')"
   },
   "prisma": {
     "seed": "tsx prisma/seed/seed.ts"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint --max-warnings=0",
+      "prettier --check"
+    ]
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",

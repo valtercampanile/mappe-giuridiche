@@ -9,7 +9,17 @@
     "preview": "vite preview",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
-    "format": "prettier --write \"src/**/*.{ts,tsx,css}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
+    "verify": "npm run lint && echo '\\n--- File più lunghi ---' && find src -name \"*.ts\" -o -name \"*.tsx\" | xargs wc -l | sort -rn | head -20 && echo '\\n--- console.log trovati ---' && (grep -r \"console.log\" src || echo 'Nessun console.log trovato')"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --max-warnings=0",
+      "prettier --check"
+    ],
+    "src/**/*.css": [
+      "prettier --check"
+    ]
   },
   "dependencies": {
     "@tanstack/react-query": "^5.62.0",
