@@ -1,0 +1,221 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ── Utenti e autenticazione ──────────────────────────────────
+
+model User {
+  id               String         @id @default(cuid())
+  email            String         @unique
+  passwordHash     String
+  name             String
+  role             Role           @default(USER)
+  subscriptionTier SubTier        @default(BASE)
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  progress         UserProgress[]
+  bookmarks        UserBookmark[]
+  notes            UserNote[]
+  refreshTokens    RefreshToken[]
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum SubTier {
+  BASE
+  ADVANCED
+  COMPLETE
+}
+
+// ── Token di refresh ─────────────────────────────────────────
+
+model RefreshToken {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+// ── Materie ──────────────────────────────────────────────────
+
+model Materia {
+  id       String   @id // "penale", "civile", "amm"
+  label    String
+  active   Boolean  @default(false)
+  entities Entity[]
+}
+
+// ── Lezioni/Capitoli ─────────────────────────────────────────
+
+model Lezione {
+  id       String          @id // "L1", "L2", ...
+  titolo   String
+  materia  String
+  ordine   Int
+  entities EntityLezione[]
+}
+
+// ── Entità (tutte le 8 categorie in una tabella) ─────────────
+
+model Entity {
+  id         String          @id // "V01", "P01", "I01", ecc.
+  type       EntityType
+  label      String
+  short      String? // max 200 chars, per il Ripasso
+  fonte      FonteType       @default(DOCENTE)
+  zonaGrigia Boolean         @default(false)
+  archived   Boolean         @default(false)
+  tags       String[] // array di stringhe
+  materiaId  String
+  materia    Materia         @relation(fields: [materiaId], references: [id])
+  data       Json // campi specifici per tipo
+  createdAt  DateTime        @default(now())
+  updatedAt  DateTime        @updatedAt
+  lezioni    EntityLezione[]
+  fromRels   Relation[]      @relation("FromEntity")
+  toRels     Relation[]      @relation("ToEntity")
+  progress   UserProgress[]
+  bookmarks  UserBookmark[]
+  notes      UserNote[]
+
+  @@index([type])
+  @@index([materiaId])
+  @@index([zonaGrigia])
+  @@index([archived])
+}
+
+enum EntityType {
+  VALORE
+  PRINCIPIO
+  NORMA
+  ISTITUTO
+  QUESTIONE
+  FUNZIONE
+  LOGICA_INTERPRETATIVA
+  GIURISPRUDENZA
+  TENSIONE
+}
+
+enum FonteType {
+  DOCENTE
+  AI
+}
+
+// ── Tabella di join Entity <-> Lezione ───────────────────────
+
+model EntityLezione {
+  entityId  String
+  lezioneId String
+  entity    Entity  @relation(fields: [entityId], references: [id])
+  lezione   Lezione @relation(fields: [lezioneId], references: [id])
+
+  @@id([entityId, lezioneId])
+}
+
+// ── Relazioni tra entità ─────────────────────────────────────
+
+model Relation {
+  id        String       @id @default(cuid())
+  type      RelationType
+  fromId    String
+  toId      String
+  label     String
+  from      Entity       @relation("FromEntity", fields: [fromId], references: [id])
+  to        Entity       @relation("ToEntity", fields: [toId], references: [id])
+  data      Json? // per le tensioni: poli, tecnica, manifestazioni, ecc.
+  createdAt DateTime     @default(now())
+
+  @@index([fromId])
+  @@index([toId])
+  @@index([type])
+}
+
+enum RelationType {
+  CATENA
+  COROLLARIO
+  STRUTTURALE
+  DI_PRINCIPIO
+  LIMITE_ECCEZIONE
+  FUNZIONALE_TRASVERSALE
+  POSITIVIZZA
+  ATTUA
+  FONDA
+  TENSIONE
+}
+
+// ── Progressione utente ──────────────────────────────────────
+
+model UserProgress {
+  userId    String
+  entityId  String
+  status    ProgressStatus @default(NEW)
+  updatedAt DateTime       @updatedAt
+  user      User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  entity    Entity         @relation(fields: [entityId], references: [id], onDelete: Cascade)
+
+  @@id([userId, entityId])
+}
+
+enum ProgressStatus {
+  NEW
+  STUDIED
+  MASTERED
+  TO_REVIEW
+}
+
+// ── Segnalibri ───────────────────────────────────────────────
+
+model UserBookmark {
+  userId    String
+  entityId  String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  entity    Entity   @relation(fields: [entityId], references: [id], onDelete: Cascade)
+
+  @@id([userId, entityId])
+}
+
+// ── Note personali ───────────────────────────────────────────
+
+model UserNote {
+  id        String   @id @default(cuid())
+  userId    String
+  entityId  String
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  entity    Entity   @relation(fields: [entityId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, entityId])
+}
+
+// ── Log upload/analisi documenti ─────────────────────────────
+
+model DocumentUpload {
+  id               String       @id @default(cuid())
+  uploadedBy       String
+  filename         String
+  status           UploadStatus @default(PENDING)
+  proposedEntities Json? // proposta generata da AI
+  approvedAt       DateTime?
+  createdAt        DateTime     @default(now())
+}
+
+enum UploadStatus {
+  PENDING
+  ANALYZING
+  REVIEW
+  APPROVED
+  REJECTED
+}

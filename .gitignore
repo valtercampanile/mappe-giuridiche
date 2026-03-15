@@ -24,3 +24,10 @@ logs/
 # IDE
 .vscode/settings.json
 .idea/
+
+# Coverage
+coverage/
+
+# Prisma
+backend/prisma/migrations/*
+!backend/prisma/migrations/.gitkeep
