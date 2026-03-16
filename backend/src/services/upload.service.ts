@@ -160,7 +160,12 @@ export const uploadService = {
       const type = TYPE_MAP[e.type.toLowerCase()] ?? e.type.toUpperCase();
       const dataObj: Record<string, unknown> = {};
       for (const [k, v] of Object.entries(e)) {
-        if (!COMMON_FIELDS.has(k)) dataObj[k] = v;
+        if (k === 'data' && typeof v === 'object' && v !== null && !Array.isArray(v)) {
+          // Formato update_inquadramento: i campi sono nested in entity.data
+          Object.assign(dataObj, v);
+        } else if (!COMMON_FIELDS.has(k)) {
+          dataObj[k] = v;
+        }
       }
       const data = dataObj as Prisma.InputJsonValue;
 
