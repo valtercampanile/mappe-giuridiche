@@ -218,4 +218,5 @@ enum UploadStatus {
   REVIEW
   APPROVED
   REJECTED
+  DELETED
 }

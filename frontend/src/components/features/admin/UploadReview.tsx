@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { approveUpload } from '../../../services/admin.api';
 import type { JsonEntity, ApproveResult } from '../../../services/admin.api';
-import { ENTITY_BADGE, ENTITY_COLORS, ENTITY_LABELS } from '../../../constants/theme';
+import { ENTITY_BADGE, ENTITY_COLORS } from '../../../constants/theme';
 import type { EntityType } from '../../../types/entity.types';
+import { EntityPreview } from './EntityPreview';
 
 const TYPE_MAP: Record<string, string> = {
   valore: 'VALORE',
@@ -23,7 +24,8 @@ interface Props {
   relationsCount: number;
 }
 
-export function UploadReview({ uploadId, entities, relationsCount }: Props) {
+export function UploadReview({ uploadId, entities: initialEntities, relationsCount }: Props) {
+  const [entities, setEntities] = useState<JsonEntity[]>(initialEntities);
   const [selected, setSelected] = useState<Set<string>>(new Set(entities.map((e) => e.id)));
   const [previewId, setPreviewId] = useState<string | null>(entities[0]?.id ?? null);
   const [result, setResult] = useState<ApproveResult | null>(null);
@@ -40,11 +42,16 @@ export function UploadReview({ uploadId, entities, relationsCount }: Props) {
     setSelected(next);
   };
 
+  const handleUpdateEntity = useCallback((updated: JsonEntity) => {
+    setEntities((prev) => prev.map((e) => (e.id === updated.id ? updated : e)));
+  }, []);
+
   const handleApprove = async () => {
     setLoading(true);
     try {
       const approved = Array.from(selected);
       const rejected = entities.filter((e) => !selected.has(e.id)).map((e) => e.id);
+      // TODO: inviare le entità modificate al backend quando l'endpoint lo supporterà
       const res = await approveUpload(uploadId, approved, rejected);
       setResult(res);
     } finally {
@@ -100,16 +107,12 @@ export function UploadReview({ uploadId, entities, relationsCount }: Props) {
       <div className="flex" style={{ height: 'calc(100vh - 220px)' }}>
         <div className="w-[380px] border-r border-border overflow-y-auto">
           {entities.map((e) => {
-            const mappedType = (TYPE_MAP[e.type.toLowerCase()] ??
-              e.type.toUpperCase()) as EntityType;
-            const colors = ENTITY_COLORS[mappedType] ?? ENTITY_COLORS.ISTITUTO;
-            const badge = ENTITY_BADGE[mappedType] ?? '?';
+            const mt = (TYPE_MAP[e.type.toLowerCase()] ?? e.type.toUpperCase()) as EntityType;
+            const c = ENTITY_COLORS[mt] ?? ENTITY_COLORS.ISTITUTO;
             return (
               <div
                 key={e.id}
-                className={`flex items-center gap-2 px-3 py-2 border-b border-border cursor-pointer hover:bg-surface ${
-                  previewId === e.id ? 'bg-primary/5' : ''
-                }`}
+                className={`flex items-center gap-2 px-3 py-2 border-b border-border cursor-pointer hover:bg-surface ${previewId === e.id ? 'bg-primary/5' : ''}`}
                 onClick={() => setPreviewId(e.id)}
               >
                 <input
@@ -121,9 +124,9 @@ export function UploadReview({ uploadId, entities, relationsCount }: Props) {
                 />
                 <span
                   className="font-mono text-[10px] w-5 h-5 flex items-center justify-center rounded shrink-0 font-bold"
-                  style={{ color: colors.color, backgroundColor: colors.bg }}
+                  style={{ color: c.color, backgroundColor: c.bg }}
                 >
-                  {badge}
+                  {ENTITY_BADGE[mt] ?? '?'}
                 </span>
                 <span className="text-[10px] text-text-secondary font-mono">{e.id}</span>
                 <span className="text-xs text-text-primary truncate flex-1">{e.label}</span>
@@ -134,7 +137,7 @@ export function UploadReview({ uploadId, entities, relationsCount }: Props) {
 
         <div className="flex-1 overflow-y-auto p-4">
           {preview ? (
-            <EntityPreview entity={preview} />
+            <EntityPreview entity={preview} onUpdateEntity={handleUpdateEntity} />
           ) : (
             <p className="text-text-secondary text-sm">Seleziona un'entità</p>
           )}
@@ -150,114 +153,6 @@ export function UploadReview({ uploadId, entities, relationsCount }: Props) {
           {loading ? 'Importazione...' : `Approva ${String(selected.size)} selezionate`}
         </button>
       </div>
-    </div>
-  );
-}
-
-// Cerca un campo sia al livello top dell'entità che dentro entity.data
-// (i file update_inquadramento mettono i campi in entity.data)
-function field(entity: JsonEntity, ...names: string[]): unknown {
-  const nested =
-    typeof entity.data === 'object' && entity.data !== null && !Array.isArray(entity.data)
-      ? (entity.data as Record<string, unknown>)
-      : null;
-  for (const name of names) {
-    const val = entity[name] ?? nested?.[name];
-    if (val !== undefined && val !== null) return val;
-  }
-  return undefined;
-}
-
-function EntityPreview({ entity }: { entity: JsonEntity }) {
-  const mappedType = (TYPE_MAP[entity.type.toLowerCase()] ??
-    entity.type.toUpperCase()) as EntityType;
-  const colors = ENTITY_COLORS[mappedType] ?? ENTITY_COLORS.ISTITUTO;
-  const badge = ENTITY_BADGE[mappedType] ?? '?';
-  const rawDef = (field(
-    entity,
-    'definizione',
-    'descrizione',
-    'formulazione',
-    'testo_breve',
-    'principio_affermato',
-    'def',
-  ) ?? '') as string;
-  const shortText = (field(entity, 'short') ?? '') as string;
-  const mainText = rawDef || shortText;
-  const fonte = ((field(entity, 'fonte') as string) ?? 'docente').toLowerCase();
-  const fondamento = field(entity, 'fondamento_normativo') as string[] | undefined;
-  const tags = entity.tags ?? (field(entity, 'tags') as string[] | undefined) ?? [];
-
-  return (
-    <div>
-      <div className="flex items-center gap-2 mb-2 flex-wrap">
-        <span
-          className="font-mono text-xs px-2 py-0.5 rounded font-bold"
-          style={{
-            color: colors.color,
-            backgroundColor: colors.bg,
-            border: `1px solid ${colors.border}`,
-          }}
-        >
-          {badge}
-        </span>
-        <span className="text-xs font-mono text-text-secondary">[{entity.id}]</span>
-        <span className="text-sm font-semibold text-text-primary">{entity.label}</span>
-        <span
-          className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${
-            fonte === 'ai' ? 'bg-primary/10 text-primary' : 'bg-success/10 text-success'
-          }`}
-        >
-          {fonte === 'ai' ? 'AI' : 'docente'}
-        </span>
-      </div>
-
-      <p className="text-[10px] text-text-secondary uppercase tracking-wide mb-1">
-        {ENTITY_LABELS[mappedType] ?? entity.type}
-      </p>
-
-      {mainText && (
-        <p className="font-serif text-sm text-text-primary leading-[1.7] mb-3">{mainText}</p>
-      )}
-
-      {shortText && shortText !== mainText && (
-        <div className="mb-3 p-2 bg-surface rounded border border-border">
-          <p className="text-[10px] text-text-secondary uppercase mb-0.5">Sintesi</p>
-          <p className="text-xs text-text-primary">{shortText}</p>
-        </div>
-      )}
-
-      {fondamento && fondamento.length > 0 && (
-        <div className="mb-3">
-          <p className="text-[10px] text-text-secondary uppercase mb-1">Fondamento normativo</p>
-          <div className="flex flex-wrap gap-1">
-            {fondamento.map((f) => (
-              <span
-                key={f}
-                className="text-[10px] px-2 py-0.5 rounded bg-primary/5 text-primary border border-primary/20"
-              >
-                {f}
-              </span>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {tags.length > 0 && (
-        <div className="mb-3">
-          <p className="text-[10px] text-text-secondary uppercase mb-1">Tags</p>
-          <div className="flex flex-wrap gap-1">
-            {tags.map((t) => (
-              <span
-                key={t}
-                className="text-[10px] px-2 py-0.5 rounded bg-surface border border-border text-text-secondary"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 }

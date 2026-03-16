@@ -70,4 +70,13 @@ export const adminController = {
       next(err);
     }
   },
+
+  async deleteUpload(req: Request, res: Response, next: NextFunction) {
+    try {
+      await uploadService.softDeleteUpload(req.params.id as string);
+      res.json({ success: true, data: { message: 'Upload eliminato' } });
+    } catch (err) {
+      next(err);
+    }
+  },
 };

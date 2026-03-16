@@ -127,6 +127,12 @@ export const uploadService = {
     return uploadRepository.findAll();
   },
 
+  async softDeleteUpload(id: string) {
+    const upload = await uploadRepository.findById(id);
+    if (!upload) throw new AppError('Upload non trovato', 'UPLOAD_NOT_FOUND', 404);
+    return uploadRepository.updateStatus(id, 'DELETED');
+  },
+
   async applyApproved(uploadId: string, approvedIds: string[], rejectedIds: string[]) {
     const upload = await uploadRepository.findById(uploadId);
     if (!upload) throw new AppError('Upload non trovato', 'UPLOAD_NOT_FOUND', 404);

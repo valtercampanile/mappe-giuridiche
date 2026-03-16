@@ -60,6 +60,10 @@ export async function getUploads(): Promise<DocumentUpload[]> {
   return res.data.data;
 }
 
+export async function deleteUpload(id: string): Promise<void> {
+  await api.delete(`/admin/upload/${id}`);
+}
+
 export async function approveUpload(
   id: string,
   approvedIds: string[],
