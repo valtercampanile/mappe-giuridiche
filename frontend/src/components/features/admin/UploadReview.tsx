@@ -154,23 +154,40 @@ export function UploadReview({ uploadId, entities, relationsCount }: Props) {
   );
 }
 
+// Cerca un campo sia al livello top dell'entità che dentro entity.data
+// (i file update_inquadramento mettono i campi in entity.data)
+function field(entity: JsonEntity, ...names: string[]): unknown {
+  const nested =
+    typeof entity.data === 'object' && entity.data !== null && !Array.isArray(entity.data)
+      ? (entity.data as Record<string, unknown>)
+      : null;
+  for (const name of names) {
+    const val = entity[name] ?? nested?.[name];
+    if (val !== undefined && val !== null) return val;
+  }
+  return undefined;
+}
+
 function EntityPreview({ entity }: { entity: JsonEntity }) {
   const mappedType = (TYPE_MAP[entity.type.toLowerCase()] ??
     entity.type.toUpperCase()) as EntityType;
   const colors = ENTITY_COLORS[mappedType] ?? ENTITY_COLORS.ISTITUTO;
   const badge = ENTITY_BADGE[mappedType] ?? '?';
-  const rawDef = (entity.definizione ??
-    entity.descrizione ??
-    entity.formulazione ??
-    entity.testo_breve ??
-    entity.principio_affermato ??
-    entity.def ??
-    '') as string;
-  const shortText = (entity.short ?? '') as string;
+  const rawDef = (field(
+    entity,
+    'definizione',
+    'descrizione',
+    'formulazione',
+    'testo_breve',
+    'principio_affermato',
+    'def',
+  ) ?? '') as string;
+  const shortText = (field(entity, 'short') ?? '') as string;
   const mainText = rawDef || shortText;
   const truncated = mainText.length > 400 ? mainText.slice(0, 400) + '...' : mainText;
-  const fonte = ((entity.fonte as string) ?? 'docente').toLowerCase();
-  const fondamento = entity.fondamento_normativo as string[] | undefined;
+  const fonte = ((field(entity, 'fonte') as string) ?? 'docente').toLowerCase();
+  const fondamento = field(entity, 'fondamento_normativo') as string[] | undefined;
+  const tags = entity.tags ?? (field(entity, 'tags') as string[] | undefined) ?? [];
 
   return (
     <div>
@@ -227,11 +244,11 @@ function EntityPreview({ entity }: { entity: JsonEntity }) {
         </div>
       )}
 
-      {entity.tags && entity.tags.length > 0 && (
+      {tags.length > 0 && (
         <div className="mb-3">
           <p className="text-[10px] text-text-secondary uppercase mb-1">Tags</p>
           <div className="flex flex-wrap gap-1">
-            {entity.tags.map((t) => (
+            {tags.map((t) => (
               <span
                 key={t}
                 className="text-[10px] px-2 py-0.5 rounded bg-surface border border-border text-text-secondary"
