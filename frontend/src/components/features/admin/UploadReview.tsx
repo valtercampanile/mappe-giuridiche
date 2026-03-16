@@ -159,9 +159,18 @@ function EntityPreview({ entity }: { entity: JsonEntity }) {
     entity.type.toUpperCase()) as EntityType;
   const colors = ENTITY_COLORS[mappedType] ?? ENTITY_COLORS.ISTITUTO;
   const badge = ENTITY_BADGE[mappedType] ?? '?';
-  const rawDef = (entity.definizione ?? entity.def ?? entity.short ?? '') as string;
-  const def = rawDef.length > 400 ? rawDef.slice(0, 400) + '...' : rawDef;
+  const rawDef = (entity.definizione ??
+    entity.descrizione ??
+    entity.formulazione ??
+    entity.testo_breve ??
+    entity.principio_affermato ??
+    entity.def ??
+    '') as string;
+  const shortText = (entity.short ?? '') as string;
+  const mainText = rawDef || shortText;
+  const truncated = mainText.length > 400 ? mainText.slice(0, 400) + '...' : mainText;
   const fonte = ((entity.fonte as string) ?? 'docente').toLowerCase();
+  const fondamento = entity.fondamento_normativo as string[] | undefined;
 
   return (
     <div>
@@ -191,12 +200,30 @@ function EntityPreview({ entity }: { entity: JsonEntity }) {
         {ENTITY_LABELS[mappedType] ?? entity.type}
       </p>
 
-      {def && <p className="font-serif text-sm text-text-primary leading-[1.7] mb-3">{def}</p>}
+      {truncated && (
+        <p className="font-serif text-sm text-text-primary leading-[1.7] mb-3">{truncated}</p>
+      )}
 
-      {entity.short && entity.short !== rawDef && (
+      {shortText && shortText !== mainText && (
         <div className="mb-3 p-2 bg-surface rounded border border-border">
           <p className="text-[10px] text-text-secondary uppercase mb-0.5">Sintesi</p>
-          <p className="text-xs text-text-primary">{entity.short}</p>
+          <p className="text-xs text-text-primary">{shortText}</p>
+        </div>
+      )}
+
+      {fondamento && fondamento.length > 0 && (
+        <div className="mb-3">
+          <p className="text-[10px] text-text-secondary uppercase mb-1">Fondamento normativo</p>
+          <div className="flex flex-wrap gap-1">
+            {fondamento.map((f) => (
+              <span
+                key={f}
+                className="text-[10px] px-2 py-0.5 rounded bg-primary/5 text-primary border border-primary/20"
+              >
+                {f}
+              </span>
+            ))}
+          </div>
         </div>
       )}
 
