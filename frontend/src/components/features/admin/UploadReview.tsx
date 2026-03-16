@@ -184,7 +184,6 @@ function EntityPreview({ entity }: { entity: JsonEntity }) {
   ) ?? '') as string;
   const shortText = (field(entity, 'short') ?? '') as string;
   const mainText = rawDef || shortText;
-  const truncated = mainText.length > 400 ? mainText.slice(0, 400) + '...' : mainText;
   const fonte = ((field(entity, 'fonte') as string) ?? 'docente').toLowerCase();
   const fondamento = field(entity, 'fondamento_normativo') as string[] | undefined;
   const tags = entity.tags ?? (field(entity, 'tags') as string[] | undefined) ?? [];
@@ -217,8 +216,8 @@ function EntityPreview({ entity }: { entity: JsonEntity }) {
         {ENTITY_LABELS[mappedType] ?? entity.type}
       </p>
 
-      {truncated && (
-        <p className="font-serif text-sm text-text-primary leading-[1.7] mb-3">{truncated}</p>
+      {mainText && (
+        <p className="font-serif text-sm text-text-primary leading-[1.7] mb-3">{mainText}</p>
       )}
 
       {shortText && shortText !== mainText && (
