@@ -66,7 +66,8 @@ Tre casi paradigmatici documentati dal docente:
 - L4: Materialità e fatto tipico (condotta, causalità, reato omissivo)
 - L5: Colpevolezza (preterintenzione, dolo, dolo eventuale, colpa medica)
 
-**Conteggio entità**: ~8V · ~27P · ~77I · ~32LI · ~46Q · ~15F · ~94G · ~108N · 22 tensioni
+**Conteggio entità nel DB** (verificato 2026-03-16, materia penale, 142 totali):
+8V · 27P · 10N · 54I · 13Q · 7F · 14LI · 9G
 
 **File dati**: `data/database_L1_con_tensioni.json` (schema + popolazione L1 + tutte le 22 tensioni)
 **Schema JSON**: `data/schema_mappe_giuridiche.json`
@@ -75,7 +76,9 @@ Tre casi paradigmatici documentati dal docente:
 
 **Testi Inquadramento**: 81 entità su 85 arricchite con testo stile capitolo di manuale. File sorgente in `data/inquadramento/` (5 batch: update_inquadramento.json — update_inquadramento_5.json).
 
-**Bug risolto**: upsert JSONB ora fa deep merge (`{ ...existing.data, ...newData }`) invece di sostituzione. I file update_inquadramento hanno struttura `{ id, type, label, fonte, data: { definizione, ... } }` — il campo `data` viene "spianato" nel DB.
+**Bug risolti**:
+- Upsert JSONB ora fa deep merge (`{ ...existing.data, ...newData }`) invece di sostituzione.
+- Lista entità sidebar vuota: il frontend inviava `limit=500` ma il backend ha Zod `max(100)` → HTTP 400 silenzioso. Risolto con `getAllEntities()` che pagina automaticamente (page 1..N con limit=100).
 
 **Da fare**:
 - Fase 2: Popolazione L2–L5 nel database
@@ -86,26 +89,47 @@ Tre casi paradigmatici documentati dal docente:
 
 ## 4. DECISIONI DI UX/UI CONSOLIDATE
 
-### Layout pagina Studio
+### Layout pagina Studio (aggiornato 2026-03-16)
 ```
-┌──────────────────────────────────────────────────────────────┐
-│ Mappe Giuridiche    Studio  Ripasso  Esercitazione  Questioni │  header 44px
-├──────────┬───────────────────────────────────────┬───────────┤
-│          │  ← →  [I01] Istituto · Riserva legge  │           │
-│ SIDEBAR  │ ─────────────────────────────────────  │  GRAFO   │
-│ compatta │ Inquadramento  Connessioni  Tesi  Nota │ (toggle) │
-│ Materia  │                                        │           │
-│ + entità │   testo della scheda (stile manuale)   │           │
-│          │                                        │           │
-│ [toggle] │                                        │           │
-└──────────┴───────────────────────────────────────┴───────────┘
+┌────┬──────────┬──────────────────────────────────────┬───────────┐
+│RAIL│ DRAWER   │  MAPPE GIURIDICHE   Studio Ripasso…  │           │
+│44px│ 44px hdr │  ← → [I01] Istituto · Riserva legge │           │
+│ ☰  │ DIR.PEN. │ ─────────────────────────────────── │  GRAFO    │
+│────│──────────│ Inquadramento  Connessioni  Tesi Nota│ (toggle)  │
+│ P  │ materie  │                                      │           │
+│ C  │ [cerca]  │  testo della scheda (stile manuale)  │           │
+│ A  │ [filtri] │                                      │           │
+│    │ lista    │                                      │           │
+└────┴──────────┴──────────────────────────────────────┴───────────┘
+ 56px  260px                  flex-1                      350px
 ```
+
+### Architettura sidebar (Rail + Drawer)
+- **Rail** (56px, sempre visibile, sfondo #0066CC):
+  - Header 44px: icona burger `Menu` (Lucide, 24px, #FFFFFF)
+  - 3 item materia: lettera maiuscola (P, C, A) — Titillium Web 20px bold #FFFFFF, altezza 48px
+  - Indicatore attivo: sfondo rgba(255,255,255,0.20) + bordo sinistro 3px #FFFFFF
+- **Drawer** (260px default, resizable 200–400px, togglabile con burger):
+  - Header 44px: nome materia attiva in maiuscolo (es. "DIRITTO PENALE"), sfondo #0066CC
+  - DrawerMaterie: lista materie con testo maiuscolo, senza icone
+  - DrawerSearch: campo ricerca con icona `Search`
+  - DrawerFilterChips: griglia 3x3 di chip tipo (V, P, N, I, Q, F, LI, G) + toggle "Seleziona/Deseleziona tutto"
+  - DrawerEntityList: lista entità con badge tipo, label, indicatore zona grigia
+- **Resize handle**: drag verticale tra drawer e colonna centrale
+- **Escape**: chiude il drawer
+- **Componenti**: `SidebarLayout.tsx` (orchestratore) → `Rail.tsx` + `Drawer.tsx` → `DrawerMaterie.tsx` + `DrawerSearch.tsx` + `DrawerFilterChips.tsx` + `DrawerEntityList.tsx`
+- **Context**: `useSidebarContext.ts` (drawerOpen, drawerWidth, totalWidth)
 
 ### Regole di navigazione
 - Frecce ← → nell'intestazione della colonna centrale (history locale, come browser)
 - Click su nodo del grafo → aggiorna colonna centrale (navigazione nel grafo)
-- Sidebar togglabile: espansa (230px, icona+testo) / compatta (52px, solo icone + tooltip hover)
 - Grafo togglabile: pulsante nella colonna centrale apre/chiude il pannello
+
+### Header app (aggiornato 2026-03-16)
+- Sfondo #0066CC, altezza 44px, posizionato a destra della sidebar (nella colonna principale)
+- Sinistra: "MAPPE GIURIDICHE" (Titillium Web 16px bold #FFFFFF uppercase, letter-spacing 0.05em)
+- Centro: 4 tab navigazione con icone Lucide (BookOpen, RotateCcw, PenLine, HelpCircle) + label testo affiancati, 13px Titillium Web. Tab attivo: #FFFFFF + bordo inferiore 2px. Inattivo: rgba(255,255,255,0.65), hover .85
+- Destra: Dropdown "Admin" (solo ruolo ADMIN) → Upload Contenuti, Gestione Entità
 
 ### Palette AgID
 ```
@@ -116,11 +140,22 @@ Testo1:       #17324D
 Testo2:       #5C6F82
 Bordo:        #D9E4ED
 Superficie:   #F5F9FC
-Sidebar bg:   #0D1B2A
-Sidebar acc:  #4DA3FF
 Errore:       #8B1A1A
 Warning:      #7A5800
 Successo:     #006D3D
+```
+
+### Palette colori entità
+```
+VALORE:                #9333EA (viola)
+PRINCIPIO:             #2563EB (blu)
+NORMA:                 #0891B2 (ciano)
+ISTITUTO:              #16A34A (verde)
+QUESTIONE:             #EA580C (arancione)
+FUNZIONE:              #4F46E5 (indaco)
+LOGICA_INTERPRETATIVA: #0D9488 (teal)
+GIURISPRUDENZA:        #DC2626 (rosso)
+TENSIONE:              #DC2626 (rosso)
 ```
 
 ### Convenzioni UI
@@ -134,22 +169,21 @@ Successo:     #006D3D
 ### Pagine dell'app
 | Pagina | Funzione |
 |--------|----------|
-| Studio | Navigazione esplorativa: sidebar + scheda entità + grafo contestuale |
+| Studio | Navigazione esplorativa: sidebar (rail+drawer) + scheda entità + grafo contestuale |
 | Ripasso | Percorsi tematici + schede sintetiche (`short` field) |
 | Esercitazione | Domande di collegamento + mini-casi con tesi a confronto |
 | Questioni | Repertorio Q entities con tesi e posizione del docente |
-| Admin > Entità | CRUD entità (solo ruolo admin) |
+| Admin > Entità | CRUD entità (solo ruolo admin) — placeholder |
 | Admin > Upload | Analisi documento → proposta nuove entità → revisione umana → commit |
-
-### Header
-- Componente `AppHeader` condiviso (frontend/src/components/layout/AppHeader.tsx)
-- Dropdown "Admin" visibile solo se `user.role === 'ADMIN'` → Upload Contenuti, Gestione Entità
 
 ### Admin Upload
 - Modifica inline di label e definizione prima dell'approvazione (stato locale, non API)
 - Storico upload cliccabile con riapertura review
 - Soft delete (status=DELETED) con pulsante ✕
 - Filtro stato: Tutti / In revisione / Approvati / Eliminati
+
+### Vincolo backend: paginazione
+Il backend ha validazione Zod `limit: z.number().max(100)`. Il frontend usa `getAllEntities()` in `entities.api.ts` per paginare automaticamente oltre le 100 entità per materia.
 
 ---
 

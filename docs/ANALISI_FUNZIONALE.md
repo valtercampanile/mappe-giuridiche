@@ -88,19 +88,26 @@ Ogni entità indica la fonte: **docente** (estratta dalle lezioni del formatore,
 ### 4.1 Pagina Studio
 **Scopo**: navigazione esplorativa e studio approfondito delle entità.
 
+**Layout**: La pagina è divisa in 4 zone orizzontali:
+- **Rail** (56px, sempre visibile): barra verticale con 3 lettere materia (P, C, A) e pulsante burger per aprire/chiudere il drawer.
+- **Drawer** (260px default, resizable 200-400px, togglabile): contiene la selezione materia, il campo di ricerca, i filtri per tipo entità (8 chip: V, P, N, I, Q, F, LI, G) e la lista scorrevole delle entità.
+- **Colonna centrale** (flex-1): scheda dell'entità selezionata con header di navigazione (frecce ← →) e tab (Inquadramento, Connessioni, Tesi, Manifestazioni, Nota).
+- **Pannello grafo** (350px, togglabile): sottografo contestuale Cytoscape.js centrato sull'entità corrente.
+
 **Flusso principale:**
-1. L'utente seleziona una materia (Penale / Civile / Amministrativo).
-2. Sfoglia o cerca un'entità nella sidebar (per tipo, per testo libero).
+1. L'utente seleziona una materia dalla rail (lettera) o dal drawer (nome completo).
+2. Sfoglia o cerca un'entità nel drawer (per tipo tramite chip, per testo libero tramite campo ricerca).
 3. Seleziona l'entità: la scheda appare nella colonna centrale.
 4. La scheda mostra: Inquadramento (testo di capitolo), Connessioni (entità collegate navigabili), Tesi a confronto (per questioni), Manifestazioni (per tensioni), Nota personale.
 5. Il pannello grafo (togglabile) mostra il sottografo contestuale centrato sull'entità corrente.
 6. Click su un nodo del grafo → aggiorna la scheda centrale.
 7. Le frecce ← → consentono di navigare nella history della sessione.
-8. La sidebar è togglabile tra espansa (icona+testo) e compatta (icona+tooltip).
+8. Il drawer si apre/chiude con il pulsante burger nella rail o con il tasto Escape.
 
 **Regole di business:**
 - La navigazione nel grafo e nella history è illimitata.
-- Il pannello grafo e la sidebar sono indipendentemente togglabili.
+- Il pannello grafo e il drawer sono indipendentemente togglabili.
+- I filtri per tipo funzionano in OR: attivare V e P mostra valori e principi. Nessun filtro attivo equivale a nessun filtro (mostra tutto).
 - Le note personali sono private per utente e persistenti tra sessioni.
 
 ### 4.2 Pagina Ripasso
