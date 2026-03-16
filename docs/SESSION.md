@@ -71,6 +71,8 @@ Tre casi paradigmatici documentati dal docente:
 **File dati**: `data/database_L1_con_tensioni.json` (schema + popolazione L1 + tutte le 22 tensioni)
 **Schema JSON**: `data/schema_mappe_giuridiche.json`
 
+**Admin Upload JSON**: implementato. Flusso: JSON da Claude.ai → upload → revisione → approvazione → upsert nel DB.
+
 **Da fare**:
 - Fase 2: Popolazione L2–L5 nel database
 - Fase 3: Sviluppo app (in corso)

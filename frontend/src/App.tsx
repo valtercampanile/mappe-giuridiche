@@ -7,6 +7,7 @@ import Studio from './pages/Studio';
 import Ripasso from './pages/Ripasso';
 import Esercitazione from './pages/Esercitazione';
 import Questioni from './pages/Questioni';
+import AdminUpload from './pages/admin/AdminUpload';
 
 const queryClient = new QueryClient();
 
@@ -50,10 +51,10 @@ function App() {
             }
           />
           <Route
-            path="/admin/*"
+            path="/admin/upload"
             element={
               <ProtectedRoute requireAdmin>
-                <div className="p-8 text-text-primary">Admin — in costruzione</div>
+                <AdminUpload />
               </ProtectedRoute>
             }
           />
