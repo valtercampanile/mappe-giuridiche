@@ -24,19 +24,22 @@ Diventare lo strumento di riferimento per la preparazione ai concorsi in magistr
 **Scope**: Diritto penale parte generale, 5 lezioni estratte.
 
 **Must have:**
-- [ ] Autenticazione (register, login, logout, refresh token)
-- [ ] Pagina Studio: sidebar + scheda entità + grafo contestuale
-- [ ] Navigazione ← → (history locale)
-- [ ] Sidebar collassabile (espansa/compatta)
-- [ ] Grafo togglabile
-- [ ] Tutte le 8 categorie di entità visualizzabili
-- [ ] Tab Inquadramento, Connessioni, Tesi (per Q), Manifestazioni (per T), Nota personale
-- [ ] Indicatore fonte (docente/AI) e zona critica
-- [ ] Gerarchia istituti nella sidebar (padre/figlio)
-- [ ] Pagina Questioni: repertorio con filtri e tesi a confronto
-- [ ] Note personali persistenti per utente
-- [ ] Import dati iniziali da JSON (L1 + 22 tensioni)
-- [ ] Admin: CRUD entità + inserimento testo norme
+- [x] Autenticazione (register, login, logout, refresh token) — JWT completo con rotazione refresh
+- [x] Pagina Studio: sidebar + scheda entità + grafo contestuale
+- [x] Navigazione ← → (history locale, max 50 entries)
+- [x] Sidebar collassabile (espansa 230px / compatta 52px)
+- [x] Grafo togglabile (Cytoscape.js, layout concentrico, colori per tipo)
+- [x] Tutte le 8 categorie di entità visualizzabili
+- [x] Tab Inquadramento, Connessioni, Tesi (per Q), Manifestazioni (per T), Nota personale
+- [x] Indicatore fonte (docente/AI) e zona critica
+- [ ] Gerarchia istituti nella sidebar (padre/figlio) — parziale, lista piatta ordinata per tipo
+- [x] Pagina Questioni: repertorio con filtri stato/zona critica e tesi a confronto
+- [ ] Note personali persistenti per utente — UI presente, endpoint backend da completare
+- [x] Import dati iniziali da JSON (L1 + 22 tensioni) — seed + Admin Upload con revisione
+- [x] Admin Upload JSON con revisione inline, approvazione e storico
+- [x] Testi Inquadramento per 81/85 entità (5 batch in data/inquadramento/)
+- [x] Launcher desktop (pywebview, ~/mappe-giuridiche-launcher/)
+- [ ] Admin: CRUD entità (placeholder, da implementare)
 
 **Nice to have v1.0:**
 - [ ] Pagina Ripasso (percorsi tematici + flash card)

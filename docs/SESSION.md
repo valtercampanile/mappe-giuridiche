@@ -71,7 +71,11 @@ Tre casi paradigmatici documentati dal docente:
 **File dati**: `data/database_L1_con_tensioni.json` (schema + popolazione L1 + tutte le 22 tensioni)
 **Schema JSON**: `data/schema_mappe_giuridiche.json`
 
-**Admin Upload JSON**: implementato. Flusso: JSON da Claude.ai → upload → revisione → approvazione → upsert nel DB.
+**Admin Upload JSON**: implementato e funzionante. Flusso: drag&drop JSON → parsing → revisione entità (con modifica inline di label e definizione) → approvazione → upsert deep merge nel DB.
+
+**Testi Inquadramento**: 81 entità su 85 arricchite con testo stile capitolo di manuale. File sorgente in `data/inquadramento/` (5 batch: update_inquadramento.json — update_inquadramento_5.json).
+
+**Bug risolto**: upsert JSONB ora fa deep merge (`{ ...existing.data, ...newData }`) invece di sostituzione. I file update_inquadramento hanno struttura `{ id, type, label, fonte, data: { definizione, ... } }` — il campo `data` viene "spianato" nel DB.
 
 **Da fare**:
 - Fase 2: Popolazione L2–L5 nel database
@@ -137,6 +141,16 @@ Successo:     #006D3D
 | Admin > Entità | CRUD entità (solo ruolo admin) |
 | Admin > Upload | Analisi documento → proposta nuove entità → revisione umana → commit |
 
+### Header
+- Componente `AppHeader` condiviso (frontend/src/components/layout/AppHeader.tsx)
+- Dropdown "Admin" visibile solo se `user.role === 'ADMIN'` → Upload Contenuti, Gestione Entità
+
+### Admin Upload
+- Modifica inline di label e definizione prima dell'approvazione (stato locale, non API)
+- Storico upload cliccabile con riapertura review
+- Soft delete (status=DELETED) con pulsante ✕
+- Filtro stato: Tutti / In revisione / Approvati / Eliminati
+
 ---
 
 ## 5. REGOLE OPERATIVE PER CC
@@ -151,6 +165,8 @@ Successo:     #006D3D
 8. **Dopo ogni feature**: aggiorna `SESSION.md` nella sezione "Stato del database" o "Decisioni consolidate" se qualcosa è cambiato.
 9. **Quando hai dubbi su una decisione di design**: non inventare — segnala con un commento `// TODO: chiedere al committente`.
 10. **Pattern obbligatori**: Repository per il DB, Service per la logica, Controller per HTTP. Mai logica nel controller, mai Prisma nel controller.
+11. **Upsert JSONB deep merge**: L'upsert del campo `data` JSONB deve sempre fare deep merge: `{ ...existing.data, ...newData }`. Mai sostituire l'intero campo data.
+12. **Launcher desktop**: Il launcher è in `~/mappe-giuridiche-launcher/` (pywebview + HTML/CSS/JS). Non modificarlo senza istruzione esplicita — è un tool separato dal codice dell'app.
 
 ---
 
