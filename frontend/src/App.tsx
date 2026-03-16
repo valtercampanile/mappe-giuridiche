@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ProtectedRoute } from './components/layout/ProtectedRoute';
+import { AppHeader } from './components/layout/AppHeader';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Studio from './pages/Studio';
@@ -10,6 +11,17 @@ import Questioni from './pages/Questioni';
 import AdminUpload from './pages/admin/AdminUpload';
 
 const queryClient = new QueryClient();
+
+function AdminEntitaPlaceholder() {
+  return (
+    <div className="h-screen flex flex-col">
+      <AppHeader />
+      <div className="flex-1 flex items-center justify-center text-text-secondary">
+        <p>Gestione Entità — in costruzione</p>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   return (
@@ -58,6 +70,15 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/admin/entita"
+            element={
+              <ProtectedRoute requireAdmin>
+                <AdminEntitaPlaceholder />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/admin" element={<Navigate to="/admin/upload" replace />} />
           <Route path="/" element={<Navigate to="/studio" replace />} />
           <Route path="*" element={<Navigate to="/studio" replace />} />
         </Routes>
