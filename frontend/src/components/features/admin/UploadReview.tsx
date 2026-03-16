@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { approveUpload } from '../../../services/admin.api';
 import type { JsonEntity, ApproveResult } from '../../../services/admin.api';
-import { ENTITY_BADGE, ENTITY_COLORS } from '../../../constants/theme';
+import { ENTITY_BADGE, ENTITY_COLORS, ENTITY_LABELS } from '../../../constants/theme';
 import type { EntityType } from '../../../types/entity.types';
 
 const TYPE_MAP: Record<string, string> = {
@@ -159,11 +159,13 @@ function EntityPreview({ entity }: { entity: JsonEntity }) {
     entity.type.toUpperCase()) as EntityType;
   const colors = ENTITY_COLORS[mappedType] ?? ENTITY_COLORS.ISTITUTO;
   const badge = ENTITY_BADGE[mappedType] ?? '?';
-  const def = (entity.definizione ?? entity.def ?? '') as string;
+  const rawDef = (entity.definizione ?? entity.def ?? entity.short ?? '') as string;
+  const def = rawDef.length > 400 ? rawDef.slice(0, 400) + '...' : rawDef;
+  const fonte = ((entity.fonte as string) ?? 'docente').toLowerCase();
 
   return (
     <div>
-      <div className="flex items-center gap-2 mb-3">
+      <div className="flex items-center gap-2 mb-2 flex-wrap">
         <span
           className="font-mono text-xs px-2 py-0.5 rounded font-bold"
           style={{
@@ -176,19 +178,41 @@ function EntityPreview({ entity }: { entity: JsonEntity }) {
         </span>
         <span className="text-xs font-mono text-text-secondary">[{entity.id}]</span>
         <span className="text-sm font-semibold text-text-primary">{entity.label}</span>
+        <span
+          className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${
+            fonte === 'ai' ? 'bg-primary/10 text-primary' : 'bg-success/10 text-success'
+          }`}
+        >
+          {fonte === 'ai' ? 'AI' : 'docente'}
+        </span>
       </div>
-      {entity.short && <p className="text-xs text-text-secondary mb-2">{entity.short}</p>}
-      {def && <p className="text-sm text-text-primary leading-relaxed mb-3">{def}</p>}
+
+      <p className="text-[10px] text-text-secondary uppercase tracking-wide mb-1">
+        {ENTITY_LABELS[mappedType] ?? entity.type}
+      </p>
+
+      {def && <p className="font-serif text-sm text-text-primary leading-[1.7] mb-3">{def}</p>}
+
+      {entity.short && entity.short !== rawDef && (
+        <div className="mb-3 p-2 bg-surface rounded border border-border">
+          <p className="text-[10px] text-text-secondary uppercase mb-0.5">Sintesi</p>
+          <p className="text-xs text-text-primary">{entity.short}</p>
+        </div>
+      )}
+
       {entity.tags && entity.tags.length > 0 && (
-        <div className="flex flex-wrap gap-1">
-          {entity.tags.map((t) => (
-            <span
-              key={t}
-              className="text-[10px] px-2 py-0.5 rounded bg-surface border border-border text-text-secondary"
-            >
-              {t}
-            </span>
-          ))}
+        <div className="mb-3">
+          <p className="text-[10px] text-text-secondary uppercase mb-1">Tags</p>
+          <div className="flex flex-wrap gap-1">
+            {entity.tags.map((t) => (
+              <span
+                key={t}
+                className="text-[10px] px-2 py-0.5 rounded bg-surface border border-border text-text-secondary"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
         </div>
       )}
     </div>
