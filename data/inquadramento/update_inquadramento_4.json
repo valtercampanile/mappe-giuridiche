@@ -1,0 +1,318 @@
+{
+  "meta": {
+    "versione": "1.4",
+    "data_aggiornamento": "2026-03-16",
+    "tipo": "update_inquadramento_batch4",
+    "descrizione": "Quarto e ultimo batch — istituti L1 rimanenti (fonti, Consulta, rimedi CEDU), principi L2 rimanenti, istituti L4-L5 rimanenti (dolo specifico, omicidio preterintenzionale). Completamento copertura.",
+    "fonte": "docente"
+  },
+  "entities": [
+    {
+      "id": "I03",
+      "type": "istituto",
+      "label": "Fonti del diritto penale (sistema complessivo)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il sistema delle fonti del diritto penale è più articolato di quanto la formula 'riserva di legge' possa suggerire. La riserva non esclude che altre fonti possano avere un ruolo nel sistema penale — esclude solo che possano svolgere la funzione incriminatrice primaria. Ogni fonte ha uno spazio definito e limiti precisi.\n\nLa legge parlamentare e gli atti con forza di legge (decreto legge e decreto legislativo) sono le fonti primarie: solo esse possono prevedere reati e sanzioni. Le sentenze della Corte Costituzionale svolgono una funzione di controllo e depurazione dell'ordinamento: in bonam partem sono iper-retroattive (travolgono il giudicato), in malam partem sono irretroattive e in linea di principio inammissibili (con eccezioni). Il diritto UE produce effetti indiretti: interpretazione conforme, disapplicazione in bonam partem, scriminanti esopenali, definizione di elementi normativi. La CEDU produce effetti indiretti: interpretazione conforme obbligatoria, e QLC con la CEDU come norma interposta (mai efficacia diretta). Le leggi regionali non possono prevedere reati ma possono interferire indirettamente (norme regionali che integrano scriminanti nazionali via art. 51 c.p.). I regolamenti e i provvedimenti amministrativi svolgono la funzione di integrazione tecnica del precetto nelle norme penali in bianco. La consuetudine ha uno spazio residualissimo: solo la consuetudine secundum legem, per integrare elementi normativi richiamati dalla fattispecie.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 117 Cost.",
+          "Art. 11 Cost."
+        ],
+        "principi_governanti": [
+          "P01",
+          "P02"
+        ],
+        "cat": "Fonti del diritto penale"
+      }
+    },
+    {
+      "id": "I04",
+      "type": "istituto",
+      "label": "Legalità formale vs. legalità sostanziale",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La distinzione tra legalità formale e legalità sostanziale sintetizza la differenza di impostazione tra il modello italiano (art. 25, co. 2, Cost.) e il modello CEDU (art. 7 CEDU) nella concezione della garanzia di legalità penale.\n\nLa legalità formale privilegia la fonte di produzione della norma: è legge penale ciò che proviene dal Parlamento o da atti aventi forza di legge. Il criterio è formale-procedurale: si guarda al 'come' è stata prodotta la norma, non al suo contenuto o alla sua prevedibilità. Questo modello garantisce la democraticità delle scelte criminali e la loro riconoscibilità formale, ma può creare spazi di imprevedibilità quando la legge è oscura, quando la giurisprudenza è instabile, o quando l'interpretazione consolidata diverge dal testo.\n\nLa legalità sostanziale privilegia la prevedibilità della decisione: è 'legge' ai fini dell'art. 7 CEDU qualsiasi regola sufficientemente accessibile e precisa da consentire al cittadino di prevedere le conseguenze penali della propria condotta, inclusa la giurisprudenza consolidata. Il criterio è sostanziale-funzionale: si guarda all'effetto sulla posizione del cittadino, non alla fonte formale. Questo modello è più flessibile e protegge meglio dalla sorpresa, ma crea incertezza su cosa conti come 'diritto' prevedibile.\n\nNel nostro ordinamento i due modelli si sommano (overlapping protection): il cittadino beneficia di entrambe le garanzie. Le implicazioni pratiche della legalità sostanziale CEDU comprendono: l'irretroattività dell'overruling giurisprudenziale sorprendente in malam partem, l'estensione dell'irretroattività alle norme formalmente processuali ma sostanzialmente penali, l'inclusione della giurisprudenza consolidata tra i parametri di prevedibilità.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 7 CEDU"
+        ],
+        "principi_governanti": [
+          "P02",
+          "P03"
+        ],
+        "cat": "Fonti del diritto penale"
+      }
+    },
+    {
+      "id": "I05",
+      "type": "istituto",
+      "label": "Effetti indiretti del diritto UE sul diritto penale",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il diritto dell'Unione Europea non può avere effetto incriminatorio diretto sul diritto penale nazionale — il principio di attribuzione (art. 4 TUE) riserva la materia penale alla sovranità nazionale — ma produce cinque categorie di effetti indiretti che ne condizionano profondamente il contenuto.\n\nPrimo: l'obbligo di interpretazione conforme al diritto UE (LIP01). Il giudice deve interpretare le norme penali nazionali in modo da non collidere con il diritto UE, come primo strumento prima di qualsiasi altro rimedio. Secondo: la disapplicazione in bonam partem. Quando una norma penale nazionale confligge con una norma UE ad efficacia diretta più favorevole, il giudice disapplica quella nazionale e assolve l'imputato (casi Placanica, El Dridi). Terzo: le scriminanti esopenali. Le norme UE che attribuiscono diritti ai cittadini fungono da cause di giustificazione attraverso l'art. 51 c.p. — esercizio del diritto (es. l'avvocato comunitario che esercita in Italia senza iscrizione all'albo nazionale non commette il reato di esercizio abusivo della professione). Quarto: la definizione di elementi normativi. Le norme UE possono definire elementi della fattispecie penale (es. la nozione di 'rifiuto', di 'alimento adulterato', di 'servizio finanziario'). Quinto: parametri per colpa specifica e obblighi di garanzia. Le direttive UE sulla sicurezza sul lavoro o sull'ambiente definiscono i parametri di diligenza rilevanti per la colpa specifica e gli obblighi di garanzia nelle fattispecie omissive.\n\nIl limite assoluto è che gli effetti del diritto UE non possono essere in malam partem per via diretta: nessuna norma UE può incriminare, nessuna può restringere le scriminanti nazionali attraverso la disapplicazione.",
+        "fondamento_normativo": [
+          "Art. 117 Cost.",
+          "Art. 4 TUE",
+          "Art. 83 TFUE"
+        ],
+        "principi_governanti": [
+          "P02",
+          "P10"
+        ],
+        "cat": "Fonti del diritto penale"
+      }
+    },
+    {
+      "id": "I09",
+      "type": "istituto",
+      "label": "Sentenze della Corte Costituzionale come fonte del diritto penale",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Le sentenze della Corte Costituzionale sono atti formalmente giurisdizionali ma sostanzialmente legislativi: modificano il sistema normativo con effetti erga omnes, non inter partes. In materia penale producono effetti particolarmente rilevanti perché incidono su norme che toccano la libertà personale.\n\nLe tipologie rilevanti sono tre. Le sentenze ablative eliminano una norma incostituzionale: producono un effetto di abrogazione ex tunc — la norma è incostituzionale dall'origine, non dalla sentenza. In bonam partem (eliminano una norma incriminatrice o aggravante) sono iper-retroattive: travolgono il giudicato di condanna (art. 673 c.p.p. + art. 30, co. 4, L. 87/1953). In malam partem (eliminano una scriminante o attenuante) sono inammissibili in via generale. Le sentenze additive aggiungono contenuto normativo dove la norma è carente: le più significative sono quelle che hanno creato scriminanti o cause di non punibilità (es. C. Cost. 242/2019 sul suicidio assistito). Le sentenze sostitutive sostituiscono una parte della norma con un contenuto diverso: es. C. Cost. 105/2021 che ha sostituito la congiunzione 'e' con 'o' nella pena per la diffamazione a mezzo stampa.\n\nLa regola fondamentale sugli effetti temporali: le sentenze in bonam partem sono iper-retroattive (travolgono il giudicato); le sentenze in malam partem (che estendono l'area penale) sono irretroattive e in linea di principio inammissibili — il dogma dell'insindacabilità delle norme favorevoli, pur contestato, funge da presidio.",
+        "fondamento_normativo": [
+          "Art. 136 Cost.",
+          "Art. 30, co. 4, L. 87/1953",
+          "Art. 673 c.p.p."
+        ],
+        "principi_governanti": [
+          "P02",
+          "P04",
+          "P05"
+        ],
+        "cat": "Fonti del diritto penale"
+      }
+    },
+    {
+      "id": "I13",
+      "type": "istituto",
+      "label": "Art. 628-bis c.p.p. (rimedio CEDU — riforma Cartabia)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "L'art. 628-bis c.p.p., introdotto dalla riforma Cartabia (D.Lgs. 150/2022), è il rimedio straordinario e polivalente attraverso cui il condannato può chiedere l'esecuzione di una sentenza della Corte EDU che ha accertato la violazione dei suoi diritti convenzionali in relazione al processo penale italiano. Prima della riforma, l'esecuzione delle sentenze CEDU avveniva in modo frammentato attraverso diversi istituti; il 628-bis unifica e razionalizza il sistema.\n\nI caratteri fondamentali: è un rimedio straordinario (attivabile solo dopo il passaggio in giudicato della sentenza penale italiana e dopo la sentenza CEDU); è riservato al solo condannato (non al PM o alle parti civili); richiede una valutazione di 'incidenza effettiva' — la violazione CEDU deve aver avuto un impatto concreto sul giudicato, non ogni violazione formale legittima il rimedio; è attribuito alla competenza della Corte di Cassazione.\n\nGli esiti possibili sono differenziati in base al tipo di violazione accertata: annullamento senza rinvio (quando la violazione rende il processo irrimediabilmente iniquo e la decisione non può essere mantenuta), annullamento con rinvio (per nuovo giudizio), rimessione al giudice dell'esecuzione (per rideterminazione della pena quando la violazione riguarda la pena inflitta). Il rimedio si interseca con la questione dei 'fratelli minori' (I14): chi era nelle stesse condizioni del ricorrente vittorioso ma non ha fatto ricorso a Strasburgo può accedere al rimedio attraverso l'art. 673 c.p.p. nelle ipotesi di sentenza pilota o diritto convenzionale consolidato.",
+        "fondamento_normativo": [
+          "Art. 628-bis c.p.p.",
+          "D.Lgs. 150/2022 (riforma Cartabia)",
+          "Art. 7 CEDU"
+        ],
+        "principi_governanti": [
+          "P03",
+          "P04"
+        ],
+        "cat": "Rimedi CEDU e giudicato"
+      }
+    },
+    {
+      "id": "I17",
+      "type": "istituto",
+      "label": "Disapplicazione dell'atto amministrativo illegittimo",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il giudice penale ha il potere-dovere di disapplicare l'atto amministrativo illegittimo che è rilevante nella fattispecie penale — in forza del principio di soggezione del giudice solo alla legge (art. 101, co. 2, Cost.) e del potere del giudice di risolvere ogni questione incidentale (art. 2 c.p.p.). La disapplicazione non è una declaratoria di nullità (riservata al giudice amministrativo), ma la privazione di effetti dell'atto ai soli fini del processo penale.\n\nLa distinzione cruciale è tra atto interno e atto esterno alla fattispecie incriminatrice. L'atto amministrativo è interno quando concorre a descrivere il precetto — fa parte della struttura stessa del fatto tipico, come elemento normativo che definisce la condotta vietata. In questo caso la disapplicazione in malam partem è inibita dai principi penali: disapplicare l'atto per punire più severamente equivarrebbe a creare un fatto tipico nuovo senza legge (violazione della riserva di legge e dell'irretroattività). L'atto amministrativo è esterno quando è presupposto del fatto ma non ne costituisce un elemento definitorio: la sua legittimità o illegittimità non modifica la struttura del fatto tipico. In questo caso la disapplicazione in malam partem è ammessa.\n\nI casi paradigmatici: SS.UU. Borgia (1993) sui reati edilizi — il permesso di costruire è esterno al precetto, il giudice può sindacarlo; SS.UU. 1992 sull'art. 734 c.p. bellezze naturali — il nulla osta è esterno, irrilevante. Il confine interno/esterno non è sempre netto: il caso dell'art. 650 c.p. (inosservanza dei provvedimenti dell'autorità) è ancora discusso.",
+        "fondamento_normativo": [
+          "Art. 101, co. 2, Cost.",
+          "Art. 2 c.p.p.",
+          "Artt. 4-5 L. 2248/1865 All. E"
+        ],
+        "principi_governanti": [
+          "P02",
+          "P01"
+        ],
+        "cat": "Fonti del diritto penale"
+      }
+    },
+    {
+      "id": "P08",
+      "type": "principio",
+      "label": "Sussidiarietà / Extrema ratio / Frammentarietà [ratio fondativa di V07]",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La sussidiarietà, l'extrema ratio e la frammentarietà sono tre criteri strettamente collegati che esprimono la natura selettiva del diritto penale: il penale non interviene su tutto ciò che è illecito, né su tutto ciò che è indesiderabile, né quando altri strumenti di tutela sarebbero sufficienti.\n\nLa sussidiarietà stabilisce che il diritto penale è lo strumento di ultima istanza: prima del penale devono essere tentate tutte le forme di tutela meno invasive (civile, amministrativo, disciplinare). Solo quando queste si rivelano insufficienti o inadeguate è legittimo il ricorso alla sanzione criminale. L'extrema ratio ne è il corollario: la pena, come misura più grave che l'ordinamento conosce, deve essere riservata ai casi in cui nessun altro rimedio è adeguato. La frammentarietà descrive il risultato: il diritto penale 'copre' solo frammenti dell'universo degli illeciti — non è un sistema onnicomprensivo ma una rete con maglie larghe che lascia fuori la maggior parte dei comportamenti sconvenienti o dannosi.\n\nLa distinzione fondamentale rispetto ai principi auto-applicativi è che questi criteri non sono strumenti dell'interprete: il giudice non può decidere che un fatto tipico non merita sanzione penale perché 'poteva bastare' una tutela civile. Questi criteri orientano il legislatore nelle scelte di incriminazione — appartengono al piano della genesi normativa, non a quello dell'applicazione. Il docente li classifica come rationes fondative del valore V07 (Razionalità dell'ordinamento), non come principi auto-applicativi.",
+        "fondamento_normativo": [
+          "Principio generale"
+        ],
+        "auto_applicativo": false,
+        "valori_fondanti": [
+          "V07"
+        ],
+        "carattere": "Ratio fondativa — orienta il legislatore nelle scelte di incriminazione, non il giudice nell'interpretazione.",
+        "note_critiche": "La tendenza alla 'penalizzazione di tutto' (ipertrofia penale) viola sistematicamente i criteri di sussidiarietà e frammentarietà. Il rimedio non è l'interpretazione restrittiva del giudice ma la depenalizzazione legislativa — o il controllo di ragionevolezza della Consulta sulle scelte di incriminazione manifestamente arbitrarie."
+      }
+    },
+    {
+      "id": "P19",
+      "type": "principio",
+      "label": "Natura pre-penale (extrapenale) delle scriminanti",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio della natura pre-penale delle scriminanti stabilisce che le cause di giustificazione non sono norme penali ma norme dell'intero ordinamento giuridico. Esse operano sul piano dell'indagine che precede l'accertamento del reato — sul piano dell'antigiuridicità — e non appartengono allo statuto del diritto penale.\n\nIl fondamento è nel principio di non contraddizione (P07): non spetta al diritto penale stabilire quali comportamenti siano leciti. Il diritto penale si limita a descrivere i fatti tipici (quello che è punibile in astratto) e a rinviare all'intero ordinamento per stabilire se il fatto tipico concreto è anche antigiuridico. Se un'altra branca del diritto — civile, amministrativo, internazionale, consuetudinario — autorizza o impone la condotta, quella norma di liceità prevale sulla norma penale.\n\nLe conseguenze sistematiche sono tre. Prima: le scriminanti non sono soggette alla riserva assoluta di legge — possono essere create da norme di qualsiasi rango (UE, regionali, regolamentari, consuetudinarie), purché appartengano all'ordinamento. Seconda: non sono soggette al divieto di analogia di cui all'art. 14 Preleggi, che vale solo per le norme penali; le scriminanti sono analogizzabili in via di principio (salvo la natura eccezionale di alcune). Terza: la norma incriminatrice si fonda su una presunzione relativa di antigiuridicità del fatto tipico (Mantovani): il fatto tipico si presume antigiuridico, ma la presunzione è vincibile.\n\nQuesta impostazione produce anche la regola della rilevanza oggettiva: le scriminanti operano per il solo fatto che si verifichino, indipendentemente dalla consapevolezza del soggetto (art. 59, co. 1, c.p.).",
+        "fondamento_normativo": [
+          "Art. 59, co. 1, c.p.",
+          "Art. 14 Preleggi"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "La norma che si invoca come scriminante appartiene all'ordinamento (non solo al penale)? Autorizza o impone la condotta tipica?",
+        "valori_fondanti": [
+          "V07"
+        ],
+        "carattere": "Fondamento della natura extrapenale delle cause di giustificazione."
+      }
+    },
+    {
+      "id": "P20",
+      "type": "principio",
+      "label": "Bilanciamento degli interessi nelle scriminanti",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio del bilanciamento degli interessi nelle scriminanti afferma che ogni causa di giustificazione si fonda su una scelta di comparazione tra valori e interessi in conflitto, e che il fondamento assiologico varia a seconda della scriminante specifica. È la teoria pluralistica delle scriminanti contrapposta alla teoria unitaria (che cerca un unico fondamento in ogni causa di giustificazione).\n\nIl bilanciamento si articola su tre livelli di 'prevalenza'. Il primo livello — interesse mancante — opera nel consenso dell'avente diritto (art. 50 c.p.): l'interesse protetto dalla norma appartiene al titolare che vi ha rinunciato; non c'è conflitto perché l'interesse che la norma tutela semplicemente non sussiste nel caso concreto. Il secondo livello — interesse prevalente — opera nella legittima difesa, nell'adempimento del dovere, nell'esercizio del diritto e nell'uso legittimo delle armi: c'è un conflitto reale tra interessi, ma l'ordinamento riconosce che uno dei due ha un peso maggiore o che la situazione (aggressione ingiusta, obbligo giuridico) giustifica la prevalenza. Il terzo livello — interesse equivalente — opera nello stato di necessità (art. 54 c.p.): i due interessi in conflitto hanno peso equivalente; l'ordinamento 'tollera' la sacrificazione di uno in favore dell'altro per ragioni di necessità, senza approvare la scelta (il soccorso necessitato è giusto, ma l'ordinamento capisce che l'istinto di conservazione prevalga).\n\nLe scriminanti sono, in questa prospettiva, il bilanciamento istituzionalizzato del sistema: il legislatore ha già operato la ponderazione degli interessi e l'ha cristallizzata nella norma. Il giudice deve solo verificare se la situazione concreta rientra nella fattispecie scriminante.",
+        "fondamento_normativo": [
+          "Art. 50-54 c.p."
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Quale interesse viene sacrificato e quale viene tutelato? Il bilanciamento effettuato dal soggetto corrisponde a quello operato dall'ordinamento nella scriminante invocata?",
+        "valori_fondanti": [
+          "V07"
+        ],
+        "carattere": "Fondamento assiologico pluralista delle cause di giustificazione."
+      }
+    },
+    {
+      "id": "P21",
+      "type": "principio",
+      "label": "Universalità dell'ordinamento penale (monismo)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di universalità o monismo dell'ordinamento penale stabilisce che il diritto penale italiano tutela valori fondamentali e inviolabili della persona indipendentemente dal contesto culturale o dall'origine del soggetto. I diritti fondamentali costituiscono uno sbarramento assoluto alla penetrazione di modelli culturali diversi che giustificherebbero comportamenti altrimenti illeciti.\n\nIl principio si contrappone al relativismo culturale nel diritto penale — l'idea che le pratiche tradizionali di una cultura debbano essere rispettate anche se contrastano con le norme penali del paese ospitante. L'ordinamento italiano adotta un approccio assimilazionistico: chi si trova nel territorio italiano è soggetto all'ordinamento italiano, senza eccezioni fondate sull'origine culturale o sul contesto di provenienza.\n\nLa regola è che le scriminanti culturali non sono ammesse come cause di giustificazione: non è possibile invocare la tradizione culturale propria per giustificare comportamenti lesivi di diritti fondamentali (mutilazioni genitali femminili, violenza domestica 'disciplinare', matrimoni forzati, pratiche rituali lesive dell'incolumità). I diritti fondamentali — all'integrità fisica, alla libertà sessuale, all'autodeterminazione — sono inderogabili e non disponibili da parte della cultura di appartenenza.\n\nGli unici spazi in cui il contesto culturale può rilevare sono: l'errore di diritto ex art. 5 c.p. per i reati 'artificiali' — quelli che non corrispondono a un universale morale ma sono specifici della cultura giuridica italiana; la commisurazione della pena (artt. 133 e 62-bis c.p.), dove il contesto culturale può attenuare il rimprovero senza eliminarlo.",
+        "fondamento_normativo": [
+          "Art. 3 Cost.",
+          "Art. 2 Cost."
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "I diritti in gioco sono fondamentali e inviolabili? Se sì, nessuna scriminante culturale è ammessa.",
+        "valori_fondanti": [
+          "V01",
+          "V05",
+          "V06"
+        ],
+        "carattere": "Regola di prevalenza categorica — non bilanciamento."
+      }
+    },
+    {
+      "id": "P23",
+      "type": "principio",
+      "label": "Principio di offensività",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di offensività stabilisce che il comportamento punibile deve costituire un'offesa a un bene giuridico meritevole di tutela penale. Non è sufficiente che il comportamento corrisponda al tipo legale: deve anche ledere o mettere in pericolo un bene giuridico concreto. Il reato senza offesa è penalmente irrilevante.\n\nIl principio è però controverso nella sua portata operativa, con due concezioni contrapposto. La concezione formalistica ritiene che l'offensività sia già insita nella tipicità: il legislatore, quando descrive il fatto tipico, seleziona comportamenti offensivi; chi realizza il fatto tipico per definizione offende. In questa concezione il principio non aggiunge nulla rispetto alla tipicità e non è un elemento autonomo da verificare. La concezione realistica ritiene invece che l'offensività debba essere verificata autonomamente: anche il fatto formalmente tipico può essere privo di offesa in concreto, e in quel caso va esclusa la punibilità.\n\nLo strumento normativo della concezione realistica è l'art. 49 c.p. (reato impossibile): quando l'azione non poteva in nessun caso cagionare l'evento dannoso o pericoloso, il reato è impossibile e il giudice pronuncia sentenza di non punibilità. L'art. 131-bis c.p. (esclusione della punibilità per particolare tenuità del fatto) si colloca diversamente: presuppone un reato completo, offesa compresa, ma l'offesa è talmente lieve da non meritare la risposta penale. La distinzione è rilevante: l'art. 49 esclude la tipicità (o l'offensività come suo elemento), l'art. 131-bis presuppone la tipicità e opera come causa di non punibilità.",
+        "fondamento_normativo": [
+          "Art. 49 c.p.",
+          "Art. 131-bis c.p.",
+          "Art. 25, co. 2, Cost."
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Il fatto ha concretamente offeso o messo in pericolo il bene giuridico tutelato dalla norma? O era strutturalmente inidoneo a produrre l'offesa?",
+        "valori_fondanti": [
+          "V07"
+        ],
+        "carattere": "Controverso — per la concezione formalistica non è elemento autonomo; per la realistica sì."
+      }
+    },
+    {
+      "id": "P26",
+      "type": "principio",
+      "label": "Divieto di responsabilità oggettiva pura",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il divieto di responsabilità oggettiva pura è il corollario operativo del principio di colpevolezza (P25): è vietata ogni forma di addebito degli elementi fondamentali del reato — quelli su cui si concentra il disvalore della fattispecie — sulla sola base del nesso causale, senza che ricorra almeno la colpa.\n\nLa responsabilità oggettiva pura significa che il soggetto risponde delle conseguenze della propria condotta indipendentemente da qualsiasi valutazione sulla sua rimproverabilità: bastano il fatto e il nesso causale. Questo modello — pervasivo nel diritto civile (responsabilità del custode, del produttore, del datore) — è incompatibile con i principi costituzionali del diritto penale, che richiedono un nesso soggettivo tra autore e fatto.\n\nLa distinzione rilevante è tra responsabilità oggettiva pura (incostituzionale per gli elementi essenziali) e responsabilità oggettiva spuria o aggravante (ammissibile con condizioni). La responsabilità oggettiva spuria opera su elementi non fondamentali della fattispecie — circostanze aggravanti, condizioni obiettive di punibilità — e la sua legittimità dipende dalla proporzionalità del trattamento sanzionatorio derivante e dalla ragionevolezza della presunzione. L'art. 42, co. 3, c.p. ('altrimenti determinati dalla legge') va letto — nella lettura costituzionalmente orientata del docente — come autorizzazione alla sola responsabilità spuria e alla colpa impropria, non come deroga generale al principio di colpevolezza.\n\nLe forme occulte di responsabilità oggettiva (culpa in re ipsa, dolus generalis, presunzioni assolute — I76) sono ugualmente incostituzionali perché producono lo stesso effetto della responsabilità oggettiva pura, camuffando il meccanismo presuntivo sotto le vesti del dolo o della colpa.",
+        "fondamento_normativo": [
+          "Art. 27, co. 1, Cost.",
+          "Art. 42, co. 3, c.p.",
+          "C. Cost. 364/1988"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "L'elemento addebitato è fondamentale per il disvalore del reato? L'addebito si fonda su accertamento della colpa in concreto o su presunzione?",
+        "valori_fondanti": [
+          "V05"
+        ],
+        "principio_padre": "P25",
+        "carattere": "Corollario del principio di colpevolezza — vieta la responsabilità oggettiva per gli elementi essenziali."
+      }
+    },
+    {
+      "id": "P27",
+      "type": "principio",
+      "label": "Personalità della responsabilità penale",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di personalità della responsabilità penale, sancito dall'art. 27, co. 1, Cost., stabilisce che la responsabilità penale è personale: ciascuno risponde solo del proprio fatto e sulla base della propria colpevolezza. Non si può rispondere penalmente per il fatto altrui, né per fatti commessi da altri in nome o per conto propri.\n\nIl principio opera su due livelli. Il primo — personalità del fatto — esclude la responsabilità collettiva: in un sistema penale liberal-garantista non esiste la pena del gruppo, del clan, dell'organizzazione. Solo la persona fisica che ha personalmente commesso il fatto (o concorso a commetterlo) può essere sanzionata penalmente. Il secondo livello — personalità della colpevolezza — esclude la responsabilità per fatto proprio senza colpa propria: non è sufficiente che il soggetto abbia causato il fatto (nesso causale), occorre che lo abbia causato con dolo o colpa propri.\n\nLa responsabilità degli enti (D.Lgs. 231/2001) crea una tensione con questo principio: le persone giuridiche rispondono 'per' i reati commessi dai propri esponenti nel loro interesse. La soluzione adottata è che la responsabilità degli enti non è 'penale' in senso proprio (è 'para-penale' o 'amministrativa-punitiva') — lo stesso decreto la qualifica come 'responsabilità amministrativa', anche se le sanzioni sono in realtà afflittive. Questo consente di rispettare formalmente il principio di personalità della responsabilità penale delle persone fisiche, pur introducendo una forma di responsabilità collettiva per le persone giuridiche.",
+        "fondamento_normativo": [
+          "Art. 27, co. 1, Cost.",
+          "D.Lgs. 231/2001"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Il soggetto risponde del proprio fatto o di quello altrui? La colpevolezza è propria o deriva da presunzioni collettive?",
+        "valori_fondanti": [
+          "V05"
+        ],
+        "principio_padre": "P25",
+        "carattere": "Presupposto logico del principio di colpevolezza."
+      }
+    },
+    {
+      "id": "I68",
+      "type": "istituto",
+      "label": "Omicidio preterintenzionale (art. 584 c.p.)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "L'omicidio preterintenzionale (art. 584 c.p.) è il reato in cui il soggetto compie 'atti diretti a commettere' il delitto di percosse (art. 581 c.p.) o lesioni personali (art. 582 c.p.) e cagiona involontariamente la morte della vittima. È la species più importante del genere 'preterintenzione'.\n\nLa struttura è binaria: un elemento soggettivo positivo (dolo delle percosse o delle lesioni, anche eventuale — gli 'atti diretti' sono equiparati al tentativo atipico, compatibile con qualsiasi forma di dolo) e un elemento soggettivo negativo (assenza di volontà dell'evento letale — se vi fosse il dolo della morte, il fatto sarebbe omicidio volontario ex art. 575 c.p.). La morte deve essere causalmente connessa agli atti diretti: non ogni morte accaduta durante una rissa è omicidio preterintenzionale, ma solo quella causalmente riconducibile agli specifici atti di percossa o lesione compiuti dall'agente.\n\nLa questione più controversa è come si imputa l'evento morte: la tesi dell'unicità (Cassazione prevalente fino al 2025) sostiene che il dolo delle percosse/lesioni assorba l'evento morte per prevedibilità ex lege, fondata sull'omogeneità dei beni giuridici (integrità fisica → vita) e sulla 'progressività naturale' delle offese fisiche. Non occorrerebbe indagare la colpa in concreto: la prevedibilità sarebbe presunta (culpa in re ipsa). La tesi della bifasicità (dottrina prevalente, C. Assise Sassari 2022, e svolta definitiva Cass. sez. I, 37437/2025) sostiene che l'art. 43 c.p., collocando la preterintenzione 'in mezzo' tra dolo e colpa, implichi la necessità di accertare la colpa in concreto: prevedibilità ed evitabilità dell'evento morte, valutate con il parametro dell'agente modello in quelle specifiche circostanze (mezzo usato, fragilità della vittima, parti del corpo colpite, contesto). Il docente è fortemente per la bifasicità: la tesi dell'unicità produce responsabilità oggettiva occulta e contrasta con la sentenza Ronci sul 586.",
+        "fondamento_normativo": [
+          "Art. 584 c.p.",
+          "Art. 43 c.p.",
+          "Art. 581-582 c.p."
+        ],
+        "principi_governanti": [
+          "P25"
+        ],
+        "padre": "I67",
+        "cat": "Elemento soggettivo",
+        "note_critiche": "La svolta Cass. 37437/2025 è il risultato di un lungo percorso critico iniziato con la sentenza Ronci (SS.UU. 2009) sul 586: se nel 586 occorre la colpa in concreto perché manca l'omogeneità dei beni, non c'è ragione sistematica per presumere la prevedibilità nel 584 solo perché c'è 'omogeneità'. L'irragionevolezza sanzionatoria della tesi dell'unicità è un argomento ulteriore: pene identiche per chi causa la morte per imperizia e per chi la causa con imprudenza grave."
+      }
+    },
+    {
+      "id": "I73",
+      "type": "istituto",
+      "label": "Dolo eventuale vs. colpa con previsione: le tesi pre-ThyssenKrupp",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Prima della svolta ThyssenKrupp (2014), il confine tra dolo eventuale e colpa con previsione era conteso tra quattro tesi con criteri diversi. La comprensione di queste tesi è necessaria per capire perché la svolta ThyssenKrupp sia stata necessaria e in cosa consista il suo apporto.\n\nLa tesi intellettiva (o della rappresentazione) identifica il dolo eventuale con la sola rappresentazione della possibilità dell'evento: chi si è rappresentato l'evento come possibile e ha agito lo stesso è in dolo eventuale. La critica decisiva è che questa tesi trasforma il dolo in colpa: anche nella colpa con previsione il soggetto si rappresenta l'evento come possibile; la differenza tra dolo eventuale e colpa con previsione scompare.\n\nLa tesi soggettiva (o dell'adesione emotiva) individua il dolo eventuale nell'adesione interiore dell'agente all'evento: non basta la rappresentazione, occorre che il soggetto 'approvi' internamente la possibilità dell'evento. La critica è che apre la strada al 'diritto penale del tipo d'autore': si punisce non per ciò che si è fatto ma per ciò che si è — per il proprio atteggiamento psicologico nei confronti dell'evento.\n\nLa tesi oggettiva individua il dolo eventuale nell'assenza di schermatura del rischio: chi adotta misure per evitare l'evento è in colpa con previsione, chi non le adotta è in dolo eventuale. La critica è che questa è una tecnica probatoria, non una definizione: la schermatura è un indicatore del dolo eventuale, non il suo criterio definitorio.\n\nLa tesi mediana (diritto vivente pre-2014) identificava il dolo eventuale con l'accettazione del rischio e il dubbio non sciolto: il soggetto ha previsto l'evento come possibile e non ha sciolto il dubbio nel senso della non-verificazione. La colpa con previsione era il dubbio sciolto negativamente ('fiduciosa speranza' che l'evento non si verifichi). Il docente critica questa tesi: viola l'art. 61, n. 3 c.p. (colpa con previsione come aggravante) — in quella norma è nella colpa che il soggetto 'prevede' l'evento; il criterio di distinzione è quindi invertito.",
+        "fondamento_normativo": [
+          "Art. 43 c.p.",
+          "Art. 61, n. 3, c.p."
+        ],
+        "principi_governanti": [
+          "P25"
+        ],
+        "cat": "Elemento soggettivo"
+      }
+    },
+    {
+      "id": "I54",
+      "type": "istituto",
+      "label": "Reati di mera condotta vs. reati di evento",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La distinzione tra reati di mera condotta e reati di evento è una delle classificazioni fondamentali dei tipi di reato e ha rilevanza strutturale per l'analisi del fatto tipico.\n\nNei reati di mera condotta l'evento — nel senso di modificazione della realtà esterna distinta dalla condotta — è assente o è insito nella condotta stessa: il reato si consuma nel momento in cui si compie l'azione o l'omissione descritta dalla norma. Esempi paradigmatici: l'evasione (art. 385 c.p. — consumata con l'allontanamento), la calunnia (consumata con la denuncia), la guida in stato di ebbrezza (consumata con la guida). In questi reati non si pone la questione del nesso di causalità, poiché non vi è un evento naturalistico da collegare alla condotta.\n\nNei reati di evento il fatto tipico richiede, accanto alla condotta, una modificazione della realtà esterna scissa dalla condotta e cronologicamente posteriore ad essa. L'evento è autonomo rispetto alla condotta e deve essere causalmente collegato ad essa. Esempi: l'omicidio (la morte è l'evento), le lesioni personali (la 'malattia' è l'evento), la truffa (il danno patrimoniale altrui e il profitto dell'agente sono gli eventi). Nei reati di evento il nesso causale è elemento indefettibile del fatto tipico.\n\nLa sotto-distinzione ulteriore riguarda le modalità della condotta: i reati a forma libera (o causalmente orientati) descrivono solo l'evento, lasciando libera la scelta della condotta che lo cagiona (es. omicidio — 'chiunque cagiona la morte di un uomo'); i reati a condotta vincolata descrivono specificamente la modalità della condotta (es. truffa — 'con artifici o raggiri', rapina — 'con violenza o minaccia'). Nei reati a condotta vincolata il disvalore è concentrato sulle modalità della condotta oltre che sull'evento.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Artt. 40-41 c.p."
+        ],
+        "principi_governanti": [
+          "P22"
+        ],
+        "padre": "I52",
+        "cat": "Struttura del reato"
+      }
+    }
+  ],
+  "relations": []
+}

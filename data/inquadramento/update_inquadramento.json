@@ -1,0 +1,552 @@
+{
+  "meta": {
+    "versione": "1.1",
+    "data_aggiornamento": "2026-03-16",
+    "tipo": "update_inquadramento",
+    "descrizione": "Aggiornamento campo data.definizione per tutte le entità L1-L5. Testi in stile capitolo di manuale estratti fedelmente dalle schede del docente.",
+    "fonte": "docente"
+  },
+  "entities": [
+    {
+      "id": "V01",
+      "type": "valore",
+      "label": "Libertà personale",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La libertà personale è il valore supremo che il diritto penale liberale pone a fondamento dell'intero sistema di garanzie. Garantita dall'art. 13 Cost. come inviolabile e dall'art. 5 CEDU, essa opera come limite intrinseco al potere punitivo statale: ogni misura che la comprime deve avere base legale, essere necessaria e proporzionata allo scopo.\n\nNel diritto penale questo valore si traduce direttamente in quattro corollari operativi: la riserva di legge (solo il Parlamento può fare scelte di criminalizzazione), il divieto di analogia in malam partem (il giudice non può estendere la norma penale a casi non previsti), l'irretroattività sfavorevole (nessuno può essere punito sulla base di una legge successiva al fatto) e la tassatività/determinatezza (la norma deve essere sufficientemente precisa da consentire al cittadino di orientare la propria condotta).\n\nLa libertà personale opera anche come criterio di orientamento nelle tensioni interpretative: il favor libertatis esprime la preferenza dell'ordinamento per le soluzioni che restringono l'area del penalmente rilevante in caso di incertezza; la calcolabilità delle conseguenze impone che il cittadino possa prevedere ex ante le conseguenze penali della propria condotta, criterio che la CEDU ha esteso fino a includere la giurisprudenza consolidata tra le fonti rilevanti per la prevedibilità.",
+        "fondamento_normativo": [
+          "Art. 13 Cost.",
+          "Art. 5 CEDU"
+        ],
+        "rationes_fondative": [
+          {
+            "label": "favor libertatis",
+            "descrizione": "In dubio pro libertate — in caso di incertezza interpretativa, la libertà prevale.",
+            "tipo": "bussola"
+          },
+          {
+            "label": "calcolabilità delle conseguenze",
+            "descrizione": "Il cittadino deve poter calcolare ex ante le conseguenze penali della propria condotta.",
+            "tipo": "bussola"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V02",
+      "type": "valore",
+      "label": "Sovranità popolare / Metodo democratico",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La sovranità popolare, espressa attraverso il metodo democratico parlamentare, costituisce il fondamento politico della riserva di legge penale. In uno Stato di diritto, le scelte di criminalizzazione — decidere quali comportamenti meritino sanzione penale — sono scelte di valore che incidono sulla libertà dei consociati e devono perciò essere adottate dall'organo che ne è l'espressione più diretta: il Parlamento, eletto dalla comunità.\n\nQuesto valore genera nel diritto penale la regola per cui né il potere esecutivo (tramite regolamenti o atti amministrativi) né il potere giudiziario (tramite interpretazione analogica o creativa) possono fare scelte di politica criminale. Il cantiere dell'incriminazione è sempre aperto — il legislatore può ampliare o ridurre l'area del penalmente rilevante — ma questa è prerogativa sua esclusiva. L'interprete trova le scelte del legislatore come dato, non le compie.\n\nLa ratione fondativa della riserva parlamentare spiega anche il limite alle sentenze in malam partem della Corte Costituzionale: il dogma dell'insindacabilità delle norme favorevoli radica, almeno in parte, nella convinzione che anche le scelte di non punire appartengano alla sovranità popolare parlamentare.",
+        "fondamento_normativo": [
+          "Art. 1 Cost."
+        ],
+        "rationes_fondative": [
+          {
+            "label": "riserva parlamentare",
+            "descrizione": "Solo il Parlamento, organo rappresentativo, può fare scelte di criminalizzazione.",
+            "tipo": "ratio_pura"
+          },
+          {
+            "label": "rappresentatività",
+            "descrizione": "Le norme penali devono riflettere la volontà generale, non quella di organi tecnici o esecutivi.",
+            "tipo": "ratio_pura"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V03",
+      "type": "valore",
+      "label": "Certezza del diritto",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La certezza del diritto esprime l'esigenza che il sistema giuridico sia prevedibile e stabile: il cittadino deve poter orientare la propria condotta sulla base delle regole vigenti, senza il rischio di sorprese retroattive o di interpretazioni radicalmente imprevedibili.\n\nNel diritto penale questo valore si manifesta con forza particolare, data la gravità delle conseguenze (la pena detentiva) e l'esigenza di libertà di autodeterminazione del soggetto. La certezza genera il principio di tassatività/determinatezza (la norma deve avere una struttura linguistica tale da consentire l'accertamento empirico dei suoi elementi), il principio di irretroattività sfavorevole (le nuove regole più severe non si applicano al passato) e la prevedibilità della decisione nel senso della CEDU (che include la giurisprudenza consolidata tra le fonti rilevanti).\n\nLa certezza del diritto è però un valore in tensione con la giustizia sostanziale: troppa rigidità produce risultati irragionevoli, troppa flessibilità svuota le garanzie. Il sistema risolve la tensione attraverso l'interpretazione conforme (che adatta la norma ai parametri superiori senza stravolgerla) e il protocollo ermeneutico obbligato (che fissa l'ordine degli strumenti interpretativi ammissibili).",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 7 CEDU"
+        ],
+        "rationes_fondative": [
+          {
+            "label": "prevedibilità",
+            "descrizione": "Il cittadino deve poter prevedere le conseguenze giuridiche dei propri atti.",
+            "tipo": "bussola"
+          },
+          {
+            "label": "stabilità dei rapporti",
+            "descrizione": "Le situazioni giuridiche definite non devono essere continuamente rimesse in discussione.",
+            "tipo": "ratio_pura"
+          },
+          {
+            "label": "intangibilità del giudicato",
+            "descrizione": "La sentenza passata in giudicato è definitiva — salvo i casi di revisione in bonam partem.",
+            "tipo": "ratio_pura"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V05",
+      "type": "valore",
+      "label": "Dignità della persona",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La dignità della persona è il valore intrinseco e incomprimibile dell'essere umano in quanto tale, indipendente da qualsiasi condizione soggettiva o comportamento. Nel diritto penale costituisce il fondamento del principio di colpevolezza — nulla poena sine culpa — e dell'inesigibilità come limite del rimprovero: non si può rimproverare chi non poteva agire diversamente.\n\nLa dignità genera nel sistema penale la concezione normativa della colpevolezza: il rimprovero penale presuppone che il soggetto abbia potuto, in concreto, conformarsi alla pretesa dell'ordinamento. Chi agisce in stato di necessità assoluta, sotto coazione insormontabile, o in condizioni che rendono inesigibile il comportamento lecito, non è degno di rimprovero — non perché il fatto non esista, ma perché la persona non è rimproverabile.\n\nDalla dignità discendono anche: il divieto di responsabilità oggettiva pura (gli elementi essenziali del reato devono essere coperti almeno dalla colpa), il principio di personalità della responsabilità penale (ciascuno risponde solo del proprio fatto e sulla base della propria colpevolezza) e le scusanti soggettive che escludono la punibilità quando il comportamento conforme era inesigibile. L'inesigibilità, come ha notato il docente, è la 'valvola di umanità del sistema penale'.",
+        "fondamento_normativo": [
+          "Art. 2 Cost.",
+          "Art. 3 CEDU"
+        ],
+        "rationes_fondative": [
+          {
+            "label": "inesigibilità (ad impossibilia nemo tenetur)",
+            "descrizione": "Non si può rimproverare chi non poteva agire diversamente. Orienta le scusanti e il giudizio di colpevolezza.",
+            "tipo": "bussola"
+          },
+          {
+            "label": "personalità della responsabilità come ratio",
+            "descrizione": "Ratio fondativa del principio di colpevolezza — distinta dal principio auto-applicativo.",
+            "tipo": "ratio_pura"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V06",
+      "type": "valore",
+      "label": "Diritto alla vita",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il diritto alla vita è il bene giuridico fondamentale per eccellenza — prerequisito logico di ogni altro diritto. Tutelato dall'art. 2 CEDU come obbligo positivo dello Stato (obblighi di protezione e di criminalizzazione) e dall'art. 27, co. 4, Cost. (divieto di pena di morte), esso opera nel diritto penale sia come bene oggetto di tutela sia come limite all'esercizio delle scriminanti che coinvolgono l'uso della forza letale.\n\nIl favor vitae, come criterio di orientamento, impone che nelle tensioni tra valori in conflitto la vita abbia un peso tendenzialmente prevalente. Questo principio ha portato la CEDU a limitare le scriminanti che autorizzano l'uso letale della forza: l'art. 53 c.p. va interpretato conformemente all'art. 2 CEDU (casi Giuliani e Alikaj), con la conseguenza che l'uso delle armi è legittimo solo per proteggere valori omogenei (vita, integrità grave) e non per fini di pura giustizia o ordine pubblico.\n\nLa tensione più delicata coinvolge il valore dell'autodeterminazione (V08): nelle questioni di fine vita l'ordinamento ha percorso un cammino graduale, riconoscendo progressivamente spazi alla volontà del paziente (L. 219/2017 sull'eutanasia passiva; C. Cost. 242/2019 sul suicidio assistito) senza mai abdicare alla tutela della vita come valore non disponibile in via generale. L'art. 579 c.p. rimane norma costituzionalmente necessaria.",
+        "fondamento_normativo": [
+          "Art. 2 CEDU",
+          "Art. 27, co. 4, Cost."
+        ],
+        "rationes_fondative": [
+          {
+            "label": "favor vitae",
+            "descrizione": "In caso di dubbio nelle tensioni che coinvolgono la vita, questa va preservata.",
+            "tipo": "bussola"
+          },
+          {
+            "label": "precauzione",
+            "descrizione": "In presenza di rischio per la vita, va adottato il comportamento più prudente.",
+            "tipo": "bussola"
+          },
+          {
+            "label": "intangibilità della vita",
+            "descrizione": "La vita non è nella disponibilità né dello Stato né del singolo in via generale.",
+            "tipo": "ratio_pura"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V08",
+      "type": "valore",
+      "label": "Autodeterminazione della persona",
+      "fonte": "docente",
+      "data": {
+        "definizione": "L'autodeterminazione della persona è il diritto di disporre di sé stessi — del proprio corpo, della propria salute, delle proprie scelte esistenziali fondamentali. Radicato nell'art. 2 Cost., nell'art. 8 CEDU (vita privata e familiare) e nell'art. 32, co. 2, Cost. (nessun trattamento sanitario obbligatorio senza legge), esso ha progressivamente ampliato il proprio perimetro nelle ultime decenni.\n\nNel diritto penale l'autodeterminazione genera il consenso dell'avente diritto come causa di giustificazione (art. 50 c.p.): chi dispone validamente di un bene giuridico proprio autorizza la condotta altrimenti tipica. I limiti sono: la disponibilità del bene, il consenso libero e informato, l'assenza di vizi della volontà, la capacità del titolare.\n\nIl campo di massima tensione con il diritto alla vita (V06) si manifesta nelle questioni di fine vita. L'evoluzione giurisprudenziale ha riconosciuto: il diritto a rifiutare le cure anche salvavita (L. 219/2017, eutanasia passiva); il diritto a essere aiutati a morire in presenza di quattro condizioni cumulative (C. Cost. 242/2019, suicidio assistito). L'omicidio del consenziente rimane punibile — il bilanciamento non è ancora concluso, come dimostra la C. Cost. 132/2025 che ha dichiarato inammissibile per difetto di motivazione la nuova questione sull'art. 579 c.p.",
+        "fondamento_normativo": [
+          "Art. 2 Cost.",
+          "Art. 8 CEDU",
+          "Art. 32, co. 2, Cost."
+        ],
+        "rationes_fondative": [
+          {
+            "label": "consenso informato",
+            "descrizione": "Solo un consenso libero, informato e privo di vizi esclude il disvalore del fatto.",
+            "tipo": "bussola"
+          },
+          {
+            "label": "habeas corpus",
+            "descrizione": "Il corpo è nella disponibilità dell'individuo: nessun trattamento sanitario coatto senza legge.",
+            "tipo": "ratio_pura"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V07",
+      "type": "valore",
+      "label": "Razionalità / Coerenza dell'ordinamento",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La razionalità e la coerenza interna dell'ordinamento giuridico costituiscono un valore sistemico: il diritto deve essere non contraddittorio, coerente nei suoi presupposti e nelle sue conclusioni, e selettivo nell'uso della sanzione penale — che è lo strumento più invasivo di cui dispone lo Stato.\n\nQuesto valore genera nel diritto penale il principio di non contraddizione dell'ordinamento (P07): un fatto non può essere contemporaneamente lecito (autorizzato da una norma) e illecito (vietato da un'altra). Da questo principio discende l'intero sistema delle cause di giustificazione: quando una norma dell'ordinamento autorizza o impone una condotta che sarebbe altrimenti tipica, la norma di liceità prevale.\n\nDalla razionalità discendono anche, come rationes fondative che orientano il legislatore (non il giudice), i criteri di frammentarietà, sussidiarietà ed extrema ratio: il penale deve intervenire solo quando le altre tutele sono insufficienti, non deve occuparsi di tutto ciò che è illecito, deve riservare la sanzione criminale ai fatti di maggiore offensività. Questi criteri non sono strumenti interpretativi nelle mani del giudice — il quale trova le scelte di incriminazione come dato — ma orientano il legislatore nelle scelte di politica criminale.",
+        "fondamento_normativo": [
+          "Principio generale dell'ordinamento"
+        ],
+        "rationes_fondative": [
+          {
+            "label": "non contraddizione",
+            "descrizione": "L'ordinamento non può affermare contemporaneamente che un fatto è lecito e illecito.",
+            "tipo": "ratio_pura"
+          },
+          {
+            "label": "frammentarietà / sussidiarietà / extrema ratio",
+            "descrizione": "Il penale interviene solo quando le altre tutele non bastano. Orienta il legislatore, non il giudice.",
+            "tipo": "ratio_pura"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V04",
+      "type": "valore",
+      "label": "Uguaglianza / Non discriminazione",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di uguaglianza, sancito dall'art. 3 Cost., impone uguale trattamento di situazioni uguali e trattamento differenziato di situazioni diverse, con la conseguenza che ogni distinzione di trattamento deve avere una giustificazione razionale. Nel diritto penale questo valore opera su più livelli.\n\nPrimo: fonda la retroattività della lex mitior (P05). Sarebbe irragionevole e discriminatorio punire chi è giudicato prima di una riforma favorevole più severamente di chi è giudicato dopo — a parità di fatto commesso, la pena deve riflettere la valutazione attuale dell'ordinamento sul disvalore del comportamento.\n\nSecondo: fonda il controllo di ragionevolezza sulle cornici edittali sproporzionate. La Corte Costituzionale ha progressivamente demolito gli automatismi sanzionatori (art. 69, co. 4, c.p. sul bilanciamento delle circostanze) che impedivano al giudice di commisuare la pena alla colpevolezza concreta del soggetto — trattando in modo identico situazioni diversissime in violazione dell'art. 3 Cost.\n\nTerzo: genera la regola di ragionevolezza nella struttura della fattispecie: classificazioni di soggetti, presunzioni assolute, automatismi processuali vengono scrutinati dalla Consulta sotto il profilo dell'uguaglianza quando producono differenze di trattamento prive di giustificazione razionale.",
+        "fondamento_normativo": [
+          "Art. 3 Cost."
+        ],
+        "rationes_fondative": [
+          {
+            "label": "ragionevolezza",
+            "descrizione": "Le distinzioni di trattamento devono avere una giustificazione razionale.",
+            "tipo": "bussola"
+          },
+          {
+            "label": "divieto di discriminazioni irrazionali",
+            "descrizione": "Situazioni uguali non possono essere trattate diversamente senza ragione.",
+            "tipo": "ratio_pura"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P01",
+      "type": "principio",
+      "label": "Principio di legalità",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di legalità — nullum crimen, nulla poena sine lege — è il cardine del diritto penale liberale e la principale garanzia del cittadino contro l'arbitrio punitivo. Radicalizzato dall'Illuminismo (Beccaria nel 'Dei delitti e delle pene', 1764; Feuerbach con la teoria della 'coazione psicologica'), impone che ogni fatto di reato e ogni sanzione penale siano previsti da una legge entrata in vigore prima della commissione del fatto.\n\nIl principio opera su due versanti complementari che si sommano senza escludersi (overlapping protection): il versante formale, codificato nell'art. 25, co. 2, Cost. e nell'art. 1 c.p., privilegia la fonte di produzione della norma — è legge solo ciò che proviene dal Parlamento o da atti aventi forza di legge; il versante sostanziale, elaborato dalla Corte EDU sull'art. 7 CEDU, privilegia la prevedibilità della decisione — il cittadino deve poter prevedere le conseguenze penali della propria condotta anche sulla base della giurisprudenza consolidata (law in action).\n\nDal principio di legalità discendono quattro corollari operativi: (1) riserva di legge — solo il Parlamento incrimina; (2) tassatività/determinatezza — la norma deve essere sufficientemente precisa; (3) divieto di analogia in malam partem — il giudice non può estendere la norma a casi non previsti; (4) irretroattività sfavorevole — le norme più gravose non si applicano a fatti pregressi. Il principio ha carattere rigido e costituisce un controlimite costituzionale: resiste anche al diritto UE (caso Taricco) e rimane inderogabile anche in stato di emergenza (art. 15 CEDU).\n\nLa Corte EDU ha progressivamente incluso nel perimetro dell'art. 7 CEDU anche il principio di colpevolezza, ritenendo che la prevedibilità della condanna implichi la rimproverabilità del soggetto. Questo ampliamento proietta la legalità dalla sola struttura della norma alla sua applicazione concreta.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 1 c.p.",
+          "Art. 7 CEDU",
+          "Art. 49 Carta di Nizza"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "(1) Esiste una legge? (2) Era in vigore prima del fatto? (3) Prevede espressamente questa condotta come reato? (4) Prevede espressamente questa sanzione?",
+        "valori_fondanti": [
+          "V01",
+          "V02",
+          "V03"
+        ],
+        "corollari": [
+          "P02",
+          "P04",
+          "P05"
+        ],
+        "carattere": "Principio rigido, controlimite costituzionale. Inderogabile anche in stato di emergenza (art. 15 CEDU). Resiste al primato del diritto UE.",
+        "note_critiche": "La CEDU estende la legalità alla prevedibilità della decisione, includendo la giurisprudenza consolidata tra le fonti rilevanti. Questo crea una legalità 'a geometria variabile' che può entrare in tensione con la legalità formale nazionale."
+      }
+    },
+    {
+      "id": "P02",
+      "type": "principio",
+      "label": "Riserva di legge",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La riserva di legge è il corollario democratico del principio di legalità: solo la legge — o un atto avente forza di legge (decreto legge, decreto legislativo) — può prevedere reati e sanzioni penali. Il fondamento è duplice: politico (il Parlamento rappresenta la sovranità popolare) e garantistico (il cittadino sa che solo norme prodotte con procedimento trasparente e deliberativo possono limitare la sua libertà).\n\nLa riserva ha una struttura asimmetrica cruciale: per il precetto è tendenzialmente assoluta (ammette integrazione tecnica, non politica, da fonti secondarie), mentre per la sanzione è assolutamente assoluta (nessuna delega è ammessa — la cornice edittale deve essere stabilita interamente dalla legge). Questa distinzione giustifica le norme penali in bianco nella misura in cui la fonte secondaria specifica tecnicamente un elemento già delineato dalla legge, senza fare scelte di valore.\n\nUn aspetto decisivo spesso trascurato: la riserva copre non solo il diritto di punire ma anche il diritto di non punire. Il Parlamento è sovrano tanto nell'incriminare quanto nel non incriminare. Questa 'doppia direzione' della riserva fonda il limite alle sentenze in malam partem della Consulta (che non può estendere l'area penale senza una base normativa), alla funzione creativa del giudice (che non può colmare lacune con l'analogia in malam partem) e alla disapplicazione in malam partem del diritto UE (che produrrebbe incriminazione senza legge parlamentare).\n\nLa regola di integrazione tecnica/politica è il criterio operativo: è tecnica la specificazione del contenuto di un elemento già definito nella legge (quale sostanza è stupefacente); è politica la scelta di cosa punire o di quale soglia stabilire per il trattamento sanzionatorio differenziato.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 1 c.p."
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "La norma applicata ha forza di legge? La sanzione è interamente stabilita dalla legge? Se la norma è in bianco, l'integrazione è tecnica o politica?",
+        "valori_fondanti": [
+          "V01",
+          "V02"
+        ],
+        "principio_padre": "P01",
+        "carattere": "Tendenzialmente assoluta per il precetto; assolutamente assoluta per la sanzione.",
+        "note_critiche": "La distinzione legge favorevole / legge di favore, elaborata dalla Consulta per giustificare le sentenze in malam partem sulle norme di favore, è considerata da parte della dottrina una fictio iuris che crea un varco nel dogma dell'insindacabilità."
+      }
+    },
+    {
+      "id": "P04",
+      "type": "principio",
+      "label": "Irretroattività della legge penale sfavorevole",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di irretroattività della legge penale sfavorevole stabilisce che una norma penale più gravosa — sia nell'area di incriminazione, sia nella misura della sanzione — non può essere applicata a fatti commessi prima della sua entrata in vigore. È il più rigido tra i corollari del principio di legalità e ha il rango di controlimite costituzionale.\n\nIl fondamento del principio è duplice: da un lato, la calcolabilità delle conseguenze (il cittadino deve poter sapere, al momento in cui agisce, a quale trattamento penale si espone); dall'altro, il principio di affidamento (chi ha agito in conformità alla legge vigente ha diritto a non vedere le proprie aspettative ribaltate da una norma successiva più severa).\n\nLa portata del principio si è estesa significativamente grazie alla giurisprudenza della CEDU (art. 7). Tre estensioni fondamentali: (a) l'overruling giurisprudenziale sorprendente in malam partem viola l'art. 7 CEDU anche se la norma scritta non è cambiata (caso Contrada — il concorso esterno non era prevedibile al momento dei fatti); (b) le leggi formalmente processuali ma sostanzialmente penali sono soggette a irretroattività (C. Cost. 32/2020, Spazza-corrotti — la norma che impediva retroattivamente l'affidamento in prova è 'legge penale' in senso sostanziale); (c) il principio resiste come controlimite anche alle richieste di disapplicazione del diritto UE (caso Taricco — la CGUE chiedeva la disapplicazione delle norme sulla prescrizione; la Consulta ha opposto i controlimiti).\n\nL'irretroattività sfavorevole ha statuto 'forte': non ammette deroghe nemmeno in stato di emergenza (art. 15 CEDU) e non cede nemmeno di fronte a sentenze retroattive della Consulta (che sono iper-retroattive solo in bonam partem).",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 2 c.p.",
+          "Art. 7 CEDU"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "La norma applicata è entrata in vigore prima del fatto? Se la norma è formalmente processuale, ha effetti sostanzialmente penali sulla libertà o sulla pena? Il mutamento giurisprudenziale era prevedibile?",
+        "valori_fondanti": [
+          "V01",
+          "V03"
+        ],
+        "principio_padre": "P01",
+        "carattere": "Controlimite assoluto. Inderogabile anche in stato di emergenza. Resiste al primato UE (caso Taricco).",
+        "note_critiche": "L'estensione alle leggi formalmente processuali (Spazza-corrotti) ha aperto un campo di incertezza: quale norma processuale ha effetti 'sostanzialmente penali' abbastanza rilevanti da attrarre il presidio dell'irretroattività? La Consulta ha adottato il parametro dell'incidenza significativa sulla libertà personale."
+      }
+    },
+    {
+      "id": "P05",
+      "type": "principio",
+      "label": "Retroattività della legge penale favorevole (lex mitior)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di retroattività della legge penale favorevole — detto anche favor rei o lex mitior — stabilisce che la legge penale più favorevole si applica retroattivamente ai fatti pregressi, anche se commessi prima della sua entrata in vigore. A differenza dell'irretroattività sfavorevole, ha però uno statuto 'debole': è derogabile dal legislatore per ragioni di interesse generale.\n\nIl fondamento è nel principio di uguaglianza (art. 3 Cost.): sarebbe irragionevole e discriminatorio trattare più severamente chi è giudicato prima di una riforma favorevole rispetto a chi è giudicato dopo — a parità di fatto commesso. La discriminazione temporale deve avere una giustificazione razionale per essere costituzionalmente legittima.\n\nLe differenze con l'irretroattività sfavorevole sono decisive. L'irretroattività sfavorevole è: assoluta (nessuna deroga ammessa), controlimite costituzionale (resiste al diritto UE), inderogabile dallo stesso legislatore. La retroattività favorevole è: relativa (derogabile dal legislatore per ragioni di interesse generale — C. Cost. e CEDU lo ammettono entrambe), non copre il giudicato (salvo l'abolitio criminis che travolge anche la sentenza definitiva tramite l'art. 673 c.p.p.), soggetta al vaglio di ragionevolezza.\n\nLa forma più intensa di retroattività favorevole è l'abolitio criminis (art. 2, co. 2, c.p.): quando una norma incriminatrice è abolita, il fatto cessa di essere reato anche per il passato, il processo si chiude con formula assolutoria e il giudicato di condanna cede all'iper-retroattività (art. 673 c.p.p.). L'abolitio si distingue dalla mera successione modificativa per il criterio strutturale della continuità del tipo di illecito (SS.UU. Giordano, 2010).",
+        "fondamento_normativo": [
+          "Art. 2, co. 4, c.p.",
+          "Art. 3 Cost."
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "La legge sopravvenuta è più favorevole? Il legislatore ha espressamente derogato alla lex mitior? È passata in giudicato (salvo abolitio)?",
+        "valori_fondanti": [
+          "V01",
+          "V04"
+        ],
+        "principio_padre": "P01",
+        "carattere": "Statuto debole — derogabile dal legislatore. Non travolge il giudicato (salvo abolitio criminis). Soggetto a vaglio di ragionevolezza della Consulta.",
+        "note_critiche": "La derogabilità del favor rei apre spazi di incertezza: fino a quando può il legislatore escludere la retroattività favorevole senza violare l'art. 3 Cost.? Il criterio è la ragionevolezza della deroga — che però è giudizio difficile e non sempre prevedibile."
+      }
+    },
+    {
+      "id": "P07",
+      "type": "principio",
+      "label": "Principio di non contraddizione dell'ordinamento",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di non contraddizione dell'ordinamento stabilisce che un fatto non può essere contemporaneamente lecito (autorizzato, imposto o consentito da una norma dell'ordinamento) e illecito (vietato e sanzionato da un'altra norma). Quando si verifica questa situazione di conflitto, la norma di liceità prevale sulla norma di divieto: si produce l'effetto liceizzante.\n\nQuesto principio è il fondamento tecnico-giuridico dell'intero sistema delle cause di giustificazione (scriminanti). Le scriminanti non sono norme penali — non appartengono al diritto penale — ma norme dell'intero ordinamento che autorizzano, impongono o consentono comportamenti altrimenti tipici. Poiché l'ordinamento non può volere che un soggetto faccia contemporaneamente e non faccia la stessa cosa, quando una norma extrapenale autorizza la condotta la norma incriminatrice cede.\n\nLe conseguenze sistematiche del principio sono rilevanti: le scriminanti non sono soggette alla riserva assoluta di legge (possono essere stabilite anche da norme UE, regionali, regolamentari, consuetudinarie); non sono soggette al divieto di analogia (art. 14 Preleggi, che vale solo per le norme penali); si estendono a qualsiasi soggetto che si trovi nella situazione prevista, indipendentemente dalla sua consapevolezza (rilevanza oggettiva, art. 59, co. 1, c.p.).\n\nDa questo principio discendono anche le scriminanti esopenali di derivazione UE: le norme UE ad efficacia diretta che attribuiscono diritti operano come cause di giustificazione attraverso l'art. 51 c.p. (esercizio del diritto), perché l'ordinamento UE e quello nazionale formano un unico sistema che non può contraddirsi.",
+        "fondamento_normativo": [
+          "Principio sistematico generale dell'ordinamento"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Esiste nell'ordinamento (non solo penale) una norma che autorizza, impone o consente la condotta tipica? Se sì, quella norma prevale sulla norma incriminatrice.",
+        "valori_fondanti": [
+          "V07"
+        ],
+        "carattere": "Fondamento tecnico-giuridico di tutte le cause di giustificazione."
+      }
+    },
+    {
+      "id": "P10",
+      "type": "principio",
+      "label": "Controlimiti costituzionali",
+      "fonte": "docente",
+      "data": {
+        "definizione": "I controlimiti costituzionali sono i principi supremi dell'ordinamento italiano che non possono essere derogati nemmeno dalle fonti sovranazionali — nemmeno dal diritto dell'Unione Europea, che ha primato sulle norme ordinarie. Sono un meta-principio di secondo ordine: non regolano direttamente i rapporti tra soggetti, ma governano i conflitti tra fonti e tra principi.\n\nL'elaborazione dei controlimiti risale alla giurisprudenza della Corte Costituzionale a partire dalla sentenza Frontini (1973) e si è sviluppata in dialogo con la CGUE. La tesi di fondo è che l'adesione dell'Italia all'ordinamento europeo (art. 11 Cost.) non equivale a una cessione incondizionata di sovranità: esistono principi supremi — connessi all'identità costituzionale dello Stato — che resistono anche al primato europeo.\n\nIn materia penale i controlimiti includono: la riserva di legge (solo il Parlamento può incriminare), l'irretroattività sfavorevole (le norme più severe non si applicano al passato), la determinatezza/tassatività (le fattispecie devono essere sufficientemente precise), il giudicato di assoluzione (intangibile). Il caso paradigmatico è il caso Taricco: la CGUE aveva ritenuto che i giudici italiani dovessero disapplicare le norme sulla prescrizione per tutelare gli interessi finanziari UE; la Consulta ha risposto con la minaccia dei controlimiti, ottenendo che la CGUE temperasse la propria posizione (Taricco II, 2017).\n\nI controlimiti non sono strumenti di difesa nazionalistica ma presidi di civiltà giuridica: garantiscono che l'integrazione europea non eroda le garanzie individuali conquistate con l'evoluzione del costituzionalismo moderno.",
+        "fondamento_normativo": [
+          "Art. 11 Cost.",
+          "Art. 2 Cost.",
+          "C. Cost. 183/1973 (Frontini)",
+          "C. Cost. 115/2018 (Taricco II)"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Il principio supremo in gioco è intaccato dalla norma UE o dalla sua interpretazione? Se sì, i controlimiti prevalgono e la norma UE non può essere applicata.",
+        "valori_fondanti": [
+          "V01",
+          "V02",
+          "V03"
+        ],
+        "carattere": "Meta-principio di secondo ordine — governa i conflitti tra principi e fonti sovranazionali.",
+        "note_critiche": "I controlimiti sono uno strumento 'nucleare': raramente attivati, ma decisivi quando lo sono. Il rischio è che un uso eccessivo crei frizioni con l'integrazione europea; il rischio opposto è che non vengano usati abbastanza, permettendo erosioni delle garanzie penali."
+      }
+    },
+    {
+      "id": "P25",
+      "type": "principio",
+      "label": "Principio di colpevolezza (nulla poena sine culpa)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di colpevolezza — nulla poena sine culpa — sancisce che non può esistere responsabilità penale senza un elemento soggettivo che copra almeno gli elementi essenziali del reato. È stato elevato a rango costituzionale dalla Corte Costituzionale con le storiche sentenze 364 e 1085 del 1988, ricavandolo dal principio di personalità della responsabilità penale (art. 27, co. 1, Cost.).\n\nIl principio opera su due livelli distinti: l'an della responsabilità (senza colpevolezza non c'è reato — gli elementi fondamentali della fattispecie devono essere coperti almeno dalla colpa) e il quantum della pena (la pena è proporzionata all'intensità del dolo o della colpa, come prevede l'art. 133 c.p.). Il rimprovero penale, a differenza di quello civile, è intrinsecamente personale: colpisce l'autore in quanto autore rimproverabile, non in quanto causa dell'evento.\n\nLa concezione normativa della colpevolezza (prevalente) la definisce come difformità della volontà rispetto al paradigma normativo: nel dolo, il soggetto vuole ciò che la legge impedisce; nella colpa, non prevede (o non evita) ciò che la legge ritiene prevedibile e evitabile dall'agente modello. Non è un mero dato psicologico ma un giudizio di rimproverabilità che tiene conto del contesto e delle capacità del soggetto.\n\nLa responsabilità oggettiva pura — addebito degli elementi essenziali sulla sola base del nesso causale, senza colpa — è incostituzionale. Le sue forme occulte sono la patologia sistematica più rilevante: culpa in re ipsa (si presume la colpa dalla natura del fatto), dolus generalis (si attribuisce il fatto al dolo iniziale anche quando l'evento si verifica diversamente), presunzioni assolute di colpevolezza, elevazione dello standard dell'agente modello fino all'eroismo. Il docente denuncia sistematicamente queste forme di elusione nella giurisprudenza penale.",
+        "fondamento_normativo": [
+          "Art. 27, co. 1, Cost.",
+          "C. Cost. 364/1988",
+          "C. Cost. 1085/1988"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Gli elementi essenziali del reato sono coperti almeno dalla colpa? L'elemento soggettivo è stato accertato in concreto o è presunto? Lo standard di diligenza richiesto è raggiungibile dall'agente ordinario?",
+        "valori_fondanti": [
+          "V05"
+        ],
+        "carattere": "Principio rigido nel nucleo essenziale — non ammette deroghe per gli elementi fondamentali del reato.",
+        "note_critiche": "La responsabilità oggettiva spuria (per elementi non fondamentali) è ammissibile con condizioni di ragionevolezza. La forma più pericolosa di elusione è l'agente eroico: quando lo standard di diligenza è elevato all'irraggiungibile, la colpa diventa de facto responsabilità oggettiva. Questo problema è particolarmente grave nella responsabilità medica."
+      }
+    },
+    {
+      "id": "P22",
+      "type": "principio",
+      "label": "Principio di materialità (o di esteriorità)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di materialità — nulla iniuria sine actione — stabilisce che nessuno può essere punito per un modo di essere, per un atteggiamento psicologico, per una volontà non tradotta in azione (cogitationis poenam nemo patitur: 'il pensiero non è punibile'). Il diritto penale si occupa esclusivamente di atti esterni, oggettivamente verificabili e percepibili nel mondo fisico.\n\nIl fondamento costituzionale è nell'art. 25, co. 2, Cost. che richiede un 'fatto commesso' — non uno stato, una tendenza, una pericolosità. La CEDU (art. 7) e la Carta di Nizza (art. 49) parlano di 'azione o omissione'. Schopenhauer ne aveva già intuito il nucleo filosofico: 'l'uomo delinque non in quanto è, ma in quanto opera'.\n\nLe conseguenze operative sono radicali: sono escluse dal diritto penale le incriminazioni del 'tipo d'autore' (punire qualcuno per quello che è, non per quello che ha fatto), del 'delinquente naturale' (concezione lombrosiana), della 'finalità' (punire per la direzione ideologica della condotta senza un fatto esterno), della 'pericolosità sociale' (che giustifica solo misure di prevenzione, non la pena). Le norme che punivano il 'possesso ingiustificato di valori' (art. 708 c.p., dichiarato incostituzionale nel 1996) o il 'vivere onestamente' come obbligo del sorvegliato speciale (art. 5 L. 1423/1956, dichiarato incostituzionale nel 2019) violavano il principio di materialità insieme a quello di determinatezza.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 7 CEDU",
+          "Art. 49 Carta di Nizza"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Vi è una condotta esterna percepibile? O si sta punendo uno stato, una qualità personale, una tendenza?",
+        "valori_fondanti": [
+          "V01"
+        ],
+        "carattere": "Principio rigido — esclude il diritto penale del tipo d'autore e le incriminazioni di stati soggettivi."
+      }
+    },
+    {
+      "id": "P24",
+      "type": "principio",
+      "label": "Principio di equivalenza delle cause (condizionalismo)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di equivalenza delle cause — o teoria condizionalistica — stabilisce che l'evento va addebitato a tutte le condizioni che ne sono state causa necessaria: condicio sine qua non. Un evento è causato dalla condotta quando, eliminando mentalmente quella condotta, l'evento hic et nunc (così come si è verificato, in quelle specifiche circostanze) non si sarebbe verificato.\n\nIl fondamento normativo è negli artt. 40 e 41 c.p.: l'art. 40 stabilisce che 'nessuno può essere punito per un fatto preveduto dalla legge come reato, se l'evento dannoso o pericoloso, da cui dipende l'esistenza del reato, non è conseguenza della sua azione od omissione'; l'art. 41, co. 1 e 3, specifica che il concorso di cause non esclude l'addebito causale.\n\nIl docente prende una posizione netta: il condizionalismo è l'unica teoria della causalità supportata dal dato normativo italiano. Le teorie 'correttive' — causalità adeguata (solo eventi tipici e prevedibili), causalità umana di Antolisei (solo eventi passibili di 'signoria' dell'uomo), imputazione obiettiva di Roxin (solo eventi che concretizzano il rischio creato dalla condotta) — introducono elementi di valutazione soggettiva (prevedibilità, normalità, rischio) in un giudizio che deve essere empirico e oggettivo. Gli eccessi del condizionalismo non vanno corretti alterando il giudizio causale, ma gestendo correttamente il piano della colpevolezza (dolo, colpa): separazione dei piani è la regola metodologica fondamentale.\n\nIl metodo di accertamento è la sussunzione sotto leggi scientifiche di copertura (Franzese, SS.UU. 2002): si parte dalla probabilità statistica della legge scientifica (causalità generale) e si verifica nel caso concreto l'esclusione di cause alternative (probabilità logica). Lo standard probatorio è quello penale: alta probabilità logica ed elevata credibilità razionale (BARD — beyond any reasonable doubt).",
+        "fondamento_normativo": [
+          "Art. 40 c.p.",
+          "Art. 41, co. 1 e 3, c.p."
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Eliminando mentalmente la condotta, l'evento hic et nunc si sarebbe comunque verificato? Se sì, manca il nesso causale. Se no, il nesso causale sussiste. Il test va applicato all'evento concreto, non a 'un evento simile'.",
+        "valori_fondanti": [
+          "V03"
+        ],
+        "carattere": "Unica teoria causale supportata dal dato normativo italiano.",
+        "note_critiche": "La teoria dell'imputazione obiettiva (Roxin), dominante in Germania, mescola causalità e imputazione. Il docente la respinge perché introduce criteri soggettivi (la 'creazione di un rischio non consentito') in un giudizio che deve essere empirico. Il rischio è che la causalità diventi strumento per anticipare o posticipare l'addebito sulla base di valutazioni di opportunità."
+      }
+    },
+    {
+      "id": "I01",
+      "type": "istituto",
+      "label": "Riserva di legge tendenzialmente assoluta",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La riserva di legge tendenzialmente assoluta è la forma concreta che assume il principio di riserva di legge (P02) nel sistema delle fonti penali. Il suo contenuto è il risultato di un percorso evolutivo che ha rifiutato i due modelli estremi: la riserva assolutamente assoluta (che richiederebbe una legge totalmente completa e autosufficiente — 'un mito', come dice il docente, perché la complessità della realtà rende impossibile la previsione legislativa di tutti i dettagli tecnici) e la riserva relativa (che ammetterebbe l'integrazione politica da fonti secondarie, svuotando l'art. 25, co. 2, Cost.).\n\nLa soluzione accolta dalla Corte Costituzionale è la distinzione precetto/sanzione: per il precetto la riserva è tendenzialmente assoluta (ammette integrazione puramente tecnica da fonti secondarie, purché la legge determini già i presupposti, i caratteri, il contenuto e i limiti dell'integrazione); per la sanzione la riserva è assolutamente assoluta (nessuna delega è ammessa — la cornice edittale, la specie di pena e i criteri di commisurazione devono essere stabiliti interamente dalla legge parlamentare).\n\nIl criterio discriminante tra integrazione tecnica ammessa e scelta politica vietata è la natura dell'integrazione: è tecnica la specificazione del contenuto di un elemento già definito nella legge (quali sostanze costituiscono stupefacenti ai sensi dell'art. 73 TU 309/90); è politica la selezione dei comportamenti penalmente rilevanti o la determinazione delle soglie sanzionatorie differenziate. Questo confine è spesso difficile da tracciare nella pratica — il caso della 'soglia-dose' negli stupefacenti è emblematico della zona grigia.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost."
+        ],
+        "principi_governanti": [
+          "P02"
+        ],
+        "funzioni": [
+          "F05"
+        ],
+        "elementi": [
+          "I02"
+        ],
+        "cat": "Fonti del diritto penale"
+      }
+    },
+    {
+      "id": "I02",
+      "type": "istituto",
+      "label": "Norme penali in bianco",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Le norme penali in bianco sono quelle norme la cui fattispecie incriminatrice è strutturalmente incompleta: il precetto non è autosufficiente e richiede l'integrazione da parte di una fonte normativa secondaria (regolamento ministeriale, decreto, atto amministrativo) per descrivere compiutamente il comportamento vietato. Il paradigma è l'art. 73 TU Stupefacenti, che rinvia a decreti ministeriali per la definizione delle sostanze stupefacenti: la norma penale fissa la condotta e la sanzione, la fonte secondaria specifica l'oggetto materiale del reato.\n\nLa legittimità costituzionale delle norme in bianco dipende dal rispetto di tre condizioni cumulative: (1) la legge deve determinare con sufficiente specificazione i presupposti, i caratteri, il contenuto e i limiti dell'integrazione ammessa; (2) l'integrazione deve essere di natura puramente tecnica — specificare fatti e non fare scelte di valore; (3) la fonte secondaria deve rimanere nei limiti segnati dalla legge, senza ampliare o restringere autonomamente l'area di incriminazione.\n\nIl rischio sistematico delle norme in bianco è la 'scivolata' dalla tecnica alla politica: quando la fonte secondaria finisce per fare scelte di valore (es. stabilire la soglia-dose che discrimina tra uso personale e spaccio), essa compie scelte di politica criminale che spetterebbero al Parlamento. Il giudice che si trova di fronte a una norma in bianco deve verificare se l'integrazione operata dalla fonte secondaria rispetti il vincolo tecnico o travalichi in scelte di valore — nel secondo caso, la norma va disapplicata o sollevata questione di legittimità costituzionale.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 73 TU Stupefacenti",
+          "Art. 650 c.p."
+        ],
+        "principi_governanti": [
+          "P02"
+        ],
+        "funzioni": [
+          "F03"
+        ],
+        "padre": "I01",
+        "cat": "Fonti del diritto penale",
+        "note_critiche": "La questione della soglia-dose negli stupefacenti è il caso emblematico: se il decreto ministeriale stabilisce che sotto una certa quantità il fatto è non punibile o punibile diversamente, sta facendo una scelta di politica criminale (decidere chi è spacciatore e chi è consumatore) che dovrebbe appartenere al legislatore. La Consulta ha oscillato su questo punto."
+      }
+    },
+    {
+      "id": "I39",
+      "type": "istituto",
+      "label": "Statuto delle scriminanti (le quattro regole)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Lo statuto delle scriminanti è l'insieme delle quattro regole generali applicabili a tutte le cause di giustificazione, ricavate dagli artt. 55, 59 e 119 c.p. Queste regole definiscono il 'diritto comune' delle scriminanti, indipendentemente dalla specifica causa di giustificazione in gioco.\n\nLa prima regola è la rilevanza oggettiva (art. 59, co. 1): le cause di giustificazione operano per il solo fatto che si verifichino oggettivamente, indipendentemente dalla consapevolezza del soggetto che agisce. Chi per caso compie un fatto tipico in una situazione scriminante (es. uccide una persona credendo di sparare a un bersaglio di carta, mentre quella persona stava per uccidere un terzo) è scriminato anche se non sapeva di trovarsi nella situazione di legittima difesa. La seconda regola è la scriminante putativa (art. 59, co. 4): la causa di giustificazione opera anche se non verificata in realtà, purché il soggetto la supponga erroneamente esistente. Se l'errore è inescusabile, il soggetto risponde per colpa (se il reato è previsto nella forma colposa).\n\nLa terza regola è l'eccesso colposo (art. 55): se la scriminante esiste ma il soggetto supera i limiti imposti dall'ordinamento, risponde per colpa dell'evento prodotto — purché il reato sia previsto nella forma colposa. La quarta regola è l'estensione ai concorrenti (art. 119): le scriminanti 'reali' (quelle che riguardano il fatto oggettivo) si estendono a tutti i correi; le scriminanti 'personali' (quelle che riguardano la posizione soggettiva del singolo) operano solo per chi si trova nella situazione rilevante.",
+        "fondamento_normativo": [
+          "Art. 55 c.p.",
+          "Art. 59 c.p.",
+          "Art. 119 c.p."
+        ],
+        "principi_governanti": [
+          "P18",
+          "P19"
+        ],
+        "funzioni": [
+          "F05"
+        ],
+        "cat": "Cause di giustificazione"
+      }
+    },
+    {
+      "id": "I52",
+      "type": "istituto",
+      "label": "Fatto tipico: struttura",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il fatto tipico è il primo elemento della struttura tripartita del reato (fatto tipico → antigiuridicità → colpevolezza) e consiste nell'insieme degli elementi oggettivi richiesti dalla singola norma incriminatrice per la configurazione del reato. È il livello al quale si verifica la corrispondenza tra il fatto storico accaduto e il modello astratto descritto dalla fattispecie penale.\n\nGli elementi fondamentali sono tre: la condotta (sempre indefettibile — senza un comportamento umano non c'è fatto tipico), l'evento naturalistico (presente solo nei reati di evento — nei reati di mera condotta l'evento è insito nella condotta stessa) e il nesso di causalità (presente solo nei reati di evento, lega la condotta all'evento). Accanto a questi elementi fondamentali vi sono elementi ulteriori: i presupposti della condotta (situazioni preesistenti richieste dalla norma), gli elementi normativi (rinvii a norme extra-penali per la definizione di elementi della fattispecie), le qualità del soggetto attivo o passivo (nei reati propri).\n\nIl fatto tipico svolge una triplice funzione: classificatoria (distingue i tipi di reato in base alla struttura — reati di azione/omissione, di evento/mera condotta, a forma libera/vincolata, di pericolo/danno); delimitativa o selettiva in senso negativo (restringe l'ambito del penalmente rilevante, escludendo comportamenti che non corrispondono al modello); dogmatica applicativa (risolve i problemi di unità e pluralità di reati attraverso i criteri di specialità, consunzione e sussidiarietà).\n\nLa struttura del fatto tipico è anche il punto in cui si manifesta la tensione tra la concezione bipartita del reato (che considera le scriminanti elementi negativi del fatto tipico) e la concezione tripartita (che le colloca in un livello autonomo — l'antigiuridicità). Il docente preferisce la tripartita per ragioni dogmatiche, ma riconosce che le differenze pratiche sono spesso minime.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Artt. 40-41 c.p.",
+          "Art. 42 c.p."
+        ],
+        "principi_governanti": [
+          "P01",
+          "P22"
+        ],
+        "funzioni": [
+          "F12",
+          "F13",
+          "F14"
+        ],
+        "elementi": [
+          "I53",
+          "I54",
+          "I55"
+        ],
+        "cat": "Struttura del reato"
+      }
+    },
+    {
+      "id": "I55",
+      "type": "istituto",
+      "label": "Nesso di causalità: teoria condizionalistica",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il nesso di causalità è il terzo elemento del fatto tipico nei reati di evento: il legame tra la condotta del soggetto e la modificazione della realtà esterna (l'evento) che costituisce il danno o il pericolo per il bene tutelato. La teoria condizionalistica — condicio sine qua non — è l'unica che trova supporto diretto nel dato normativo italiano (artt. 40 e 41 c.p.) ed è quella accolta dal docente.\n\nIl metodo di accertamento è il giudizio controfattuale: eliminando mentalmente la condotta dell'agente, l'evento hic et nunc — così come si è verificato, in quelle specifiche circostanze e in quel momento — si sarebbe comunque verificato? Se sì, manca il nesso causale. Se no, il nesso sussiste. Il punto decisivo è che l'oggetto del giudizio è l'evento concreto, non 'un evento simile': la morte di quella persona, in quel modo, in quel momento — non 'una morte in generale'.\n\nPer l'accertamento nelle fattispecie complesse (malattie professionali, disastri industriali, responsabilità medica) le SS.UU. con la sentenza Franzese (2002) hanno elaborato il modello della probabilità logica: (1) si individua una legge scientifica di copertura che spiega il meccanismo causale (causalità generale — probabilità statistica); (2) si verifica nel caso concreto che quella legge si sia effettivamente realizzata, escludendo cause alternative (causalità individuale — probabilità logica). Lo standard è il BARD: alta probabilità logica ed elevata credibilità razionale. Una legge scientifica con bassa probabilità statistica può essere sufficiente se il processo esclude tutte le cause alternative (caso HIV: 1% di probabilità statistica può fondare condanna se non vi sono spiegazioni causali alternative).\n\nIl docente respinge i 'correttivi' alla teoria condizionalistica (causalità adeguata, umana, imputazione obiettiva) perché contaminano con elementi soggettivi un giudizio che deve essere empirico e oggettivo. Gli eccessi del condizionalismo si correggono sul piano della colpevolezza, non su quello causale.",
+        "fondamento_normativo": [
+          "Art. 40, co. 1, c.p.",
+          "Art. 41 c.p.",
+          "SS.UU. Franzese 30328/2002"
+        ],
+        "principi_governanti": [
+          "P24"
+        ],
+        "padre": "I52",
+        "cat": "Struttura del reato"
+      }
+    },
+    {
+      "id": "I74",
+      "type": "istituto",
+      "label": "Dolo eventuale — svolta ThyssenKrupp",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il dolo eventuale è la forma meno intensa di dolo prevista dal codice penale (art. 43 c.p.): l'evento non è né il fine perseguito dall'agente (dolo intenzionale) né una conseguenza certa della sua condotta (dolo diretto), ma una conseguenza possibile che il soggetto accetta di produrre pur di raggiungere il proprio obiettivo. Le SS.UU. ThyssenKrupp (38343/2014) hanno fissato la definizione tuttora vigente e hanno segnato una svolta epocale nella giurisprudenza penale italiana.\n\nLa chiave della definizione è la 'nozione economica' del dolo eventuale elaborata dalle SS.UU.: l'evento collaterale è il 'prezzo' che il soggetto è disposto a pagare per raggiungere il suo fine. Il soggetto compara i propri interessi (l'obiettivo che persegue) con l'interesse della vittima (l'evento lesivo che potrebbe produrre) e, nell'implicita 'transazione', sacrifica l'interesse della vittima come corrispettivo del proprio agire. Questa costruzione salva la componente volitiva del dolo eventuale: non è sufficiente la mera rappresentazione della possibilità dell'evento, occorre l'accettazione — la disponibilità a 'pagare il prezzo'.\n\nLa distinzione dal confine — la colpa con previsione — è nella schermatura del rischio: nel dolo eventuale il soggetto non schermatura il rischio (non adotta cautele specifiche per evitare l'evento collaterale) perché accetta che si verifichi; nella colpa con previsione il soggetto si rappresenta l'evento ma non lo accetta, scherma il rischio, confida nel non-verificarsi grazie alla propria abilità o a circostanze esterne.\n\nGli indicatori elaborati dalla giurisprudenza ThyssenKrupp per accertare il dolo eventuale comprendono: la probabilità percepita dell'evento (più alta, più si avvicina al dolo diretto), le conseguenze per l'agente stesso (se l'evento potesse danneggiare anche lui, è meno probabile l'accettazione), la durata e la reiterazione della condotta (chi persiste a lungo dimostra accettazione), il contesto lecito o illecito (nell'illecito è più probabile l'accettazione del rischio), la schermatura del rischio (le cautele adottate dimostrano non-accettazione), il comportamento post-fatto.",
+        "fondamento_normativo": [
+          "Art. 43 c.p.",
+          "SS.UU. ThyssenKrupp 38343/2014"
+        ],
+        "principi_governanti": [
+          "P25"
+        ],
+        "cat": "Elemento soggettivo",
+        "note_critiche": "La distinzione dolo eventuale / colpa con previsione rimane uno dei problemi più difficili del diritto penale. Il caso Schettino ha dimostrato i limiti: un soggetto che si rappresenta un rischio enorme ma agisce per panico o vanità si trova in una zona grigia in cui l'accertamento degli indicatori ThyssenKrupp produce esiti controversi."
+      }
+    }
+  ],
+  "relations": []
+}

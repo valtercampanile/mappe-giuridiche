@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "versione": "1.5",
+    "data_aggiornamento": "2026-03-16",
+    "tipo": "update_inquadramento_batch5_finale",
+    "descrizione": "Quinto e ultimo batch — principi tassatività L2 (P12-P14, P16, P17), istituti L2 rimanenti (I27, I29, I34-I36), istituti L4 rimanenti (I56, I57). Completamento totale.",
+    "fonte": "docente"
+  },
+  "entities": [
+    {
+      "id": "P12",
+      "type": "principio",
+      "label": "Chiarezza della legge penale",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di chiarezza richiede che la norma penale sia linguisticamente e sintatticamente comprensibile: la struttura del testo, la sintassi delle proposizioni e il significato dei termini devono essere intellegibili per il destinatario. Una legge 'irrimediabilmente oscura' — quella che, per come è formulata, non consente di capire cosa prescrive — è incostituzionale.\n\nIl parametro di incostituzionalità per le norme penali oscure è l'art. 3 Cost. (principio di ragionevolezza) prima ancora dell'art. 25, co. 2 (principio di legalità): una norma incomprensibile è irragionevole, perché non può orientare il comportamento del destinatario. Il caso paradigmatico individuato dal docente è C. Cost. 110/2023, relativa a una legge regionale del Molise che usava l'acronimo 'V.A.' con due significati diversi nella stessa disposizione: la Corte ha dichiarato la norma incostituzionale per oscurità che la rendeva 'sospesa nel vuoto' — il destinatario non poteva capire a quale significato fare riferimento.\n\nIl principio di chiarezza ha come destinatario il legislatore, non il giudice. Il legislatore deve formulare le norme in modo chiaro; il giudice usa l'interpretazione per chiarire le ambiguità (riducendole teleologicamente, se necessario), ma non può supplire a un'oscurità radicale che rende la norma semanticamente inapplicabile.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 3 Cost.",
+          "C. Cost. 110/2023"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "La norma è linguisticamente comprensibile? Se è irrimediabilmente oscura — non solo ambigua — sollevare QLC per violazione del principio di ragionevolezza.",
+        "valori_fondanti": [
+          "V01",
+          "V03"
+        ],
+        "principio_padre": "P11",
+        "carattere": "Destinatario: il legislatore. Ma il giudice solleva QLC se la norma è irrimediabilmente oscura."
+      }
+    },
+    {
+      "id": "P13",
+      "type": "principio",
+      "label": "Precisione della legge penale",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di precisione richiede che il fatto tipico sia descritto in modo puntuale, senza formule eccessivamente generiche che conferiscano al giudice un potere integrativo di fatto equivalente a quello del legislatore. Il legislatore non può delegare al giudice la selezione dei comportamenti punibili attraverso clausole aperte che non delimitano sufficientemente l'area del penalmente rilevante.\n\nLa distinzione cruciale è tra clausole elastiche (ammesse) e formule radicalmente vaghe (incostituzionali). Le clausole elastiche contengono termini valutativi o sintetici che richiedono una certa opera interpretativa per la loro applicazione al caso concreto, ma sono dotate di una ratio unificante riconoscibile che orienta il giudice: 'atti osceni', 'condotta violenta', 'stato di bisogno'. Non sono infinitamente estensibili — il giudice deve trovare nei casi tipici un filo conduttore — ma non sono vuote di contenuto. Le formule radicalmente vaghe invece non offrono al giudice alcun criterio di orientamento e finiscono per consentire qualsiasi scelta interpretativa: il caso paradigmatico è il 'plagio' (art. 603 c.p., C. Cost. 96/1981), dove lo 'stato di totale soggezione' non era accertabile empiricamente né definibile con sufficiente precisione.\n\nIl parametro interpretativo per distinguere clausole elastiche ammesse e formule vaghe incostituzionali è la 'ratio unificante': se una serie di casi tipici condivide una caratteristica identificabile, la clausola elastica è precisata a sufficienza dalla ratio stessa.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 1 c.p.",
+          "C. Cost. 96/1981 (plagio)"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Il termine usato dalla norma ha una ratio unificante identificabile? I casi tipici condividono una caratteristica comune che delimita l'ambito applicativo? Se no, sollevare QLC per violazione della tassatività.",
+        "valori_fondanti": [
+          "V01",
+          "V03"
+        ],
+        "principio_padre": "P11",
+        "carattere": "Destinatario primario: il legislatore. Il giudice tassativizza le clausole elastiche ma non può salvare le formule radicalmente vaghe."
+      }
+    },
+    {
+      "id": "P14",
+      "type": "principio",
+      "label": "Determinatezza della legge penale",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di determinatezza richiede che gli elementi della fattispecie penale siano empiricamente accertabili nel processo. Non basta che la norma sia comprensibile e precisa in astratto: deve essere 'verificabile' in concreto — ci deve essere corrispondenza controllabile tra fatto storico e modello astratto. Le parole della legge penale devono avere, con l'espressione di Barthes, 'effetti di realtà'.\n\nLa determinatezza è la dimensione processuale della tassatività: si proietta dal piano del legislatore (che deve formulare la norma in modo accertabile) al piano del processo (dove il giudice deve poter accertare con metodo empirico se il fatto storico corrisponde al modello normativo). Un elemento della fattispecie non è determinato quando la sua 'prova' è strutturalmente impossibile — non per difficoltà di fatto, ma perché il concetto stesso non ha un referente empirico verificabile.\n\nI due casi paradigmatici mostrano la differenza. Il 'plagio' (art. 603 c.p.) richiedeva la prova di uno 'stato di totale soggezione psicologica': la Corte Costituzionale (96/1981) ha dichiarato la norma incostituzionale perché non era possibile accertare empiricamente nel processo quando uno stato di influenza psicologica raggiungesse la 'totalità' della soggezione — un concetto senza referente empirico verificabile. Lo 'stalking' (art. 612-bis c.p.) richiede la prova di un 'grave e perdurante stato di ansia o di paura': la Corte Costituzionale (172/2014) ha dichiarato la norma costituzionalmente legittima perché la psicologia clinica consente di accertare con metodologia scientifica la presenza di uno stato ansioso, e il requisito 'perdurante' e 'grave' aggiunge delimitazioni empiriche sufficienti.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "C. Cost. 96/1981 (plagio)",
+          "C. Cost. 172/2014 (stalking)"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Gli elementi della fattispecie hanno un referente empirico verificabile nel processo? Esiste una metodologia scientifica o pratica per accertarli? Se no, sollevare QLC per violazione della determinatezza.",
+        "valori_fondanti": [
+          "V01",
+          "V03"
+        ],
+        "principio_padre": "P11",
+        "carattere": "Dimensione processuale della tassatività — garantisce la verificabilità empirica degli elementi del fatto tipico."
+      }
+    },
+    {
+      "id": "P16",
+      "type": "principio",
+      "label": "Favor libertatis / preferenza interpretazione restrittiva",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il favor libertatis esprime la preferenza dell'ordinamento penale per le soluzioni interpretative che restringono l'area del penalmente rilevante. In caso di incertezza tra un'interpretazione estensiva e una restrittiva della norma penale, l'interprete deve preferire quella restrittiva. La ragione è radicata nel fondamento stesso del diritto penale liberale: la libertà personale è il valore supremo che il penale comprime, e ogni compressione non necessaria è illegittima.\n\nIl favor libertatis non è un divieto assoluto di interpretazione estensiva — che è ammessa quando necessaria e prevedibile — ma un principio di preferenza: a parità di fondatezza interpretativa, vale l'interpretazione più favorevole alla libertà. Ha il suo analogo procedurale nell'in dubio pro reo (nell'accertamento del fatto storico in caso di dubbio probatorio) e normativo nella lex mitior (in caso di successione di leggi nel tempo).\n\nIl confronto con i sistemi di common law è istruttivo. La 'rule of lenity' francese (art. 111-4 c.p.f.) e il suo equivalente statunitense vietano espressamente l'interpretazione estensiva delle norme penali. L'ordinamento italiano non prevede un divieto esplicito, ma il favor libertatis produce un effetto simile attraverso la via del principio: l'interpretazione estensiva è eccezione, non regola, e richiede una giustificazione specifica (necessità + prevedibilità). Quando non c'è questa giustificazione, prevale la lettura restrittiva.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 1 c.p.",
+          "Art. 14 Preleggi"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Tra due interpretazioni ugualmente plausibili, quella più restrittiva è preferibile. L'interpretazione estensiva richiede giustificazione specifica (necessità + prevedibilità).",
+        "valori_fondanti": [
+          "V01"
+        ],
+        "principio_padre": "P15",
+        "carattere": "Principio di preferenza — non divieto assoluto, ma orientamento ermeneutico verso la lettura meno incriminante."
+      }
+    },
+    {
+      "id": "P17",
+      "type": "principio",
+      "label": "Principio di inesigibilità (ad impossibilia nemo tenetur)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di inesigibilità — ad impossibilia nemo tenetur — stabilisce che l'ordinamento rinuncia al rimprovero penale quando il rispetto della legge era talmente costoso, lacerante o impossibile da non essere umanamente esigibile. È la 'valvola di umanità del sistema penale' (definizione del docente): il punto in cui la rigidità normativa cede di fronte alla realtà della condizione umana.\n\nL'inesigibilità opera non eliminando il fatto (che rimane tipico e antigiuridico) ma escludendo la colpevolezza: il soggetto ha agito contra ius, ma non è rimproverabile perché le circostanze erano tali da rendere impossibile o irragionevolmente costosa la scelta conforme al diritto. Il fondamento è nella ratio fondativa del valore V05 (dignità della persona): non si rimprovera chi non poteva ragionevolmente agire diversamente.\n\nLo status controverso del principio è il punto più delicato. La Cassazione (SS.UU. 2021) lo ha elevato a principio generale dell'ordinamento, auto-applicativo dal giudice: quando il caso concreto presenta caratteristiche di inesigibilità non riconducibili a nessuna scusante tipizzata, il giudice può direttamente escludere la colpevolezza in applicazione del principio. La dottrina prevalente è critica: l'inesigibilità è una ratio fondativa che orienta il legislatore nella creazione delle scusanti (art. 384, art. 54, co. 3, art. 393-bis c.p.), non un principio auto-applicativo nelle mani del giudice. Permettere al giudice di escludere la colpevolezza in casi non tipizzati equivale a consentirgli di fare scelte di politica criminale — invadendo la sfera del legislatore. Il docente si schiera con la dottrina critica: l'inesigibilità è ratio, non principio.",
+        "fondamento_normativo": [
+          "Art. 27, co. 1, Cost.",
+          "Art. 384 c.p.",
+          "Art. 54, co. 3, c.p.",
+          "SS.UU. 2021"
+        ],
+        "auto_applicativo": false,
+        "valori_fondanti": [
+          "V05"
+        ],
+        "carattere": "Status controverso: per la Cassazione è principio generale auto-applicativo; per la dottrina prevalente e per il docente è ratio fondativa che richiede intermediazione legislativa.",
+        "note_critiche": "Il docente è netto: se l'inesigibilità fosse auto-applicativa, ogni giudice potrebbe assolvere qualsiasi imputato 'comprensibile' — una giurisprudenza degli affetti che dissolverebbe la certezza del diritto. Le scusanti devono essere tipizzate dal legislatore, non create caso per caso dalla giurisprudenza."
+      }
+    },
+    {
+      "id": "I27",
+      "type": "istituto",
+      "label": "Analogia in bonam partem",
+      "fonte": "docente",
+      "data": {
+        "definizione": "L'analogia in bonam partem è l'estensione analogica di norme favorevoli al reo a casi non espressamente previsti ma dotati della medesima ratio. È in linea di principio ammessa nel diritto penale — il divieto di analogia (P15) opera solo in malam partem, in coerenza con la ratio garantista della tassatività (tutela della libertà, non della certezza).\n\nIl limite fondamentale è la distinzione tra lacuna tecnica (colmabile per analogia) e lacuna politica (scelta consapevole del legislatore che non deve essere aggirata). La lacuna tecnica è la dimenticanza o il gap involontario: il legislatore non ha previsto il caso perché non l'ha considerato, ma la ratio della norma si estenderebbe naturalmente ad esso. La lacuna politica è il silenzio consapevole: il legislatore ha deliberatamente escluso il caso, per ragioni di opportunità o di coerenza del sistema — e quel silenzio è vincolante per il giudice.\n\nL'ambito di applicazione dell'analogia in bonam partem varia per categoria di norma. Le cause di giustificazione (scriminanti) sono pacificamente analogizzabili: sono norme extrapenali, non soggette all'art. 14 Preleggi. Le scusanti (cause di esclusione della colpevolezza) sono analogizzabili secondo le SS.UU. 2021 — che le qualifica come norme regolari che attuano il principio di colpevolezza — ma il docente è critico (rischio di lacune politiche mascherate da tecniche). Le cause di estinzione del reato/pena, le immunità, le condizioni obiettive di punibilità, le circostanze attenuanti tipiche e le cause di esclusione della punibilità in senso stretto sono norme eccezionali, non analogizzabili.",
+        "fondamento_normativo": [
+          "Art. 14 Preleggi",
+          "Art. 25, co. 2, Cost."
+        ],
+        "principi_governanti": [
+          "P15"
+        ],
+        "cat": "Logiche interpretative — istituto"
+      }
+    },
+    {
+      "id": "I29",
+      "type": "istituto",
+      "label": "Art. 384 c.p. e convivente more uxorio (SS.UU. 2021)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il caso dell'estensione dell'art. 384 c.p. al convivente more uxorio è uno dei più discussi nella giurisprudenza recente sull'analogia in bonam partem e costituisce un esempio paradigmatico di come il confine tra lacuna tecnica e lacuna politica sia spesso incerto e controverso.\n\nL'art. 384 c.p. prevede una scusante — non è una causa di giustificazione, come precisa il docente — per chi commette taluni reati (false dichiarazioni, favoreggiamento, rifiuto di uffici) per salvare un 'prossimo congiunto' (art. 307 c.p.) da un procedimento penale. Il convivente more uxorio non è un 'prossimo congiunto' ai sensi dell'art. 307. Le SS.UU. 10381/2021 hanno esteso per analogia l'art. 384 al convivente, attraverso un ragionamento in tre passaggi: (1) l'art. 384 è una scusante soggettiva — non una mera causa di non punibilità — che esclude la colpevolezza per inesigibilità; (2) le scusanti sono norme regolari (non eccezionali) perché attuano il principio costituzionale di colpevolezza; (3) il conflitto di doveri tra istinto familiare e fedeltà alla giustizia è identico per il coniuge e per il convivente more uxorio — eadem ratio, stessa regola.\n\nIl docente è criticamente netto: la lacuna era politica, non tecnica. Il legislatore sapeva benissimo dell'esistenza delle convivenze di fatto. La legge Cirinnà (L. 76/2016), che ha equiparato le unioni civili al matrimonio in molti istituti, dimostra che il Parlamento aveva valutato la questione e operato scelte consapevoli. Non estendere autonomamente l'art. 384 con legge ordinaria, mentre lo faceva per altri istituti, era una scelta politica deliberata — che le SS.UU. non potevano scavalcare con l'analogia giurisprudenziale.",
+        "fondamento_normativo": [
+          "Art. 384 c.p.",
+          "Art. 307 c.p.",
+          "SS.UU. 10381/2021",
+          "L. 76/2016"
+        ],
+        "principi_governanti": [
+          "P15",
+          "P25"
+        ],
+        "padre": "I28",
+        "cat": "Logiche interpretative — istituto",
+        "note_critiche": "La critica del docente alle SS.UU. è anche sistematica: l'estensione dell'art. 307 per includere il convivente avrebbe avuto effetti in malam partem (maltrattamenti in famiglia, violazione di domicilio — figure che presuppongono lo status di familiare). Il percorso scelto — analogia sull'art. 384 senza toccare il 307 — aggira il problema ma non lo risolve: le SS.UU. hanno usato l'analogia dove non aveva conseguenze negative, fingendo di non vedere che il vero problema era la nozione di 'prossimo congiunto'."
+      }
+    },
+    {
+      "id": "I34",
+      "type": "istituto",
+      "label": "Scriminante procedurale (fine vita — C. Cost. 242/2019)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La scriminante procedurale è una categoria elaborata dalla dottrina per descrivere il meccanismo creato dalla C. Cost. 242/2019 (caso Cappato/DJ Fabo) in relazione all'aiuto al suicidio. Si tratta di una causa di giustificazione la cui operatività è condizionata non solo alla presenza di certi presupposti sostanziali, ma anche al rispetto di una procedura di accertamento.\n\nQuattro condizioni cumulative definiscono la scriminante: (1) malattia irreversibile con prognosi infausta; (2) trattamenti di sostegno vitale già in corso (ventilazione meccanica, nutrizione artificiale); (3) sofferenze fisiche o psicologiche che il paziente reputa intollerabili; (4) volontà libera, informata, stabile e attuale del paziente, accertata attraverso una procedura medicalizzata (struttura del SSN, parere vincolante del comitato etico). La procedura non è un formalismo: è garanzia sostanziale che la volontà sia genuina e che il paziente sia nelle condizioni descritte.\n\nLa qualificazione giuridica della 242/2019 è controversa ed è cruciale per le implicazioni future. Se è una scriminante (causa di giustificazione di natura procedurale), è una norma regolare non eccezionale e potrebbe essere analogizzata all'omicidio del consenziente (art. 579 c.p.), aprendo spazi alla legalizzazione dell'eutanasia attiva diretta. Se è una detipizzazione parziale dell'art. 580 c.p. — la Corte avrebbe ridotto l'area del penalmente rilevante senza creare una scriminante autonoma — non ci sono spazi per l'analogia. La C. Cost. 132/2025 ha dichiarato inammissibile la nuova QLC sull'art. 579, rinviando la questione al legislatore.",
+        "fondamento_normativo": [
+          "Art. 580 c.p.",
+          "C. Cost. 242/2019",
+          "L. 219/2017"
+        ],
+        "principi_governanti": [
+          "P18",
+          "P19"
+        ],
+        "cat": "Cause di giustificazione"
+      }
+    },
+    {
+      "id": "I35",
+      "type": "istituto",
+      "label": "Overruling giurisprudenziale sfavorevole e irretroattività",
+      "fonte": "docente",
+      "data": {
+        "definizione": "L'overruling giurisprudenziale sfavorevole è il mutamento interpretativo in malam partem: il caso in cui la giurisprudenza abbandona un orientamento consolidato favorevole al reo sostituendolo con uno sfavorevole. Il problema — sollevato dalla CEDU con il caso Contrada — è se un tale mutamento possa essere applicato retroattivamente a fatti commessi quando l'orientamento favorevole era consolidato.\n\nLa risposta della CEDU è no, quando il mutamento è 'sorprendente' e il cittadino non poteva ragionevolmente prevederlo al momento del fatto. Il principio di legalità sostanziale CEDU (art. 7, P03) include la prevedibilità della decisione sulla base del diritto vivente al momento del fatto — e il diritto vivente comprende la giurisprudenza consolidata. Se l'orientamento favorevole era così stabilizzato da far parte del 'diritto vivente' conoscibile, l'overruling sorprendente viola l'aspettativa legittima del cittadino.\n\nLa distinzione cruciale è tra conflitto sincronico (coesistenza di orientamenti contrapposti al momento del fatto — in quel caso non c'è orientamento 'consolidato' e il cittadino non può fare affidamento su nessuno) e conflitto diacronico (superamento di un orientamento che era stabilmente consolidato al momento del fatto — in quel caso l'overruling ha effetto sorpresa). Il caso Contrada (2015) è emblematico: il concorso esterno all'associazione mafiosa non era una figura giurisprudenzialmente consolidata al momento dei fatti; la CEDU ha ritenuto che Contrada non potesse prevedere di essere condannato per un reato la cui esistenza era ancora sub iudice. La SS.UU. Genco (2020) ha limitato la portata di Contrada ai casi di vera imprevedibilità.",
+        "fondamento_normativo": [
+          "Art. 7 CEDU",
+          "Contrada c. Italia (CEDU 2015)",
+          "SS.UU. Genco 2020"
+        ],
+        "principi_governanti": [
+          "P03",
+          "P04"
+        ],
+        "cat": "Successione di leggi penali nel tempo"
+      }
+    },
+    {
+      "id": "I56",
+      "type": "istituto",
+      "label": "Correttivi causali (respinti dal docente)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "I correttivi causali sono teorie alternative al condizionalismo puro, elaborate per limitarne gli eccessi — in particolare per escludere la responsabilità in casi dove la condotta è condizione necessaria dell'evento ma l'addebito appare eccessivo. Il docente le respinge tutte, per ragioni di metodo e di sistema.\n\nLa teoria della causalità adeguata (Von Bar, Träger) limita la causalità agli eventi tipici, normali, prevedibili secondo l'id quod plerumque accidit: è causa solo ciò che secondo l'ordinaria esperienza contribuisce a produrre quel tipo di evento. Il pugno dato all'emofiliaco non è causa adeguata della morte, perché la morte di un essere umano adulto sano per un pugno è statisticamente insolita. La causalità umana di Antolisei restringe ulteriormente: è causa solo ciò che rientra nel dominio volontaristico del soggetto, nella sua 'signoria'. La teoria dell'imputazione obiettiva dell'evento (Roxin) è la più sofisticata: l'evento è imputabile alla condotta solo se ne concretizza il rischio non consentito che la condotta ha creato — il giudice deve valutare se il nesso tra rischio e evento corrisponde all'ambito di tutela della norma violata.\n\nLa critica metodologica del docente è unitaria per tutte: contaminano causalità e imputazione, introducendo giudizi soggettivi (prevedibilità, normalità, rischio) in un piano che deve essere empirico e oggettivo. La causalità risponde alla domanda: 'questo fatto ha causato quell'evento?' — una domanda empirica. Le teorie correttive rispondono alla domanda: 'è giusto addebitare quell'evento a questo fatto?' — una domanda normativa. Le due domande appartengono a piani diversi: la prima al nesso causale, la seconda all'elemento soggettivo (dolo, colpa). Gli eccessi del condizionalismo si correggono con la colpa — non con i correttivi causali che avvelenano il pozzo della causalità.",
+        "fondamento_normativo": [
+          "Art. 40 c.p.",
+          "Art. 41 c.p."
+        ],
+        "principi_governanti": [
+          "P24"
+        ],
+        "cat": "Struttura del reato — causalità",
+        "note_critiche": "Il 'pugno all'emofiliaco' è il caso cruciale: con il condizionalismo puro, chi dà un pugno a una persona non sapendo che è emofiliaca risponde della morte se questa sopravviene. Il docente risolve il caso sul piano della colpa (non prevedibilità della morte) e non su quello causale — mantenendo il nesso causale ma escludendo l'elemento soggettivo."
+      }
+    },
+    {
+      "id": "I57",
+      "type": "istituto",
+      "label": "Art. 41, co. 2: cause sopravvenute 'da sole sufficienti'",
+      "fonte": "docente",
+      "data": {
+        "definizione": "L'art. 41, co. 2, c.p. stabilisce che 'il rapporto di causalità è escluso quando la causa del danno è una causa sopravvenuta da sola sufficiente a determinare l'evento'. È il punto di massima controversia interpretativa nella disciplina della causalità penale: la norma sembra in contrasto con il condizionalismo puro, che afferma che il concorso di cause non esclude l'addebito.\n\nLa questione è se 'da sola sufficiente' sia un ossimoro (una concausa non può mai essere 'da sola sufficiente' — è per definizione concausa, non causa unica) oppure sia un'eccezione al condizionalismo per cause sopravvenute di particolare preponderanza. Sono in campo due tesi principali. La tesi A (Marinucci, confermista) sostiene che la norma si riferisce a cause effettivamente autonome — non concause, ma cause sopravvenute che non hanno alcun legame con la condotta precedente. In quel caso la norma è inutile (già col condizionalismo puro la causa autonoma esclude il nesso) ma conferma la regola: il concorso di concause non esclude l'addebito. La tesi B (Mantovani, derogatoria, prevalente in giurisprudenza) sostiene che la norma si riferisce a concause sopravvenute eccezionalmente preponderanti — che pur essendo collegate alla condotta precedente sono così anomale e imprevedibili da spezzare il nesso causale. Il criterio applicativo è l'eccentricità qualitativa del rischio: se la concausa sopravvenuta introduce un rischio qualitativamente diverso da quello creato dalla condotta originaria, esclude il nesso. Esempio: chi ferisce lievemente una persona che poi muore per un incendio ospedaliero doloso — l'incendio è causa sopravvenuta da sola sufficiente perché il rischio-incendio è eccentrico rispetto al rischio-ferita.",
+        "fondamento_normativo": [
+          "Art. 41, co. 2, c.p."
+        ],
+        "principi_governanti": [
+          "P24"
+        ],
+        "cat": "Struttura del reato — causalità"
+      }
+    }
+  ],
+  "relations": []
+}

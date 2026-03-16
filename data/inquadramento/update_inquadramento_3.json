@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "versione": "1.3",
+    "data_aggiornamento": "2026-03-16",
+    "tipo": "update_inquadramento_batch3",
+    "descrizione": "Terzo batch — istituti L2 (successione leggi), L3 (scriminanti specifiche), L4 (causalità e posizioni garanzia), L4-L5 (colpevolezza). Fonte: schede docente.",
+    "fonte": "docente"
+  },
+  "entities": [
+    {
+      "id": "I31",
+      "type": "istituto",
+      "label": "Tempus commissi delicti",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il tempus commissi delicti è il momento in cui il reato si considera commesso ai fini della successione di leggi penali nel tempo. La questione è fondamentale: è in quel momento che il cittadino fa il conto con le conseguenze penali della propria condotta, ed è rispetto a quel momento che si applica il principio di irretroattività sfavorevole.\n\nLa regola generale per i reati a evento differito — quelli in cui condotta ed evento sono separati nel tempo — è che il reato si considera commesso al momento della condotta, non dell'evento. Le SS.UU. Pittalà (2018) hanno stabilito questo principio con chiarezza: solo al momento della condotta il cittadino può conoscere e calcolare le conseguenze penali. Se intervenisse una legge più severa tra la condotta e l'evento, applicarla sarebbe una forma di retroattività sfavorevole in violazione dell'art. 7 CEDU.\n\nLe articolazioni per categoria di reato sono: il reato istantaneo non pone problemi (condotta ed evento coincidono); il reato abituale è controverso — Cass. 28218/2023 ha richiesto che le condotte successive alla nuova legge siano 'autosufficienti' per integrare il reato, soluzione criticata dal docente per la sua artificiosità; il reato permanente vede la legge vigente al momento in cui cessa la permanenza; il reato a consumazione prolungata segue il principio del 'controllo dell'azione'. Il tempus commissi delicti si intreccia con la causalità nelle ipotesi di reato a evento differito: la condotta può precede di anni l'evento (malattia da amianto, tumori da esposizione), creando delicate questioni di diritto intertemporale.",
+        "fondamento_normativo": [
+          "Art. 2 c.p.",
+          "Art. 25, co. 2, Cost.",
+          "Art. 7 CEDU",
+          "SS.UU. Pittalà 40986/2018"
+        ],
+        "principi_governanti": [
+          "P04"
+        ],
+        "cat": "Successione di leggi penali nel tempo"
+      }
+    },
+    {
+      "id": "I32",
+      "type": "istituto",
+      "label": "Abolitio criminis vs. successione modificativa",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La distinzione tra abolitio criminis e successione modificativa è il cuore della disciplina della successione di leggi penali nel tempo e determina conseguenze radicalmente diverse: l'abolitio travolge anche il giudicato di condanna (iper-retroattività); la successione modificativa opera col favor rei ma lascia intatto il giudicato.\n\nL'abolitio criminis (art. 2, co. 2, c.p.) si ha quando la nuova legge elimina completamente la rilevanza penale del fatto: non solo le condanne in corso di esecuzione cessano, ma il giudicato stesso cede — tramite l'art. 673 c.p.p., il condannato può chiedere la revocazione della sentenza. La successione modificativa (art. 2, co. 4, c.p.) si ha quando la nuova legge modifica la fattispecie o la sanzione senza eliminarla: si applica la legge più favorevole al momento del giudizio, ma il giudicato è intangibile.\n\nIl criterio per distinguere le due ipotesi è stato oggetto di evoluzione giurisprudenziale. Il criterio della 'doppia punibilità in concreto' (il fatto deve essere punibile sia sotto la vecchia che la nuova legge) è stato abbandonato perché confonde il piano astratto con quello concreto. Il criterio della 'discontinuità del tipo di illecito' era troppo soggettivo. Le SS.UU. Giordano (2010) hanno fissato il criterio attuale: verifica strutturale e formale della continuità normativa del tipo di illecito, attraverso il test di specialità unilaterale tra fattispecie astratte. Se la nuova fattispecie è speciale rispetto alla vecchia (ne mantiene tutti gli elementi più uno aggiuntivo), c'è successione modificativa. Se non c'è rapporto di specialità, c'è abolitio. SS.UU. 19357/2024 ha applicato il criterio al millantato credito (abolitio per discontinuità strutturale con il traffico di influenze).",
+        "fondamento_normativo": [
+          "Art. 2, co. 2 e 4, c.p.",
+          "Art. 673 c.p.p.",
+          "SS.UU. Giordano 17781/2010"
+        ],
+        "principi_governanti": [
+          "P04",
+          "P05"
+        ],
+        "cat": "Successione di leggi penali nel tempo"
+      }
+    },
+    {
+      "id": "I33",
+      "type": "istituto",
+      "label": "Successione mediata di leggi penali",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La successione mediata si verifica quando non cambia la norma penale, ma cambia la norma extrapenale richiamata dalla fattispecie penale — e questa modifica produce effetti sulla punibilità del fatto. Il problema è se applicare la disciplina della successione di leggi penali (art. 2 c.p.) o quella della successione di leggi in generale (tempus regit actum — la nuova norma si applica ai fatti successivi senza effetto retroattivo).\n\nLa risposta dipende dalla funzione della norma extrapenale nel contesto della fattispecie. Se la norma extrapenale ha funzione integratrice del precetto — cioè la norma penale è strutturalmente incompleta senza di essa e la fonte extrapenale ne definisce gli elementi essenziali — allora la sua modifica equivale a una modifica della legge penale e si applica il favor rei dell'art. 2 c.p. Se invece la norma extrapenale si limita a disciplinare un elemento normativo del fatto concreto (senza essere strutturalmente necessaria per la completezza del precetto), la sua modifica non è successione mediata e si applica il principio tempus regit actum.\n\nEsempi di norma integratrice (successione mediata): il decreto ministeriale che definisce quali sostanze sono stupefacenti ai sensi dell'art. 73 TU 309/90; la normativa che definisce il 'minore' come elemento del fatto; le norme che definiscono i reati-fine dell'associazione mafiosa. Esempi di norma non integratrice (tempus regit actum): lo status di straniero (SS.UU. Magera — la perdita dello status di clandestino dopo la condanna non determina abolitio); la nozione di 'onore'; il tasso usurario periodico (se la soglia usura cambia, non retroagisce sui contratti già stipulati).",
+        "fondamento_normativo": [
+          "Art. 2 c.p.",
+          "Art. 25, co. 2, Cost."
+        ],
+        "principi_governanti": [
+          "P04",
+          "P05"
+        ],
+        "cat": "Successione di leggi penali nel tempo"
+      }
+    },
+    {
+      "id": "I40",
+      "type": "istituto",
+      "label": "Graduazione assiologica delle scriminanti",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La graduazione assiologica delle scriminanti è la classificazione delle cause di giustificazione in ordine decrescente di 'apprezzamento' da parte dell'ordinamento, basata sulla struttura del bilanciamento di interessi sottostante a ciascuna. La scala, elaborata dalla dottrina, riflette quanto il comportamento sia non solo tollerato ma positivamente valutato dal sistema.\n\nIn cima alla scala: l'adempimento del dovere (art. 51 c.p.) — il fatto è non solo autorizzato ma imposto dall'ordinamento. Il soggetto che adempie a un dovere giuridico fa esattamente ciò che il sistema pretende da lui; il fatto tipico è, dal punto di vista dell'ordinamento, un fatto necessario. Subito sotto: l'esercizio del diritto (art. 51 c.p.) — il fatto è autorizzato dall'ordinamento che riconosce al soggetto la facoltà di agire in quel modo. Poi: il consenso dell'avente diritto (art. 50 c.p.) — l'interesse protetto dalla norma è nella disponibilità del titolare, che vi ha rinunciato; il fatto 'manca' del suo presupposto assiologico (interesse mancante). Poi: la legittima difesa (art. 52 c.p.) — il fatto è accettato perché diretto a difendere un interesse equivalente o superiore da un'aggressione ingiusta (interesse prevalente). In fondo: lo stato di necessità (art. 54 c.p.) — il fatto è tollerato perché diretto a salvare un interesse equivalente da un pericolo non evitabile altrimenti; l'ordinamento non approva ma comprende (interesse equivalente).\n\nLa graduazione non è solo dogmatica ma orientativa: indica la diversa 'facilità' con cui la scriminante deve essere accertata e la diversa intensità del bilanciamento richiesto. Lo stato di necessità, essendo la scriminante 'meno apprezzata', è quella con i requisiti più stringenti e l'ambito applicativo più limitato.",
+        "fondamento_normativo": [
+          "Art. 51 c.p.",
+          "Art. 52 c.p.",
+          "Art. 54 c.p.",
+          "Art. 50 c.p."
+        ],
+        "principi_governanti": [
+          "P18",
+          "P20"
+        ],
+        "cat": "Cause di giustificazione"
+      }
+    },
+    {
+      "id": "I43",
+      "type": "istituto",
+      "label": "Attività medico-chirurgica: fondamento della liceità",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il fondamento della liceità dell'attività medico-chirurgica è una questione da sempre dibattuta in dottrina, con implicazioni pratiche rilevanti specialmente quando si tratta di interventi su pazienti incapaci o dissenzienti. Le tesi proposte sono quattro: atipicità (l'attività medica non integra il fatto tipico perché diretta alla salute), esclusione della colpevolezza (chi rispetta le leges artis non è rimproverabile), stato di necessità (negli interventi urgenti senza consenso), esercizio del diritto (art. 51 c.p.).\n\nIl docente aderisce alla tesi dell'esercizio del diritto (art. 51 c.p.) come fondamento generale, con alcune precisazioni. L'attività medica è lecita quando ricorrono quattro requisiti cumulativi: abilitazione professionale del medico (il diritto spetta solo a chi è qualificato); consenso informato del paziente (componente della scriminante, non scriminante autonoma ex art. 50 — perché il bene vita/integrità non è liberamente disponibile); necessità terapeutica (l'intervento deve essere giustificato clinicamente); rispetto delle leges artis (le regole della scienza e dell'arte medica). Quando il consenso è impossibile da ottenere (urgenza, incapacità del paziente), lo stato di necessità (art. 54 c.p.) supplisce come fondamento della liceità.\n\nLa tesi della SS.UU. Giulini (2009) — che distingue esito fausto (atipicità per assenza di 'malattia' in senso funzionale) ed esito infausto (responsabilità differenziata in base a consenso, fine terapeutico, elemento soggettivo) — è criticata dal docente perché interpreta la 'malattia' in senso oggettivo, trascurando la dimensione soggettiva e l'autodeterminazione del paziente valorizzata dalla L. 219/2017.",
+        "fondamento_normativo": [
+          "Art. 51 c.p.",
+          "Art. 54 c.p.",
+          "L. 219/2017"
+        ],
+        "principi_governanti": [
+          "P18",
+          "P20"
+        ],
+        "cat": "Cause di giustificazione",
+        "note_critiche": "La critica alla Giulini è che la 'malattia' funzionale oggettiva prescinde dalla volontà del paziente: un intervento non consenziente che produce esito fausto sarebbe sempre lecito — ma questo contrasta con il diritto all'autodeterminazione. La L. 219/2017 ha rafforzato l'orientamento soggettivista: la salute è unità corpo-psiche e il consenso è insostituibile."
+      }
+    },
+    {
+      "id": "I47",
+      "type": "istituto",
+      "label": "Uso legittimo delle armi: interpretazione conforme CEDU",
+      "fonte": "docente",
+      "data": {
+        "definizione": "L'uso legittimo delle armi (art. 53 c.p.) è la scriminante che autorizza gli ufficiali e agenti della forza pubblica a fare uso delle armi o di altro mezzo di coazione fisica quando vi siano costretti dalla necessità di respingere una violenza o di vincere una resistenza. La norma è stata oggetto di restrizione interpretativa da parte della Corte EDU attraverso il parametro dell'art. 2 CEDU (diritto alla vita).\n\nL'art. 2 CEDU ammette la privazione della vita da parte di un pubblico ufficiale solo quando risulti 'assolutamente necessaria' per: difendere una persona da una violenza illegale; operare un regolare arresto o impedire l'evasione di persona regolarmente detenuta; reprimere, conformemente alla legge, una sommossa o un'insurrezione. La CEDU ha interpretato il requisito dell'assoluta necessità come comprensivo della proporzionalità: l'uso della forza letale è legittimo solo per proteggere beni di uguale rilievo (vita, integrità grave), non per ragioni di ordine pubblico, inseguimento di fuggitivo, o difesa di beni patrimoniali.\n\nI casi Giuliani (2009) e Alikaj c. Italia (2011) hanno portato la CEDU a condannare l'Italia per violazione dell'art. 2 CEDU in relazione all'uso letale delle armi da parte delle forze dell'ordine. La conseguenza interpretativa è che l'art. 53 c.p. va interpretato conformemente all'art. 2 CEDU: la necessità implica la proporzionalità, e la proporzionalità richiede l'omogeneità tra il bene difeso e il bene sacrificato. Un uso letale delle armi per impedire la fuga di un rapinatore — che non minaccia la vita di alcuno — non è giustificato dall'art. 53 c.p. così interpretato. L'effetto è in malam partem indiretto: la scriminante si restringe.",
+        "fondamento_normativo": [
+          "Art. 53 c.p.",
+          "Art. 2 CEDU",
+          "Casi Giuliani (2009) e Alikaj (2011)"
+        ],
+        "principi_governanti": [
+          "P18",
+          "P03"
+        ],
+        "cat": "Cause di giustificazione"
+      }
+    },
+    {
+      "id": "I49",
+      "type": "istituto",
+      "label": "Legittima difesa domiciliare: interpretazione conforme",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La legittima difesa domiciliare, introdotta dalla L. 59/2006 e ampliata dalla L. 36/2019, ha aggiunto i commi 2-4 all'art. 52 c.p., creando una disciplina speciale per la difesa nel domicilio e nei luoghi assimilati. La questione interpretativa centrale è se questi commi configurino una scriminante autonoma (con presunzione assoluta di tutti i requisiti della legittima difesa) o una forma speciale di legittima difesa (con presunzione solo di alcuni requisiti).\n\nIl docente aderisce alla tesi prevalente nella giurisprudenza e in dottrina: legittima difesa speciale, non scriminante autonoma. I commi 2-4 sono norme incomplete che presuppongono i requisiti del comma 1 (pericolo attuale di un'offesa ingiusta, necessità della difesa). La presunzione opererebbe solo per il requisito della proporzionalità — non anche per la necessità e l'attualità del pericolo, che vanno sempre verificate in concreto. L'argomento sistematico decisivo è il co. 2 dell'art. 55 c.p. (eccesso colposo domiciliare): se tutti i requisiti fossero presunti, non ci potrebbe mai essere eccesso — ma il legislatore ha espressamente previsto la scusante dell'eccesso colposo in contesto domiciliare, il che implica che i limiti esistono.\n\nL'interpretazione conforme a Costituzione e CEDU (art. 2 CEDU — favor vitae) impone di non leggere la norma come una 'licenza di uccidere' nel domicilio: una difesa incondizionata violerebbe la tutela della vita dell'intruso e l'art. 2 CEDU. L'eccesso colposo domiciliare (art. 55, co. 2, c.p.) non è una scriminante ma una scusante: esclude la punibilità se l'agente ha agito in stato di minorata difesa o di grave turbamento, ma solo per reazioni 'asteniche' (paura, terrore), non 'steniche' (collera, rabbia).",
+        "fondamento_normativo": [
+          "Art. 52 c.p.",
+          "Art. 55, co. 2, c.p.",
+          "Art. 2 CEDU"
+        ],
+        "principi_governanti": [
+          "P18",
+          "P03"
+        ],
+        "cat": "Cause di giustificazione",
+        "note_critiche": "La riforma del 2019 aveva l'obiettivo politico di ampliare la tutela del cittadino nel domicilio, ma la formulazione normativa è ambigua. La giurisprudenza ha prevalentemente resistito alla lettura 'autonoma' che avrebbe aperto spazi alla difesa letale incondizionata."
+      }
+    },
+    {
+      "id": "I53",
+      "type": "istituto",
+      "label": "Suitas (condotta)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La suitas è la coscienza e volontà dell'azione o dell'omissione (art. 42, co. 1, c.p.) — non dell'evento, non del fatto tipico nella sua interezza, non delle conseguenze. È il requisito minimo della condotta umana: ciò che distingue il comportamento dell'uomo dall'evento naturale, dal movimento riflesso, dall'azione durante il sonno o l'ipnosi.\n\nLa suitas non coincide con il dolo né con la colpa: è un presupposto della tipicità, non un elemento della colpevolezza. Si può avere suitas senza dolo e senza colpa (il soggetto agisce coscientemente ma senza prevedere l'evento e senza possibilità di prevederlo). Il dolo e la colpa presuppongono la suitas: non si può essere in dolo o colpa rispetto a un'azione che non si ha la coscienza di compiere.\n\nLa suitas viene meno in tre situazioni: forza maggiore (il soggetto è fisicamente costretto ad agire da una forza esterna irresistibile), costringimento fisico (il corpo è mosso da un terzo), e caso fortuito (discusso — per alcuni esclude la suitas, per altri esclude la colpa). Non viene meno, invece, per la forte emozione o la difficoltà psichica: il soggetto che agisce sotto l'impulso di un'emozione intensa o in condizioni di difficoltà psicologica conserva la possibilità di dominare la propria condotta — la questione si sposta sul piano della colpevolezza (imputabilità, inesigibilità), non della tipicità.",
+        "fondamento_normativo": [
+          "Art. 42, co. 1, c.p.",
+          "Art. 45 c.p."
+        ],
+        "principi_governanti": [
+          "P22"
+        ],
+        "padre": "I52",
+        "cat": "Struttura del reato"
+      }
+    },
+    {
+      "id": "I58",
+      "type": "istituto",
+      "label": "Causalità scientifica (Franzese-Cozzini)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il modello Franzese-Cozzini rappresenta il metodo di accertamento del nesso causale elaborato dalla giurisprudenza italiana per le fattispecie in cui la causalità non è rilevabile con certezza empirica diretta ma richiede il ricorso alle scienze empirico-naturali. Le SS.UU. Franzese (2002) hanno fissato il principio generale; la sentenza Cozzini (2010) ha integrato i criteri di valutazione dell'attendibilità delle teorie scientifiche.\n\nIl metodo si articola in due passaggi distinti. Primo passaggio — causalità generale o astratta: si individua una legge scientifica di copertura (covering law) che spiega il meccanismo causale tra la condotta e il tipo di evento. Non è necessario che la legge sia universale (ogni volta che A, allora B) — è sufficiente una legge statistica che esprima una probabilità. La probabilità statistica della legge scientifica (es. il 40% delle esposizioni prolungate ad amianto causa mesotelioma) non è però sufficiente per la condanna. Secondo passaggio — causalità individuale o concreta: si verifica se quella legge si è effettivamente realizzata nel caso concreto, escludendo spiegazioni causali alternative. È in questo secondo passaggio che si forma la 'probabilità logica' — il convincimento del giudice, fondato sul ragionamento probatorio e sull'esclusione di cause alternative, che l'esposizione in questione ha causato la malattia di quella specifica persona.\n\nLo standard probatorio è quello penale: alta probabilità logica ed elevata credibilità razionale (BARD — beyond any reasonable doubt). Una legge scientifica con bassa probabilità statistica può essere sufficiente se il processo esclude tutte le cause alternative. I criteri Cozzini per valutare l'attendibilità di una teoria scientifica includono fattori soggettivi (autorevolezza, indipendenza e integrità degli esperti) e oggettivi (ampiezza delle basi fattuali, verificabilità e falsificabilità della teoria, consenso della comunità scientifica).",
+        "fondamento_normativo": [
+          "Art. 40 c.p.",
+          "SS.UU. Franzese 30328/2002",
+          "Cass. Cozzini 43786/2010"
+        ],
+        "principi_governanti": [
+          "P24"
+        ],
+        "cat": "Struttura del reato — causalità"
+      }
+    },
+    {
+      "id": "I59",
+      "type": "istituto",
+      "label": "Causalità omissiva",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La causalità omissiva è il nesso che lega l'omissione del garante all'evento non impedito nel reato omissivo improprio. Si distingue strutturalmente dalla causalità attiva perché l'omissione è ontologicamente un nulla — non è un antecedente fisico dell'evento, ma una mancanza. Il suo 'impatto' causale è giuridicamente costruito attraverso il giudizio ipotetico: se il garante avesse compiuto l'azione dovuta, l'evento si sarebbe verificato lo stesso?\n\nLe quattro caratteristiche strutturali della causalità omissiva: (1) doppio accertamento — giudizio esplicativo (cosa ha causato l'evento nella realtà) più giudizio controfattuale predittivo (cosa sarebbe accaduto se il garante avesse agito); (2) giudizio per addizione mentale, non per eliminazione — si aggiunge mentalmente l'azione dovuta e si chiede se l'evento sarebbe stato impedito; (3) antecedente normativo, non storico — l'antecedente rilevante non è un fatto accaduto ma un comportamento che avrebbe dovuto accadere; (4) applicazione del modello Franzese-Cozzini con maggiori difficoltà, perché il giudizio predittivo su ciò che sarebbe accaduto con l'intervento è per natura meno certo del giudizio esplicativo su ciò che è accaduto.\n\nLa tesi dottrinale contraria sostiene che la causalità omissiva è una finzione: l'omissione non causa nulla, semplicemente non impedisce. Sarebbe più onesto sostituire il requisito causale con la teoria dell'aumento del rischio — si condanna il garante non perché ha causato l'evento, ma perché ha aumentato il rischio che si verificasse. Il docente prende atto di questa critica ma ritiene che il sistema normativo imponga comunque l'accertamento causale, seppure con le difficoltà strutturali indicate.",
+        "fondamento_normativo": [
+          "Art. 40, co. 2, c.p.",
+          "SS.UU. Franzese 30328/2002"
+        ],
+        "principi_governanti": [
+          "P24"
+        ],
+        "cat": "Struttura del reato — causalità"
+      }
+    },
+    {
+      "id": "I61",
+      "type": "istituto",
+      "label": "Posizioni di garanzia: le tre concezioni",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Le posizioni di garanzia sono le situazioni giuridiche che fondano l'obbligo di impedire l'evento ex art. 40, co. 2, c.p. Sono l'elemento che trasforma il generico dovere morale di soccorrere in un obbligo giuridico penalmente sanzionato. La questione di quali situazioni fondino una posizione di garanzia è la più controversa del reato omissivo improprio, con tre concezioni in campo.\n\nLa concezione formale richiede una norma giuridica espressa: la posizione di garanzia nasce dalla legge (es. art. 147 c.c. — dovere dei genitori), dal contratto (es. il medico che accetta il paziente), o dall'esercizio di un'attività pericolosa (es. il gestore di un impianto nucleare). Il 'trifoglio' formale garantisce la certezza del diritto: il soggetto sa in anticipo se è garante e di cosa deve rispondere. La critica è che lascia scoperte situazioni in cui il garante di fatto si è assunto la tutela del bene senza un titolo formale.\n\nLa concezione sostanziale pura ritiene sufficiente la posizione fattuale di garante: chi si trova in una posizione di effettivo controllo su un bene fondamentale altrui, in condizione di esclusiva, è garante indipendentemente da un titolo formale. Questa concezione massimizza la tutela dei beni giuridici ma crea un campo di responsabilità dai contorni indefiniti, potenzialmente in conflitto con il principio di determinatezza.\n\nLa concezione mista (accolta dalla giurisprudenza prevalente) richiede entrambe: una base formale (norma, contratto, o assunzione volontaria della gestione del rischio) più l'effettiva assunzione del controllo sul bene. La tendenza recente è verso la progressiva sostanzializzazione: le posizioni sostanziali (assunzione volontaria unilaterale, contatto sociale) diventano autonomamente sufficienti, con il rischio — denunciato dal docente — di violare la legalità e la determinatezza.",
+        "fondamento_normativo": [
+          "Art. 40, co. 2, c.p.",
+          "Art. 2043 c.c.",
+          "Art. 147 c.c."
+        ],
+        "principi_governanti": [
+          "P01",
+          "P22"
+        ],
+        "padre": "I60",
+        "cat": "Struttura del reato — reato omissivo",
+        "note_critiche": "La sostanzializzazione progressiva è la tensione strutturale del reato omissivo improprio: più si estendono le posizioni di garanzia, più si amplia l'area del penalmente rilevante senza una legge che lo preveda espressamente. Il docente propone il correttivo del 'dovere gestorio' come limite alla deriva sostanzialistica."
+      }
+    },
+    {
+      "id": "I62",
+      "type": "istituto",
+      "label": "Posizioni di garanzia sostanziali: le tre casistiche",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Le posizioni di garanzia sostanziali sono le situazioni in cui la giurisprudenza ha riconosciuto l'esistenza di un obbligo di garanzia in assenza di un titolo formale espresso (norma o contratto), fondandosi sulla posizione fattuale del soggetto. Il docente ne individua tre casistiche principali, con diverso grado di accettazione.\n\nLa prima è l'attività pericolosa: chi svolge un'attività intrinsecamente pericolosa (attività industriale, gestione di animali, organizzazione di eventi ad alto rischio) diventa garante degli eventi dannosi derivanti da quella pericolosità. La critica del docente è che in molti casi si tratta di causalità attiva con note omissive (il datore che non predispone misure di sicurezza compie una condotta complessivamente attiva), e che l'attività pericolosa non è una 'fonte formale' dell'obbligo. Il caso dei gonfiabili (Cass. 2024) è esemplificativo di un'applicazione estensiva problematica.\n\nLa seconda è l'assunzione volontaria unilaterale: quando un soggetto prende in carico un bene appartenente a un soggetto fragile o incapace, senza accordo contrattuale, si crea un rapporto di dipendenza che genera posizione di garanzia. Il caso Vannini (2021) ne è l'esempio paradigmatico: la famiglia che ospita il giovane e si prende cura di lui diventa garante della sua incolumità. Il fondamento è la solidarietà sociale (art. 2 Cost.) e l'interruzione delle alternative istanze di protezione.\n\nLa terza è il contatto sociale consensuale: l'ingerenza nella sfera altrui con accordo informale (non elevato a contratto) crea un'aspettativa di protezione che il diritto penale tutela. Casi: lo scalatore esperto che guida il principiante; chi accompagna un non vedente; chi tiene in braccio un bambino in acqua; chi ospita qualcuno in casa propria. Il fondamento è la buona fede e l'affidamento reciproco (art. 1175 c.c.).",
+        "fondamento_normativo": [
+          "Art. 40, co. 2, c.p.",
+          "Art. 2 Cost.",
+          "Art. 1175 c.c."
+        ],
+        "principi_governanti": [
+          "P01",
+          "P22"
+        ],
+        "padre": "I61",
+        "cat": "Struttura del reato — reato omissivo"
+      }
+    },
+    {
+      "id": "I63",
+      "type": "istituto",
+      "label": "Tesi del docente: dovere gestorio vs. salvifico",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La tesi del docente sulle posizioni di garanzia sostanziali rappresenta un tentativo di trovare un equilibrio tra l'esigenza di tutela dei beni fondamentali (che giustifica l'estensione delle posizioni di garanzia) e il rispetto della legalità e della determinatezza (che impone confini chiari agli obblighi penalmente sanzionati).\n\nIl punto di partenza è l'accettazione parziale della sostanzializzazione: le posizioni di garanzia sostanziali (assunzione volontaria, contatto sociale) sono accettabili se soddisfano quattro presupposti cumulativi: (1) presa in carico effettiva del bene altrui — il soggetto ha assunto de facto la gestione di una situazione; (2) rilevanza di beni fondamentali — vita, incolumità, beni della persona; (3) soggetto incapace di tutelarsi autonomamente — fragilità della vittima che giustifica la tutela penale; (4) idoneità del comportamento ad aver creato o accentuato un rischio, oppure ad aver impedito l'attivazione di alternative istanze di protezione.\n\nIl punto centrale della tesi è la distinzione tra dovere gestorio e dovere salvifico. Il diritto civile impone un dovere salvifico generico: chiunque può essere tenuto a soccorrere chi è in pericolo (art. 593 c.p. — omissione di soccorso — ne è l'eco penale). Il diritto penale impone solo un dovere gestorio: il garante deve gestire i rischi che lui stesso ha creato o accentuato, o i rischi rispetto ai quali si è posto come unico referente. Non deve salvare chiunque, ma deve gestire i pericoli che ha contribuito a creare o che ha assunto in esclusiva.\n\nQuesta distinzione ha un'implicazione pratica: non chiunque si trovi in presenza di un pericolo per un bene altrui diventa garante. Diventa garante solo chi ha svolto un ruolo attivo nella creazione o nell'accentuazione del rischio, o chi ha interrotto la catena di protezione alternativa.",
+        "fondamento_normativo": [
+          "Art. 40, co. 2, c.p."
+        ],
+        "principi_governanti": [
+          "P01",
+          "P22",
+          "P24"
+        ],
+        "padre": "I62",
+        "cat": "Struttura del reato — reato omissivo",
+        "note_critiche": "La tesi del dovere gestorio vs. salvifico è apprezzata dalla dottrina come tentativo di contenere la deriva sostanzialistica, ma non è ancora diventata diritto vivente. La giurisprudenza continua ad applicare criteri più ampi, con il rischio di un 'penale del tipo d'autore' mascherato dalla forma omissiva."
+      }
+    },
+    {
+      "id": "I72",
+      "type": "istituto",
+      "label": "Dolo: classificazione per intensità",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il dolo si articola in tre gradi di intensità decrescente, che corrispondono a tre diversi rapporti psicologici tra il soggetto e l'evento tipico. La distinzione non è puramente teorica: il grado di dolo rileva per la commisurazione della pena (art. 133 c.p. — intensità del dolo), per la distinzione tra tentativo e reato consumato in alcune fattispecie, e soprattutto per il confine con la colpa con previsione.\n\nIl dolo intenzionale (o diretto di primo grado) è la forma più intensa: il soggetto persegue come fine specifico la produzione dell'evento tipico. L'evento è il suo obiettivo, ciò che vuole ottenere. Il dolo intenzionale assorbe qualsiasi livello di probabilità: anche se la riuscita è incerta, il soggetto che la vuole ha dolo intenzionale. È il dolo dell'omicidio premeditato, della truffa, della calunnia.\n\nIl dolo diretto (di secondo grado) si ha quando l'evento non è il fine ma è rappresentato come certo o come conseguenza necessariamente connessa al fine perseguito. Il soggetto non vuole l'evento in sé, ma lo accetta come conseguenza inevitabile di ciò che vuole. Esempio classico: il terrorista che mette una bomba su un aereo per uccidere una sola persona — la morte degli altri passeggeri è dolo diretto, non intenzionale, perché conseguenza necessaria e prevista come certa.\n\nIl dolo eventuale (di terzo grado o indiretto) è la forma meno intensa: l'evento non è né il fine né una conseguenza certa, ma una conseguenza possibile che il soggetto accetta come 'prezzo' del suo agire (nozione economica — SS.UU. ThyssenKrupp). È su questo terzo grado che si colloca il confine con la colpa con previsione: nel dolo eventuale il soggetto accetta l'evento (non lo schermatura), nella colpa con previsione il soggetto lo prevede ma non lo accetta, confida nel non-verificarsi e schermatura il rischio.",
+        "fondamento_normativo": [
+          "Art. 43 c.p."
+        ],
+        "principi_governanti": [
+          "P25"
+        ],
+        "cat": "Elemento soggettivo"
+      }
+    },
+    {
+      "id": "I77",
+      "type": "istituto",
+      "label": "Colpevolezza nel diritto europeo: overlapping protection",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di colpevolezza ha trovato espressione anche nel diritto europeo, sia convenzionale che eurounitario, ma con caratteristiche diverse rispetto al modello italiano. Questa divergenza crea una potenziale tensione che si risolve attraverso il meccanismo dell'overlapping protection — le garanzie si sommano e il cittadino beneficia del livello più elevato.\n\nLa CEDU (art. 6 — diritto a un equo processo; art. 7 — legalità) è più attenta alla qualità della legge e alla prevedibilità della decisione che alla rimproverabilità soggettiva in senso stretto. La Corte EDU ha elaborato un orientamento (caso Salabiaku c. Francia, 1979) che ammette le presunzioni di colpevolezza purché siano ragionevoli nel loro campo di applicazione e vincibili dal processato attraverso la prova contraria. Le presunzioni assolute di colpevolezza sarebbero incompatibili con l'equo processo; le presunzioni relative sono ammesse se proporzionate e non eccessive.\n\nLa CGUE ammette presunzioni di colpevolezza più ampie in settori specifici dove la tutela è particolarmente significativa: terrorismo, ambiente, concorrenza, impresa. In questi settori l'imputato può trovarsi a dover provare la propria assenza di responsabilità, rovesciando l'onere probatorio.\n\nLa soluzione del conflitto con il modello italiano si trova nei controlimiti (P10) e nella natura nazionale della materia penale: le garanzie europee in materia di colpevolezza non possono sostituirsi in peius a quelle italiane. Il principio di colpevolezza italiano — che vieta la responsabilità oggettiva pura per gli elementi essenziali del reato — è un controlimite che resiste alle pressioni europee verso presunzioni di colpevolezza più ampie. Le garanzie europee si sommano (overlapping protection) ma non sostituiscono in senso peggiorativo.",
+        "fondamento_normativo": [
+          "Art. 6 CEDU",
+          "Art. 7 CEDU",
+          "Art. 27 Cost.",
+          "Caso Salabiaku c. Francia (1979)"
+        ],
+        "principi_governanti": [
+          "P25",
+          "P10"
+        ],
+        "cat": "Elemento soggettivo — diritto europeo"
+      }
+    }
+  ],
+  "relations": []
+}

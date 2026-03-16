@@ -1,0 +1,340 @@
+{
+  "meta": {
+    "versione": "1.2",
+    "data_aggiornamento": "2026-03-16",
+    "tipo": "update_inquadramento_batch2",
+    "descrizione": "Secondo batch — principi L2, istituti L2-L5, logiche interpretative principali. Fonte: schede di estrazione del docente.",
+    "fonte": "docente"
+  },
+  "entities": [
+    {
+      "id": "P03",
+      "type": "principio",
+      "label": "Legalità sostanziale (prevedibilità della decisione — CEDU)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La legalità sostanziale è il modello di legalità elaborato dalla Corte Europea dei Diritti dell'Uomo sull'art. 7 CEDU, che si distingue dal modello formale italiano (art. 25, co. 2, Cost.) per il criterio adottato: non la fonte di produzione della norma, ma la prevedibilità della decisione per il cittadino. Una norma è 'legge' ai sensi dell'art. 7 CEDU se è accessibile e formulata con sufficiente precisione da consentire al cittadino di prevedere le conseguenze delle proprie azioni, eventualmente con l'ausilio di una consulenza legale qualificata.\n\nL'aspetto più innovativo è l'inclusione della giurisprudenza consolidata tra le fonti rilevanti per la prevedibilità. Nel sistema CEDU, il 'diritto' applicabile non è solo la legge scritta ma anche il 'diritto vivente' — l'interpretazione stabilizzata dei tribunali. Un orientamento giurisprudenziale consolidato è parte del 'diritto' che il cittadino deve poter prevedere. Per converso, un overruling sorprendente in malam partem — un mutamento interpretativo improvviso e imprevedibile in senso sfavorevole al reo — viola l'art. 7 CEDU anche se la legge scritta non è cambiata (caso Contrada, 2015).\n\nNel nostro ordinamento la legalità sostanziale si somma a quella formale senza sostituirla: overlapping protection. Il cittadino italiano gode di entrambe le garanzie cumulativamente, e il livello di protezione è dato dal massimo tra le due. La legalità sostanziale CEDU ha però portato estensioni importanti: le norme formalmente processuali ma sostanzialmente penali (C. Cost. 32/2020, Spazza-corrotti) sono soggette all'irretroattività proprio perché la CEDU guarda alla sostanza e non alla forma.",
+        "fondamento_normativo": [
+          "Art. 7 CEDU",
+          "Art. 49 Carta di Nizza"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Al momento del fatto, era prevedibile per il cittadino — anche con l'ausilio di consulenza legale — che quella condotta avrebbe comportato conseguenze penali?",
+        "valori_fondanti": [
+          "V01",
+          "V03"
+        ],
+        "principio_padre": "P01",
+        "carattere": "Si somma alla legalità formale senza sostituirla (overlapping protection).",
+        "note_critiche": "Il modello CEDU crea un sistema di legalità 'a geometria variabile': il diritto rilevante include la giurisprudenza, il che rende più difficile per il cittadino conoscere esattamente i confini del penalmente rilevante. Il caso Contrada ha sollevato il problema dei 'fratelli minori' — chi era nelle stesse condizioni ma non ha fatto ricorso a Strasburgo."
+      }
+    },
+    {
+      "id": "P06",
+      "type": "principio",
+      "label": "Principio di separazione dei poteri",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di separazione dei poteri — elaborato da Montesquieu e recepito nelle costituzioni moderne — stabilisce che le funzioni legislative, esecutive e giudiziarie devono essere esercitate da organi distinti e reciprocamente controllati. Nel diritto penale questo principio ha un'importanza capitale perché definisce chi può fare cosa: il legislatore può incriminare; il giudice deve applicare; l'esecutivo non può fare scelte di politica criminale.\n\nLa funzione di garanzia del principio si esplica principalmente in tre direzioni. Prima: fonda la riserva di legge parlamentare (P02) — solo il Parlamento, che rappresenta la sovranità popolare, può fare scelte di criminalizzazione; l'esecutivo non può incriminare tramite regolamenti o decreti ministeriali che vadano oltre l'integrazione tecnica. Seconda: limita il potere creativo del giudice — il giudice non può creare norme penali nuove né estendere quelle esistenti attraverso l'analogia in malam partem; può solo interpretare, mai legiferare. Terza: fonda il limite alle sentenze in malam partem della Consulta — la Corte Costituzionale non ha legittimazione democratica per sostituirsi al Parlamento nelle scelte di incriminazione.\n\nIl principio è anche il fondamento dell'argomento critico contro le 'sentenze patologiche': quando le SS.UU. (caso art. 384 c.p.) o la Cassazione (caso Mariotti) producono regole con effetti di politica criminale, invadono la sfera del legislatore — un'operazione che il docente denuncia sistematicamente come 'zona grigia' in cui la distinzione tra applicazione e creazione del diritto si assottiglia pericolosamente.",
+        "fondamento_normativo": [
+          "Art. 1 Cost.",
+          "Art. 101 Cost.",
+          "Artt. 70-74 Cost."
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Sto applicando la legge o sto creando una norma nuova? La mia interpretazione supera il dato testuale fino a produrre una regola che il legislatore non ha previsto?",
+        "valori_fondanti": [
+          "V02"
+        ],
+        "carattere": "Fondamento politico-filosofico della riserva di legge e del divieto di analogia."
+      }
+    },
+    {
+      "id": "P09",
+      "type": "principio",
+      "label": "Principio di proporzionalità della pena",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di proporzionalità della pena stabilisce che la sanzione penale deve essere proporzionata alla gravità del fatto e al grado di colpevolezza dell'autore. È un principio che ha vissuto una metamorfosi significativa: da vincolo 'soft' che orientava il legislatore in astratto, si è trasformato in un principio pienamente auto-applicativo che la Corte Costituzionale verifica concretamente sulle cornici edittali.\n\nIl fondamento normativo è plurale: l'art. 49 della Carta di Nizza prevede espressamente la proporzionalità tra reati e sanzioni; l'art. 27, co. 3, Cost. impone che le pene tendano alla rieducazione del condannato (funzione che una pena sproporzionata vanifica); l'art. 3 CEDU vieta i trattamenti degradanti (una pena grossolanamente sproporzionata può assumere carattere degradante). Internamente, il fondamento è costruito dalla Consulta attraverso l'art. 3 Cost. (ragionevolezza): una pena sproporzionata è irragionevole e quindi incostituzionale.\n\nLa Corte Costituzionale ha progressivamente demolito gli automatismi sanzionatori che impedivano al giudice di commisurare la pena alla colpevolezza concreta. La sentenza paradigmatica è C. Cost. 105/2021 sulla diffamazione a mezzo stampa: la pena cumulativa (reclusione e multa) è stata sostituita con la pena alternativa ('o' invece di 'e'). Prima ancora, la Consulta ha demolito progressivamente il divieto di prevalenza delle attenuanti sulla recidiva reiterata (art. 69, co. 4, c.p.) in numerose sentenze che hanno liberato il giudice dall'automatismo sanzionatorio in casi specifici (vizio parziale di mente, compartecipazione anomala).\n\nIl vincolo opera su entrambi i piani: il legislatore non può fissare cornici edittali grossolanamente sproporzionate rispetto al disvalore del fatto; il giudice deve commisurare la pena concreta alla colpevolezza individuale (art. 133 c.p.).",
+        "fondamento_normativo": [
+          "Art. 49 Carta di Nizza",
+          "Art. 27 Cost.",
+          "Art. 3 CEDU",
+          "Art. 3 Cost."
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "La pena stabilita dalla legge è grossolanamente sproporzionata rispetto al disvalore del fatto? Se sì, sollevare QLC. La pena concreta riflette l'intensità del dolo/colpa e le circostanze del caso?",
+        "valori_fondanti": [
+          "V04",
+          "V05"
+        ],
+        "carattere": "Sta diventando pienamente auto-applicativo grazie alla giurisprudenza Consulta e CEDU.",
+        "note_critiche": "Il passaggio da proporzionalità come 'criterio orientativo del legislatore' a principio pienamente sindicabile è uno dei mutamenti strutturali più rilevanti della giurisprudenza costituzionale degli ultimi anni. Il rischio opposto è l'eccessiva discrezionalità giudiziale nella commisurazione."
+      }
+    },
+    {
+      "id": "P11",
+      "type": "principio",
+      "label": "Principio di tassatività (in senso lato)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di tassatività — nel suo senso più ampio — richiede che la legge penale possegga specifiche qualità intrinseche che la rendano capace di vincolare sia il legislatore (nella formulazione della fattispecie) sia il giudice (nell'interpretazione). Non è sufficiente che la legge esista: deve essere una legge che funzioni come garanzia reale, non formale. Ferrajoli distingue la 'legalità mera o lata' (primazia della legge quale che sia) dalla 'legalità stretta' (primazia della legge dotata di qualità costituzionalmente adeguate).\n\nIl principio si articola in quattro sotto-principi con destinatari distinti. Chiarezza: la norma deve essere linguisticamente e sintatticamente comprensibile — un testo 'irrimediabilmente oscuro' è incostituzionale già per violazione dell'art. 3 Cost. (ragionevolezza), prima ancora che dell'art. 25, co. 2 (C. Cost. 110/2023 sulla legge regionale Molise). Precisione: il fatto tipico deve essere descritto in modo puntuale, senza formule eccessivamente generiche — le clausole elastiche sono ammesse se dotate di una ratio unificante che le rende determinabili, ma le formule radicalmente vaghe sono incostituzionali. Determinatezza: gli elementi della fattispecie devono essere empiricamente accertabili nel processo — le parole devono avere 'effetti di realtà' (Barthes), cioè deve esserci corrispondenza controllabile tra fatto storico e modello astratto (C. Cost. 96/1981 sul plagio: 'stato di totale soggezione' non è accertabile; C. Cost. 172/2014 sullo stalking: 'perdurante e grave stato di ansia' è sufficientemente determinato). Tassatività in senso stretto: il divieto di analogia in malam partem come applicazione specifica del principio al piano ermeneutico.\n\nIl principio di tassatività è un presidio contro l'arbitrio sia del legislatore (che non può formulare norme talmente vaghe da demandare al giudice la definizione del fatto tipico) sia del giudice (che non può estendere la norma oltre i confini del testo).",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 1 c.p.",
+          "Art. 14 Preleggi",
+          "Art. 7 CEDU"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "La norma è comprensibile? Gli elementi del fatto tipico sono empiricamente accertabili nel processo? I termini usati hanno un significato controllabile?",
+        "valori_fondanti": [
+          "V01",
+          "V03"
+        ],
+        "principio_padre": "P01",
+        "carattere": "Corollario della legalità, vincola sia il legislatore (formulazione) sia il giudice (interpretazione)."
+      }
+    },
+    {
+      "id": "P15",
+      "type": "principio",
+      "label": "Divieto di analogia in malam partem",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il divieto di analogia in malam partem è la tassatività nel suo aspetto ermeneutico: il giudice non può applicare la norma penale a casi non espressamente previsti, anche se simili, anche se la ratio della norma sembrerebbe estendersi al caso inespresso. Il giudice non può trasformare la ratio legis in una norma nuova per coprire una lacuna.\n\nIl fondamento del divieto — crucialmente — non è la certezza del diritto (che potrebbe in astratto giustificare anche norme analogiche purché prevedibili) ma la tutela della libertà personale. È questa la ragione per cui il divieto opera solo in malam partem: se la ratio del divieto è proteggere la libertà, il divieto vale solo quando l'analogia peggiorerebbe la posizione del reo. L'analogia in bonam partem — estensione di norme favorevoli a casi non previsti — è in linea di principio ammessa (con i limiti derivanti dalla natura eccezionale di alcune norme di favore).\n\nLa distinzione operativa fondamentale è tra analogia e interpretazione estensiva: l'analogia va oltre il dato letterale, trasformando la ratio in una norma nuova; l'interpretazione estensiva rimane nel solco del testo, attribuendo alla lettera della legge il suo massimo significato semantico possibile. Il confine è mobile e spesso discusso — la 'criptoanalogia' (I30) è il fenomeno per cui un'interpretazione estensiva eccessiva finisce per essere, nella sostanza, analogia mascherata.\n\nCasi emblematici di criptoanalogia denunciati dal docente: pornografia minorile e selfie (il selfie autoscattato dal minore 'detenuto' da adulto è produzione?); corruzione di minorenni e videochiamata; peculato e 'energia lavorativa' dei dipendenti; tentativo di rapina impropria; maltrattamenti e convivente non coabitante.",
+        "fondamento_normativo": [
+          "Art. 14 Preleggi",
+          "Art. 25, co. 2, Cost.",
+          "Art. 1 c.p."
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "L'interpretazione rimane nel solco del testo (estensiva — ammessa) o lo travalica, trasformando la ratio in una norma nuova (analogia — vietata in malam partem)?",
+        "valori_fondanti": [
+          "V01"
+        ],
+        "principio_padre": "P11",
+        "carattere": "Divieto che opera solo in malam partem — la ratio è la tutela della libertà, non la certezza.",
+        "note_critiche": "Il confine tra interpretazione estensiva e analogia è il campo di battaglia principale della legalità applicativa. La SS.UU. sul 'profitto' nel furto (G28) e sulla 'violenza economica' nei maltrattamenti (G29) mostrano orientamenti oscillanti su dove si trova il confine."
+      }
+    },
+    {
+      "id": "P18",
+      "type": "principio",
+      "label": "Prevalenza della norma di liceità sulla norma di divieto",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di prevalenza della norma di liceità sulla norma di divieto stabilisce che quando una norma dell'ordinamento — non necessariamente penale — autorizza, impone o consente un comportamento che una norma incriminatrice vieta, la norma di liceità prevale e si produce l'effetto liceizzante: il fatto tipico non è antigiuridico. Il principio è la traduzione operativa del principio di non contraddizione dell'ordinamento (P07): un ordinamento non può volere contemporaneamente che il soggetto faccia e non faccia la stessa cosa.\n\nLa conseguenza più rilevante è che le cause di giustificazione non appartengono al diritto penale ma all'intero ordinamento giuridico. Il diritto penale non stabilisce cosa è lecito — questa è prerogativa dell'ordinamento nel suo insieme. Il diritto penale stabilisce solo cosa è tipico. Sarà poi l'intero ordinamento a dire se il fatto tipico è anche antigiuridico (assenza di cause di giustificazione) o se invece è giustificato da una norma di liceità.\n\nQuesta natura extrapenale delle scriminanti ha conseguenze sistematiche importanti: non sono soggette alla riserva assoluta di legge (possono essere create da norme UE, regionali, regolamentari, consuetudinarie); non sono soggette al divieto di analogia di cui all'art. 14 Preleggi (che vale solo per le norme penali); operano oggettivamente, indipendentemente dalla consapevolezza del soggetto che agisce. La norma incriminatrice si fonda su una presunzione relativa di antigiuridicità del fatto tipico (Mantovani): chi commette il fatto tipico è presunto antigiuridico, ma la presunzione è vincibile dall'esistenza di una causa di giustificazione.",
+        "fondamento_normativo": [
+          "Art. 59 c.p.",
+          "Principio di non contraddizione dell'ordinamento"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Esiste una norma dell'ordinamento (di qualsiasi ramo) che autorizza o impone la condotta tipica? Se sì, il fatto tipico non è antigiuridico.",
+        "valori_fondanti": [
+          "V07"
+        ],
+        "carattere": "Fonda l'intero sistema delle cause di giustificazione.",
+        "note_critiche": "La teoria pluralistica delle scriminanti (ogni scriminante ha un fondamento assiologico diverso) si contrappone alla teoria unitaria (unico fondamento: bilanciamento di interessi). Il docente aderisce alla pluralistica."
+      }
+    },
+    {
+      "id": "P25",
+      "type": "principio",
+      "label": "Principio di colpevolezza (nulla poena sine culpa)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il principio di colpevolezza — nulla poena sine culpa — sancisce che non può esistere responsabilità penale senza un elemento soggettivo che copra almeno gli elementi essenziali del reato. È stato elevato a rango costituzionale dalla Corte Costituzionale con le storiche sentenze 364 e 1085 del 1988, ricavandolo dal principio di personalità della responsabilità penale (art. 27, co. 1, Cost.).\n\nIl principio opera su due livelli distinti: l'an della responsabilità (senza colpevolezza non c'è reato — gli elementi fondamentali della fattispecie devono essere coperti almeno dalla colpa) e il quantum della pena (la pena è proporzionata all'intensità del dolo o della colpa, come prevede l'art. 133 c.p.). Il rimprovero penale, a differenza di quello civile, è intrinsecamente personale: colpisce l'autore in quanto autore rimproverabile, non in quanto causa dell'evento.\n\nLa concezione normativa della colpevolezza (prevalente) la definisce come difformità della volontà rispetto al paradigma normativo: nel dolo, il soggetto vuole ciò che la legge impedisce; nella colpa, non prevede (o non evita) ciò che la legge ritiene prevedibile e evitabile dall'agente modello. Non è un mero dato psicologico ma un giudizio di rimproverabilità che tiene conto del contesto e delle capacità del soggetto.\n\nLa responsabilità oggettiva pura — addebito degli elementi essenziali sulla sola base del nesso causale, senza colpa — è incostituzionale. Le sue forme occulte sono la patologia sistematica più rilevante: culpa in re ipsa (si presume la colpa dalla natura del fatto), dolus generalis (si attribuisce il fatto al dolo iniziale anche quando l'evento si verifica diversamente), presunzioni assolute di colpevolezza, elevazione dello standard dell'agente modello fino all'eroismo. Il docente denuncia sistematicamente queste forme di elusione nella giurisprudenza penale.",
+        "fondamento_normativo": [
+          "Art. 27, co. 1, Cost.",
+          "C. Cost. 364/1988",
+          "C. Cost. 1085/1988"
+        ],
+        "auto_applicativo": true,
+        "test_giudice": "Gli elementi essenziali del reato sono coperti almeno dalla colpa? L'elemento soggettivo è stato accertato in concreto o è presunto? Lo standard di diligenza richiesto è raggiungibile dall'agente ordinario?",
+        "valori_fondanti": [
+          "V05"
+        ],
+        "carattere": "Principio rigido nel nucleo essenziale — non ammette deroghe per gli elementi fondamentali del reato.",
+        "note_critiche": "La responsabilità oggettiva spuria (per elementi non fondamentali) è ammissibile con condizioni di ragionevolezza. La forma più pericolosa di elusione è l'agente eroico: quando lo standard di diligenza è elevato all'irraggiungibile, la colpa diventa de facto responsabilità oggettiva."
+      }
+    },
+    {
+      "id": "I25",
+      "type": "istituto",
+      "label": "Interpretazione estensiva in materia penale",
+      "fonte": "docente",
+      "data": {
+        "definizione": "L'interpretazione estensiva è l'operazione ermeneutica con cui il giudice attribuisce alla lettera della legge il suo massimo significato semantico possibile, portandola ai confini estremi del suo senso letterale senza tuttavia travalicarlo. Si distingue dall'analogia — con cui condivide la volontà di estendere l'applicazione della norma — per il fatto che rimane entro i limiti del testo: non crea una norma nuova, ma porta la norma esistente alla sua massima estensione.\n\nIn materia penale l'interpretazione estensiva è ammessa, ma in posizione recessiva rispetto all'interpretazione restrittiva: il favor libertatis e la tassatività creano una preferenza per le interpretazioni che restringono l'area del penalmente rilevante. L'interpretazione estensiva è un'eccezione giustificata da ragioni stringenti, non la regola. Le condizioni cumulative sono: (1) necessità — l'interpretazione restrittiva porterebbe a risultati illogici, assurdi o costituzionalmente problematici; (2) prevedibilità — il risultato non deve essere 'sorprendente' per il consociato, che deve poter anticipare ragionevolmente che la norma si applica anche al suo caso.\n\nIl limite esterno dell'interpretazione estensiva — e il confine con l'analogia vietata — è il significato letterale comunemente inteso del termine usato dalla norma. Per i termini non tecnici, il significato è quello del comune cittadino; per i termini tecnico-giuridici, è il significato del contesto normativo di riferimento. Una volta raggiunto il limite esterno del significato letterale, qualsiasi ulteriore estensione non è più interpretazione ma analogia.",
+        "fondamento_normativo": [
+          "Art. 14 Preleggi",
+          "Art. 25, co. 2, Cost."
+        ],
+        "principi_governanti": [
+          "P11",
+          "P15"
+        ],
+        "cat": "Logiche interpretative — istituto",
+        "note_critiche": "La criptoanalogia (I30) è il rischio sistematico: un'interpretazione presentata come 'estensiva' ma che in realtà supera il limite letterale e costruisce una norma nuova. Il caso più discusso è SS.UU. 4170/2023 sul 'profitto' nel furto — il docente ritiene che l'inclusione del vantaggio non patrimoniale superi il significato letterale del termine."
+      }
+    },
+    {
+      "id": "I26",
+      "type": "istituto",
+      "label": "Riduzione teleologica / interpretazione tassativizzante",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La riduzione teleologica è l'operazione ermeneutica con cui il giudice restringe l'ambito applicativo di una norma al di sotto del suo tenore letterale, per renderla compatibile con i principi costituzionali o con la ratio legis autentica. Se l'interpretazione estensiva porta la norma al suo massimo significato, la riduzione teleologica la porta al di sotto del suo significato letterale — 'tassativizza' una norma che sarebbe altrimenti troppo vaga o troppo ampia.\n\nLa riduzione teleologica è legittima quando scioglie ambiguità presenti nel testo che potrebbero portare a risultati incostituzionali o irragionevoli, purché il risultato sia ancora compatibile con il dato letterale e rispetti la volontà del legislatore. È illegittima quando 'cancella' o 'riscrive' il precetto in modo contra legem, attribuendo alla norma un significato che il testo non può sostenere. È assolutamente inammissibile quando produce un effetto in malam partem — quando restringe una norma favorevole per punire più severamente: in quel caso non è interpretazione ma creazione di una norma penale più severa senza base legislativa.\n\nIl caso Mariotti (SS.UU. 8770/2018) è l'esempio paradigmatico di riduzione teleologica illegittima in malam partem: le SS.UU. hanno interpretato la non punibilità per imperizia nell'esecuzione di linee guida adeguate (art. 590-sexies, co. 2) come applicabile solo alla colpa lieve, introducendo un limite implicito che la norma non prevede. Il docente definisce questa sentenza 'la più illegittima di tutte': crea una norma giurisprudenziale in malam partem, viola la riserva di legge, e riduce una norma di favore senza base testuale — zona grigia per eccellenza.",
+        "fondamento_normativo": [
+          "Art. 25, co. 2, Cost.",
+          "Art. 3 Cost."
+        ],
+        "principi_governanti": [
+          "P11",
+          "P02"
+        ],
+        "cat": "Logiche interpretative — istituto",
+        "note_critiche": "Il doppio binario Cassazione/Consulta (LI17) definisce i limiti: il giudice può fare riduzione teleologica per sciogliere ambiguità, ma quando il vizio è radicale deve sollevare QLC. Solo la Consulta espunge definitivamente la norma dall'ordinamento. La Mariotti ha violato entrambi i limiti: ha fatto riduzione teleologica in malam partem dove non era ammessa, senza nemmeno sollevare QLC."
+      }
+    },
+    {
+      "id": "I28",
+      "type": "istituto",
+      "label": "Scusanti (cause di esclusione della colpevolezza)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Le scusanti sono norme che escludono la rimproverabilità del fatto all'autore quando questi ha agito in circostanze anormali che rendevano inesigibile il comportamento lecito. A differenza delle cause di giustificazione (scriminanti), le scusanti non rendono il fatto lecito: il fatto è tipico, antigiuridico — contrario all'ordinamento — ma non rimproverabile al soggetto concreto che si è trovato in quelle circostanze straordinarie. La pena non si applica non perché il fatto sia approvato, ma perché la colpevolezza è esclusa.\n\nIl fondamento è nel principio di inesigibilità (ratio fondativa di V05): l'ordinamento rinuncia al rimprovero penale quando il rispetto della legge era talmente costoso, lacerante o impossibile da non essere umanamente esigibile. L'art. 384, co. 1, c.p. è l'esempio classico: chi commette falsa testimonianza o favoreggiamento per salvare un prossimo congiunto da un procedimento penale agisce in modo antigiuridico, ma l'ordinamento comprende che l'istinto di proteggere i propri cari prevale sulla fedeltà alla giustizia in quelle circostanze estreme.\n\nLa questione più controversa — esplosa con le SS.UU. 10381/2021 sul convivente more uxorio — è se le scusanti siano norme eccezionali (non analogizzabili) o norme regolari che attuano il principio costituzionale di colpevolezza (analogizzabili). Le SS.UU. hanno scelto la seconda via, qualificando l'art. 384 come norma regolare e applicandola per analogia al convivente. Il docente è fortemente critico: l'esclusione del convivente era una scelta consapevole del legislatore (lacuna politica), non una dimenticanza (lacuna tecnica) — la legge Cirinnà, che ha equiparato le unioni civili al matrimonio, dimostra che il Parlamento sapeva benissimo dell'esistenza delle coppie di fatto e aveva scelto di non modificare l'art. 384.",
+        "fondamento_normativo": [
+          "Art. 384 c.p.",
+          "Art. 54, co. 3, c.p.",
+          "Art. 393-bis c.p."
+        ],
+        "principi_governanti": [
+          "P25"
+        ],
+        "cat": "Cause di esclusione della colpevolezza",
+        "note_critiche": "La distinzione scriminanti/scusanti ha conseguenze pratiche rilevanti: le scusanti non escludono la legittima difesa da parte di chi subisce il fatto; non si estendono ai correi (non operano obiettivamente); non fanno venir meno la pretesa risarcitoria civile."
+      }
+    },
+    {
+      "id": "I30",
+      "type": "istituto",
+      "label": "Criptoanalogia (analogia mascherata in malam partem)",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La criptoanalogia è il fenomeno per cui il divieto di analogia in malam partem viene aggirato di fatto, mascherando un'operazione analogica dietro la veste formale dell'interpretazione estensiva. È la patologia sistematica dell'interpretazione penale: il giudice (o il legislatore stesso, nelle clausole di chiusura 'e casi analoghi') supera il limite letterale della norma ma presenta l'operazione come se rimanesse entro i confini del testo.\n\nLe forme della criptoanalogia sono varie. Legislative: le clausole di chiusura esplicite ('e casi analoghi', 'in modo analogo') o le norme talmente elastiche da conferire al giudice un potere integrativo de facto. Giurisprudenziali: le estensioni creative contrabbandate per interpretazione estensiva, dove il giudice forza il significato ordinario di un termine per ricomprendervi casi che, nella percezione del comune cittadino, non vi rientrerebbero.\n\nI casi emblematici di criptoanalogia individuati dal docente comprendono: la pornografia minorile e il selfie autoscattato dal minore (il termine 'produzione' copre l'autoripresa?); la corruzione di minorenni e la videochiamata (il 'compimento di atti sessuali in presenza di minore' copre la comunicazione a distanza?); il peculato e 'l'energia lavorativa' sottratta al datore di lavoro (la norma sul pubblico ufficiale copre il furto di tempo lavorativo?); il getto pericoloso di cose e le emissioni elettromagnetiche. La criptoanalogia è la controparte oggettiva della responsabilità oggettiva occulta (I76): come quella elude il principio di colpevolezza sul piano soggettivo, la criptoanalogia elude il principio di tassatività sul piano oggettivo.",
+        "fondamento_normativo": [
+          "Art. 14 Preleggi",
+          "Art. 25, co. 2, Cost."
+        ],
+        "principi_governanti": [
+          "P11",
+          "P15"
+        ],
+        "cat": "Patologie del sistema — zone grigie",
+        "note_critiche": "La criptoanalogia è difficile da sanzionare perché si presenta come interpretazione legittima. Il rimedio è la verifica del limite letterale: si chiede se il cittadino comune, leggendo il testo della norma, avrebbe potuto prevedere che il suo comportamento vi rientrava. Se la risposta è no, l'operazione ermeneutica supera il limite della prevedibilità CEDU (P03) oltre che del dato letterale."
+      }
+    },
+    {
+      "id": "I45",
+      "type": "istituto",
+      "label": "Le tre forme di eutanasia",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il sistema italiano riconosce tre forme distinte di eutanasia, con diverso regime giuridico e diverso grado di 'accettazione' da parte dell'ordinamento, frutto di un bilanciamento progressivo tra intangibilità della vita (V06) e autodeterminazione (V08) che non è ancora concluso.\n\nLa prima forma — eutanasia passiva o omissiva (L. 219/2017) — è il diritto a essere aiutato 'nel morire': il paziente capace può rifiutare qualsiasi trattamento sanitario, anche salvavita, e il medico è tenuto a rispettare questa volontà e ad accompagnare il paziente nella fase finale. La natura giuridica è controversa: detipizzazione (viene meno l'obbligo di garanzia del medico, quindi la condotta omissiva non è tipica) o scriminante procedurale (il fatto è tipico ma giustificato dalla volontà del paziente espressa nelle forme di legge). Il diritto è azionabile in giudizio.\n\nLa seconda forma — suicidio assistito (C. Cost. 242/2019, caso Cappato/DJ Fabo) — è il diritto a essere aiutato 'a morire': il medico può assistere il paziente nell'atto finale, senza incorrere nella responsabilità penale ex art. 580 c.p., ma solo in presenza di quattro condizioni cumulative: malattia irreversibile con prognosi infausta; trattamenti di sostegno vitale in corso; sofferenze fisiche o psicologiche inaccettabili per il paziente; volontà libera, informata e stabile accertata attraverso una procedura medicalizzata (struttura del SSN, parere del comitato etico). Il diritto non è pienamente azionabile perché è riconosciuta l'obiezione di coscienza del medico.\n\nLa terza forma — omicidio del consenziente (art. 579 c.p.) — rimane punibile. L'art. 579 è una norma costituzionalmente necessaria (C. Cost. 50/2022 ha dichiarato inammissibile il referendum abrogativo): la sua abolizione lascerebbe privi di tutela soggetti vulnerabili. La questione dell'estensione analogica della scriminante del suicidio assistito all'omicidio del consenziente è ancora aperta — C. Cost. 132/2025 ha dichiarato inammissibile per difetto di motivazione la nuova QLC sull'art. 579.",
+        "fondamento_normativo": [
+          "L. 219/2017",
+          "C. Cost. 242/2019",
+          "Art. 579 c.p.",
+          "Art. 580 c.p."
+        ],
+        "principi_governanti": [
+          "P18",
+          "P19"
+        ],
+        "cat": "Cause di giustificazione",
+        "note_critiche": "La questione aperta è se la scriminante procedurale del suicidio assistito sia analogizzabile all'omicidio del consenziente. La risposta dipende dalla qualificazione della sentenza 242/2019: se è una scriminante (norma regolare, analogizzabile), potrebbe aprire spazi; se è una detipizzazione parziale (riduzione dell'area penale senza creare scriminante), non ci sono spazi per l'analogia."
+      }
+    },
+    {
+      "id": "I60",
+      "type": "istituto",
+      "label": "Reato omissivo improprio: struttura",
+      "fonte": "docente",
+      "data": {
+        "definizione": "Il reato omissivo improprio è una fattispecie ibrida che combina una norma di parte speciale (che descrive un evento da impedire) con la clausola generale dell'art. 40, co. 2, c.p.: 'non impedire un evento che si ha l'obbligo giuridico di impedire equivale a cagionarlo'. Non esiste un catalogo legislativo di reati omissivi impropri: ogni fattispecie commissiva di evento può diventare omissiva impropria per il soggetto che aveva l'obbligo di impedire quell'evento.\n\nLa struttura è composta da cinque elementi: la situazione tipica (le circostanze di fatto che generano l'obbligo di agire); l'obbligo giuridico di impedire l'evento (la posizione di garanzia); la condotta omissiva (il mancato compimento dell'azione dovuta e possibile); l'evento non impedito; il nesso di causalità omissiva tra omissione ed evento. La questione teorica più controversa è la fonte delle posizioni di garanzia: le concezioni formale, sostanziale e mista danno risposte diverse (I61).\n\nIl reato omissivo improprio è il punto di massima tensione tra il principio di materialità (P22) e le esigenze di tutela dei beni fondamentali: l'omissione è ontologicamente un nulla, diventa giuridicamente rilevante solo grazie all'art. 40, co. 2, che trasforma il non-agire in 'causare'. La tensione si manifesta anche nella causalità omissiva (I59): il giudizio controfattuale ('cosa sarebbe successo se il garante avesse agito?') ha una componente predittiva difficile da accertare con il rigore del BARD.",
+        "fondamento_normativo": [
+          "Art. 40, co. 2, c.p."
+        ],
+        "principi_governanti": [
+          "P22",
+          "P24"
+        ],
+        "elementi": [
+          "I61",
+          "I62",
+          "I63"
+        ],
+        "cat": "Struttura del reato"
+      }
+    },
+    {
+      "id": "I67",
+      "type": "istituto",
+      "label": "Preterintenzione: struttura e inquadramento",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La preterintenzione è l'elemento soggettivo 'mediano' del sistema penale: collocata dall'art. 43 c.p. tra il dolo e la colpa ('oltre l'intenzione'), descrive la situazione in cui il soggetto vuole un evento meno grave (percosse o lesioni) e produce un evento più grave (la morte). Non vuole la morte — altrimenti sarebbe omicidio doloso — ma non si tratta nemmeno di mera colpa, perché ha voluto il fatto base che ha causato la morte.\n\nL'ambito applicativo è ristretto a due soli reati nel sistema italiano: l'omicidio preterintenzionale (art. 584 c.p.) e l'aborto preterintenzionale. La ristrettezza dell'ambito è indice della natura eccezionale della figura, che deroga alla regola generale della responsabilità per colpa richiedendo qualcosa di più (il dolo del fatto base) ma qualcosa di meno rispetto al dolo dell'evento (che non deve esserci).\n\nIl rapporto con le figure limitrofe è rilevante. L'art. 83 c.p. (aberratio delicti) è il genus: regola il caso generale in cui la condotta dolosa produce un evento diverso da quello voluto, addebitandolo a titolo di colpa in concreto. L'art. 584 e l'art. 586 sono species con trattamento più severo. L'art. 586 (morte o lesioni come conseguenza di altro delitto doloso) si distingue dal 584 per la 'disomogeneità' del reato base rispetto all'evento: nel 584 c'è continuità tra percosse/lesioni e morte; nel 586 il reato base è eterogeneo rispetto all'evento letale. La SS.UU. Ronci (2009) ha stabilito che nel 586 serve la colpa in concreto — il docente critica che lo stesso ragionamento non sia stato applicato al 584.",
+        "fondamento_normativo": [
+          "Art. 43 c.p.",
+          "Art. 584 c.p.",
+          "Art. 83 c.p.",
+          "Art. 586 c.p."
+        ],
+        "principi_governanti": [
+          "P25"
+        ],
+        "cat": "Elemento soggettivo"
+      }
+    },
+    {
+      "id": "I75",
+      "type": "istituto",
+      "label": "Colpa medica: Gelli-Bianco e norme COVID",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La responsabilità penale del medico per colpa ha vissuto un'evoluzione legislativa travagliata, che riflette la tensione tra due esigenze opposte: la tutela del paziente dalla negligenza medica e la tutela del medico dalla medicina difensiva — la tendenza a prescrivere esami e trattamenti non necessari per paura di essere processati.\n\nLa legge Gelli-Bianco (L. 24/2017) ha introdotto nell'art. 590-sexies, co. 2, c.p. una causa di non punibilità per il medico che, nell'esecuzione di linee guida adeguate e correttamente applicate, abbia commesso un errore per imperizia. La ratio è chiara: se il medico ha seguito le linee guida approvate dalla comunità scientifica, l'errore tecnico nell'esecuzione non deve tradursi in responsabilità penale. Le linee guida non sono regole cautelari in senso penalistico (la loro violazione non integra colpa specifica), ma parametri orientativi che definiscono lo standard di diligenza atteso.\n\nSulla portata della norma si sono fronteggiate tre tesi: Tarabori (norma inutile — già il sistema precedente permetteva di assolvere il medico diligente); Cavazza (esclude qualsiasi colpa, anche grave, nell'esecuzione delle linee guida); Mariotti/SS.UU. 8770/2018 (esclude solo la colpa lieve, non quella grave — limite implicito). Il docente è duramente critico verso la tesi Mariotti: crea una norma giurisprudenziale più restrittiva di quella legislativa, viola la riserva di legge, è una riduzione teleologica in malam partem inammissibile.\n\nLe norme COVID (D.L. 44/2021) hanno introdotto una causa di non punibilità per il personale sanitario che, nell'emergenza pandemica, abbia commesso errori nell'esecuzione dei vaccini o delle procedure emergenziali. La natura preferibile è quella di scusante (causa di esclusione della colpevolezza): il sanitario si è trovato in una situazione di conflitto tra doveri — operare in condizioni di emergenza assoluta, con protocolli in evoluzione, con risorse scarse — che rendeva inesigibile il comportamento pienamente conforme alle leges artis. Non è 'colpa' in senso normativo perché non è rimproverabile.",
+        "fondamento_normativo": [
+          "Art. 590-sexies c.p.",
+          "L. 24/2017 (Gelli-Bianco)",
+          "D.L. 44/2021",
+          "Art. 2236 c.c."
+        ],
+        "principi_governanti": [
+          "P25"
+        ],
+        "cat": "Responsabilità professionale",
+        "note_critiche": "La sentenza Mariotti rappresenta la zona grigia per eccellenza nella responsabilità medica: il giudice ha fatto una scelta di politica criminale (decidere fino a dove tutelare il medico) che spettava al legislatore. Il docente la definisce 'la più illegittima di tutte le sentenze patologiche'."
+      }
+    },
+    {
+      "id": "I76",
+      "type": "istituto",
+      "label": "Responsabilità oggettiva occulta / mascherata",
+      "fonte": "docente",
+      "data": {
+        "definizione": "La responsabilità oggettiva occulta o mascherata è la patologia sistematica del piano soggettivo del reato: forme di addebito che di fatto prescindono dalla colpa ma che si presentano con le vesti formali del dolo o della colpa, eludendo il divieto costituzionale di responsabilità oggettiva pura (P26).\n\nLe forme principali sono cinque. Il dolus generalis: l'evento conclusivo di una serie causale viene attribuito al dolo iniziale anche quando si verifica diversamente da quanto voluto (es. l'agente crede di aver ucciso la vittima con il primo colpo e la seppellisce viva — muore per asfissia; si addebita l'omicidio al dolo omicida iniziale, non alla successiva azione di seppellimento). Il dolus in re ipsa: si presume il dolo dalla sola natura del fatto, senza accertamento in concreto della rappresentazione e volontà (es. in certi reati a dolo specifico, la finalità è desunta automaticamente dalla condotta). La culpa in re ipsa: si presume la colpa dalla sola causalità materiale, senza verificare la prevedibilità in concreto (es. tesi dell'unicità nell'omicidio preterintenzionale — la colpa per l'evento morte è presunta dall'omogeneità dei beni giuridici). Le presunzioni assolute di colpevolezza: meccanismi normativi che impediscono al reo di provare l'assenza di dolo o colpa. L'agente eroico: lo standard dell'agente modello viene elevato fino all'irraggiungibile, rendendo di fatto impossibile non incorrere nella colpa — un medico ordinario non può raggiungere lo standard dell'esperto di quel settore in ogni situazione.\n\nLa responsabilità oggettiva occulta è la controparte soggettiva della criptoanalogia (I30): come quella elude la tassatività sul piano oggettivo, questa elude il principio di colpevolezza sul piano soggettivo. Entrambe sono forme di aggiramento delle garanzie penali che il docente denuncia sistematicamente come espressione di tendenze securitarie della giurisprudenza.",
+        "fondamento_normativo": [
+          "Art. 27, co. 1, Cost.",
+          "C. Cost. 364/1988"
+        ],
+        "principi_governanti": [
+          "P25",
+          "P26"
+        ],
+        "cat": "Patologie del sistema — zone grigie",
+        "note_critiche": "Il docente identifica tre sentenze paradigmatiche di responsabilità oggettiva occulta: la tesi dell'unicità nell'art. 584 (culpa in re ipsa), la sentenza Mariotti (agente eroico nella responsabilità medica), e i meccanismi presuntivi in certi reati societari e tributari. La svolta ThyssenKrupp ha arginato il problema per il dolo eventuale; Cass. 37437/2025 segna la svolta per il 584."
+      }
+    }
+  ],
+  "relations": []
+}
