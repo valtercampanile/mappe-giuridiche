@@ -19,6 +19,23 @@
       (DIRITTO PENALE · DIRITTO CIVILE · DIRITTO AMMINISTRATIVO)
 - [x] Documentazione: SESSION.md + BACKLOG.md + ANALISI_FUNZIONALE.md
       aggiornati allo stato reale
+- [x] A1: Connessioni inline + finestra mobile pinnabile
+      (accordion in Inquadramento, hover preview, pin, drag,
+      collisione cascade, dropdown "Aperte" nell'header)
+- [x] A2: Grafo nodi parlanti + archi colorati + legenda
+- [x] B1: Seed EntityLezione L2-L5 + chapter tags ISTITUTO
+- [x] C1: Relazioni trasversali L1-L5 (28 nuove, 74 totali)
+- [x] C2: Visualizzazione tensioni nel grafo (pannello dettaglio,
+      archi tratteggiati rossi, nodi polo, legenda aggiornata)
+- [x] C0: Seed questioni complete (25 Q, 127 relazioni Q-grafo)
+- [x] C1: Relazioni trasversali L1-L5 (catena V→P cross-lezione,
+      P L1 che governano istituti L2-L5, 28 relazioni)
+- [x] C2: Visualizzazione tensioni nel grafo (archi tratteggiati,
+      TensionePanel, nodi polo, legenda aggiornata)
+- [x] C3: Pagina Questioni (struttura base: lista + filtri +
+      scheda dettaglio + tesi + posizione docente)
+- [x] Fix I14, I20, I69 (istituti L1/L5 mancanti)
+- [x] Filtro capitoli nel drawer (endpoint + DrawerCapitoli)
 
 ### Debito tecnico aperto
 - [ ] Rimuovere vecchio Sidebar.tsx (non più importato)
@@ -30,29 +47,25 @@
 
 ## BLOCCO A — UI/UX
 
-### A1 — Connessioni inline + finestra mobile [IN CORSO]
+### A1 — Connessioni inline + finestra mobile [COMPLETATO]
 Connessioni visibili nella tab Inquadramento come card accordion
-in testa alla scheda (due colonne IN/OUT, responsive).
-Finestra mobile al hover su item connessione: preview con
-testo inquadramento, pin per persistenza globale (Zustand),
-drag & drop, "Vai all'entità".
-Finestre pinnate sopravvivono alla navigazione.
-Pannello "Aperte" nell'header se finestre pinnate attive.
-Prompt scritto e lanciato — in attesa di risultato.
+in testa alla scheda (due colonne IN/OUT). Tab Connessioni rimosso.
+Finestra mobile al hover su item connessione: title bar unica
+con accordion integrato, pin per persistenza globale (Zustand),
+drag & drop, collisione cascade, hover robusto con close delay.
+Dropdown "Aperte" interattivo nell'header (lista + chiudi tutte).
 
-### A2 — Grafo: nodi parlanti + interazioni [IN CORSO]
-Nodi Cytoscape con label visibile (tipo + label troncata).
-Archi colorati per tipo di relazione con legenda.
+### A2 — Grafo: nodi parlanti + interazioni [COMPLETATO]
+Nodi Cytoscape roundrectangle con sigla tipo + label troncata.
+Archi colorati per tipo di relazione con legenda compatta.
 Tooltip al hover su nodo (label completa).
-Prompt scritto e lanciato insieme ad A1.
 
-### A3 — Responsive mobile
+### A3 — Responsive mobile [PROSSIMO — prompt già scritto]
 Bottom navigation bar (Studio/Ripasso/Esercitazione/Questioni).
 Header mobile semplificato: burger + "MAPPE GIURIDICHE" +
 chip materia attiva (tap → modal selezione materia).
 Drawer come bottom sheet (75vh, swipe down chiude, backdrop).
 Grafo come overlay full-screen via FAB (Lucide Network).
-Prompt scritto — da lanciare dopo A1+A2.
 
 ### A4 — Capitoli
 Nuova tabella Capitolo + join EntityCapitolo (solo ISTITUTO).
@@ -83,13 +96,13 @@ nel sistema Dossier — non funzionalità separata.
 
 ## BLOCCO B — Contenuti e integrazione
 
-### B1 — Popolazione L2–L5 nel database
-Script seed per inserire le entità estratte dalle schede
-L02–L05. Prerequisito per C1 (relazioni trasversali).
-Stima: da 142 entità attuali a ~420 totali.
-Attenzione: dopo B1 getAllEntities gestirà 5+ pagine —
-verificare performance e rivalutare limite Zod.
-Assegnare le entità ai capitoli corretti durante il seed.
+### B1 — Popolazione L2–L5 nel database [COMPLETATO]
+Le 142 entità erano già nel DB da L1 + admin uploads.
+Seed completato: 164 EntityLezione mappings creati
+(L1:88, L2:23, L3:21, L4:17, L5:15).
+54 ISTITUTO taggati con capitolo (cap_principi,
+cap_antigiuridicita, cap_elemento_materiale, cap_colpevolezza).
+Script: data/seed/seed-L2-L5.ts (idempotente).
 
 ### B2 — Workflow upload AI migliorato
 Integrazione armonica di nuovo materiale senza conflitti
@@ -110,28 +123,37 @@ Garantisce consistenza visiva in tutta l'app.
 
 ## BLOCCO C — Fase 2: relazioni trasversali
 
-### C1 — Relazioni trasversali L1–L5
-Collegamento entità tra lezioni diverse nel database.
-Le 22 tensioni sono già in database_L1_con_tensioni.json
-per L1 — estendere a tutte le lezioni dopo B1.
-Prerequisito: B1 (popolazione L2–L5).
-Questo è il cuore del prodotto: senza queste relazioni
-le mappe non mostrano la loro potenza didattica.
+### C1 — Relazioni trasversali L1–L5 [COMPLETATO]
+28 relazioni cross-lezione inserite (da 42 a 70 totali).
+25 relazioni semplici (FONDA, COROLLARIO, STRUTTURALE,
+DI_PRINCIPIO, LIMITE_ECCEZIONE) + 3 nuove tensioni
+(V01-V06, P25-V03, P27-P09) + 2 tensioni aggiornate
+con nuove manifestazioni (P05-V03, P02-P06).
+Script: data/seed/relazioni_trasversali.ts (idempotente).
+TODO risolti: I69 creata, P26->I69 inserita, tensione P11/V07 creata,
+tensione P01/V04 creata con SS.UU. 384.
 
-### C2 — Visualizzazione tensioni nel grafo
-Tensioni come archi visibili e distinti in Cytoscape.
-Stile arco diverso per tipo di relazione (già parzialmente
-implementato in A2 — qui si completa per le tensioni).
-Indicatore zona grigia su nodi e archi patologici.
-Le 8 tensioni con zona_grigia: true (T04, T05, T07, T13,
-T15, T18, T20, T21) devono essere visivamente distinte.
+### C2 — Visualizzazione tensioni nel grafo [COMPLETATO]
+Archi TENSIONE tratteggiati rossi (2.5px) nel grafo Cytoscape.
+Nodi polo delle tensioni: bordo tratteggiato rosso.
+Click su arco TENSIONE apre TensionePanel sovrapposto:
+poli cliccabili, tecnica di risoluzione, criteri, zona critica
+banner, manifestazioni accordion con istituti navigabili.
+Legenda aggiornata con SVG tratteggiato + zona critica.
+Hover su arco mostra label tensione come tooltip.
+Escape chiude il pannello.
+14 tensioni nel DB (9 originali + 5 nuove cross-lezione).
 
-### C3 — Pagina Questioni
-Repertorio completo entità Q con tesi a confronto.
-Filtri: materia, capitolo, stato questione, zona critica.
-Posizione del docente evidenziata (badge "docente").
-Collegamento diretto alle entità correlate (navigabile).
-Indicatore visivo per questioni in zona critica.
+### C3 — Pagina Questioni [STRUTTURA BASE COMPLETATA]
+Struttura base funzionante: lista + filtri (stato, zona critica,
+search) + scheda dettaglio con tesi e posizione docente.
+Dati pronti: 25 Q (13 L1 + 12 L2-L5), tutte collegate
+al grafo con 127 relazioni (45 Q→P, 41 Q→I, 41 I→Q).
+Interventi pianificati:
+  1. Integrazione sidebar Rail+Drawer (fix layout)
+  2. Grafo contestuale centrato sulla Q selezionata
+     (principi in gioco + istituti + tensione sottostante)
+  3. Filtro capitolo (chip row, stesso stile drawer)
 
 ---
 
@@ -191,6 +213,14 @@ Gestione manuale abbonamenti dall'admin (già nella v1.0).
 - **Integrazione armonica**: il nuovo materiale caricato
   arricchisce le entità esistenti, non le sovrascrive.
   Deep merge sempre, mai sostituzione.
+- **Questioni nel grafo**: le Q sono nodi del grafo a pieno
+  titolo: relazioni DI_PRINCIPIO→P, STRUTTURALE→I/N/G,
+  STRUTTURALE→T. Non creare Q senza le relative relazioni.
+- **Grafo Questioni**: centrato sulla Q (non sull'entità
+  generica) — stessa libreria Cytoscape ma layout e focus
+  diversi da Studio.
+- **Storico fix entità**: I14, I20 mancanti dal seed L1;
+  I69 mancante dal seed L5 (recuperati con fix dedicati).
 
 ---
 
@@ -200,3 +230,6 @@ Gestione manuale abbonamenti dall'admin (già nella v1.0).
 |------|-----|-------|-----|
 | mar 2026 | Filtro tipo VALORE non funzionava | Mismatch sigla→enum | Corretta mappatura in theme.ts |
 | mar 2026 | Lista entità sempre vuota | limit:500 violava Zod max(100) | getAllEntities() con paginazione automatica |
+| mar 2026 | I14, I20 mancanti da seed L1 | Entità non inserite nel seed iniziale | fix_I14_I20.ts |
+| mar 2026 | I69 mancante da seed L5 | Entità non inserita in B1 | relazioni_trasversali_fix.ts |
+| mar 2026 | Q01-Q13 isolate nel grafo | Seed B1 non inseriva relazioni Q-I/P | seed_questioni.ts |

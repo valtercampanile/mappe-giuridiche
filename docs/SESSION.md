@@ -59,29 +59,62 @@ Tre casi paradigmatici documentati dal docente:
 
 ## 3. STATO DEL DATABASE
 
-**Fase 1 completata** — estrazione di 5 lezioni di diritto penale parte generale:
+**Lezioni coperte**: L1–L5 (diritto penale parte generale)
 - L1: Principio di legalità e fonti del diritto penale
 - L2: Corollari della legalità (tassatività, analogia, successione di leggi)
 - L3: Cause di giustificazione (scriminanti)
 - L4: Materialità e fatto tipico (condotta, causalità, reato omissivo)
 - L5: Colpevolezza (preterintenzione, dolo, dolo eventuale, colpa medica)
 
-**Conteggio entità nel DB** (verificato 2026-03-16, materia penale, 142 totali):
-8V · 27P · 10N · 54I · 13Q · 7F · 14LI · 9G
+**Entità totali**: 157 (materia penale)
+8V · 27P · 10N · 57I · 25Q · 7F · 14LI · 9G
+
+**Relazioni totali**: 207 (di cui tensioni: 14)
+
+**Entità per lezione**:
+L1: 88 · L2: 23 · L3: 21 · L4: 17 · L5: 15
+(alcune entità appartengono a più lezioni)
+
+**Capitoli** (tag su ISTITUTO):
+- cap_principi → I01-I22, I25-I35 (L1+L2)
+- cap_antigiuridicita → I34, I39-I49 (L3)
+- cap_elemento_materiale → I52-I63 (L4)
+- cap_colpevolezza → I28, I30, I67-I77 (L5)
+
+**Questioni**: 25 (Q01-Q25), tutte connesse al grafo
+- Q01-Q13: L1 (legalità e fonti)
+- Q14-Q16: L2 (tassatività, lex mitior, analogia)
+- Q17-Q19: L3 (scriminanti, legittima difesa, eutanasia)
+- Q20-Q22: L4 (offensività, causalità omissiva, concause)
+- Q23-Q25: L5 (preterintenzione, dolo eventuale, colpa medica)
+
+**Tensioni mappate**: 14
+Tensioni con zona_grigia: true:
+- T04, T05, T07, T13, T15, T18, T20, T21 (da L1)
+- T-NEW-2 (autodeterminazione vs favor vitae)
+- T-NEW-3 (colpevolezza vs certezza)
+- T-NEW-4 (personalità vs prevenzione)
+- T-NEW-5 (tassatività vs ragionevolezza)
+- T-NEW-6 (legalità vs giustizia sostanziale)
+
+**Script seed** disponibili in data/seed/:
+- `seed-L2-L5.ts` — entità L2-L5 (idempotente)
+- `relazioni_trasversali.ts` — relazioni cross-lezione
+- `relazioni_trasversali_fix.ts` — fix I69, tensioni P11/V07 e P01/V04
+- `seed_questioni.ts` — questioni Q14-Q25 + relazioni
+- `fix_I14_I20.ts` — istituti L1 mancanti
+
+**Vincolo backend**: limit max(100) in entity.schema.ts. Usare sempre `getAllEntities()` lato frontend.
 
 **File dati**: `data/database_L1_con_tensioni.json` (schema + popolazione L1 + tutte le 22 tensioni)
 **Schema JSON**: `data/schema_mappe_giuridiche.json`
 
 **Admin Upload JSON**: implementato e funzionante. Flusso: drag&drop JSON → parsing → revisione entità (con modifica inline di label e definizione) → approvazione → upsert deep merge nel DB.
 
-**Testi Inquadramento**: 81 entità su 85 arricchite con testo stile capitolo di manuale. File sorgente in `data/inquadramento/` (5 batch: update_inquadramento.json — update_inquadramento_5.json).
-
-**Bug risolti**:
-- Upsert JSONB ora fa deep merge (`{ ...existing.data, ...newData }`) invece di sostituzione.
-- Lista entità sidebar vuota: il frontend inviava `limit=500` ma il backend ha Zod `max(100)` → HTTP 400 silenzioso. Risolto con `getAllEntities()` che pagina automaticamente (page 1..N con limit=100).
+**Testi Inquadramento**: 81 entità su 85 arricchite con testo stile capitolo di manuale. File sorgente in `data/inquadramento/` (5 batch).
 
 **Da fare**:
-- Fase 2: Popolazione L2–L5 nel database
+- ~~Fase 2: Popolazione L2–L5 nel database~~ — completata
 - Fase 3: Sviluppo app (in corso)
 - Fase 4: Integrazione nuove lezioni (arriveranno altre 3 + possibili capitoli di manuale)
 
@@ -107,8 +140,9 @@ Tre casi paradigmatici documentati dal docente:
 ### Architettura sidebar (Rail + Drawer)
 - **Rail** (56px, sempre visibile, sfondo #0066CC):
   - Header 44px: icona burger `Menu` (Lucide, 24px, #FFFFFF)
-  - 3 item materia: lettera maiuscola (P, C, A) — Titillium Web 20px bold #FFFFFF, altezza 48px
+  - 3 item materia: abbreviazione (CIV, PEN, AMM) — Titillium Web 13px bold #FFFFFF, altezza 48px
   - Indicatore attivo: sfondo rgba(255,255,255,0.20) + bordo sinistro 3px #FFFFFF
+  - In fondo: icona User (link a /profilo)
 - **Drawer** (260px default, resizable 200–400px, togglabile con burger):
   - Header 44px: nome materia attiva in maiuscolo (es. "DIRITTO PENALE"), sfondo #0066CC
   - DrawerMaterie: lista materie con testo maiuscolo, senza icone
@@ -182,8 +216,48 @@ TENSIONE:              #DC2626 (rosso)
 - Soft delete (status=DELETED) con pulsante ✕
 - Filtro stato: Tutti / In revisione / Approvati / Eliminati
 
-### Vincolo backend: paginazione
-Il backend ha validazione Zod `limit: z.number().max(100)`. Il frontend usa `getAllEntities()` in `entities.api.ts` per paginare automaticamente oltre le 100 entità per materia.
+### ConnessioniCard inline (aggiornato 2026-03-16)
+- Accordion in cima al tab Inquadramento, default aperto
+- Due colonne: relazioni in uscita (sinistra) e in entrata (destra)
+- Ogni item: freccia direzione + badge tipo + label + tipo relazione
+- Hover su item: dopo 400ms appare FloatingEntityCard (anteprima)
+
+### Finestra mobile (FloatingEntityCard)
+- Position: fixed, 320px larghezza, min 120px / max 400px altezza
+- Title bar unica: badge tipo + label (click = toggle accordion) + chevron + pin + close
+- Corpo: testo data.definizione, default aperto, max-height 240px scroll, transizione 200ms
+- Footer "Vai all'entità →" sempre visibile (fuori dall'accordion)
+- Pin: fissa la finestra (persiste alla navigazione), z-index 1000+
+- Finestre pinnate ignorano hover close (chiusura solo con X)
+- Drag: mouse + touch events, clamped nel viewport
+- Collisione: nuove finestre evitano sovrapposizione con pinnate (cascade offset 28px, max 5 iter)
+- Hover robusto: mouseLeave dall'item avvia close delay 150ms, mouseEnter sulla finestra lo cancella
+- Tab "Connessioni" rimosso (ridondante con ConnessioniCard in Inquadramento)
+- Gestito in store: `pinnedWindows[]` in uiStore
+- PinnedWindowsManager: renderizza via React Portal su document.body
+- Pannello "Aperte" nell'header: dropdown interattivo (lista finestre + "Chiudi tutte")
+
+### Grafo Cytoscape (post A2+C2)
+- Nodi: roundrectangle 90x44, sigla + label troncata 20ch
+- Archi colorati per tipo relazione (RELATION_EDGE_COLORS)
+- Archi TENSIONE: tratteggiati rossi 2.5px, bidirezionali
+- Click arco TENSIONE → TensionePanel (pannello in-grafo)
+- Nodi polo tensione: bordo tratteggiato rosso
+- Legenda compatta in basso-sinistra con SVG tratteggiato
+- Tooltip al hover su nodo (label completa)
+
+### Pagina Questioni
+- Layout: colonna sinistra 300px (filtri + lista) + colonna destra flex (scheda dettaglio)
+- Filtri: stato (chip row) + zona critica (toggle) + search
+- Mancano ancora: filtro capitolo, sidebar Rail+Drawer, grafo contestuale
+- Stato attuale: struttura base funzionante, 3 interventi pianificati (sidebar, grafo, filtro capitolo)
+
+### Finestre mobili pinnate
+- Vivono in Zustand (`pinnedWindows[]`)
+- Persistono globalmente tra navigazioni
+- React Portal su document.body
+- Pannello "Aperte" nell'header con dropdown (lista + chiudi singola + "Chiudi tutte")
+- Posizionamento: ancorato all'item connessione (getBoundingClientRect), cascade offset anti-collisione
 
 ---
 
@@ -201,6 +275,9 @@ Il backend ha validazione Zod `limit: z.number().max(100)`. Il frontend usa `get
 10. **Pattern obbligatori**: Repository per il DB, Service per la logica, Controller per HTTP. Mai logica nel controller, mai Prisma nel controller.
 11. **Upsert JSONB deep merge**: L'upsert del campo `data` JSONB deve sempre fare deep merge: `{ ...existing.data, ...newData }`. Mai sostituire l'intero campo data.
 12. **Launcher desktop**: Il launcher è in `~/mappe-giuridiche-launcher/` (pywebview + HTML/CSS/JS). Non modificarlo senza istruzione esplicita — è un tool separato dal codice dell'app.
+13. **Filtro capitoli**: il drawer mostra `DrawerCapitoli` solo quando il chip ISTITUTO è attivo. Endpoint backend `GET /api/v1/entities/capitoli?materia=penale`. Filtro client-side per tag `cap_*` su DrawerEntityList.
+14. **Questioni nel grafo**: le Q sono entità del grafo a pieno titolo. Hanno relazioni DI_PRINCIPIO verso P, STRUTTURALE verso I/N/G, e si collegano alle tensioni. Non creare mai Q senza le relative relazioni verso gli istituti e principi coinvolti.
+15. **Idempotenza seed**: tutti gli script in `data/seed/` sono idempotenti e rieseguibili. Prima di creare un nuovo script verificare se esiste già uno applicabile.
 
 ---
 
